@@ -1,0 +1,43 @@
+site_name: Sea Forward Documentation
+docs_dir: docs
+theme:
+  name: material
+  logo: assets/logo.webp
+  features:
+    - navigation.expand
+    - content.code.copy
+    - navigation.footer
+  palette:
+    # Mode sombre (Slate)
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Mode clair (Default)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+extra_css:
+  - css/syntax_custom.css
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+
+nav:
+  - Accueil: index.md
+  - Introduction: introduction.md
+  - Détails du script: script.md
