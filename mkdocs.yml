@@ -41,11 +41,10 @@ plugins:
       cover_subtitle: "Version 1.0"
 
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
+  - codehilite:
+      guess_lang: false
       use_pygments: true
+      pygments_style: monokai
   - pymdownx.inlinehilite
   - pymdownx.superfences
 
