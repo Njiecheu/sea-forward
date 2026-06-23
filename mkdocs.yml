@@ -28,6 +28,10 @@ theme:
 extra_css:
   - css/syntax_custom.css
 
+plugins:
+  - search
+  - pdf-export
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
