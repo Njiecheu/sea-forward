@@ -4,7 +4,7 @@ This guide explains how to easily download environmental data (**ERA5** atmosphe
 
 ---
 
-## 0. Cloning the Repository (GitHub)
+## 0. Cloning the Github Repository
 
 Before setting up the environment, you need to download (clone) the project to your local machine. You must clone the **develop** branch. You can do this using either **SSH** (recommended for frequent contributors) or **HTTPS** (easier for beginners).
 
@@ -72,10 +72,10 @@ bash Miniconda3-latest-MacOSX-*.sh
 Follow the prompts and restart your terminal after installation.
 
 **On Windows:**
-- Download the Windows installer from the [official Miniconda page](https://docs.conda.io/en/latest/miniconda.html).
-- Double-click the downloaded `.exe` file to run it.
-- Follow the instructions on the screen (it is recommended to install for "Just Me").
-- After installation, search for and open **Anaconda Prompt** from your Start menu to run the subsequent commands.
+     - Download the Windows installer from the [official Miniconda page](https://docs.conda.io/en/latest/miniconda.html).
+     - Double-click the downloaded `.exe` file to run it.
+     - Follow the instructions on the screen (it is recommended to install for "Just Me").
+     - After installation, search for and open **Anaconda Prompt** from your Start menu to run the subsequent commands.
 
 ---
 

@@ -1,5 +1,5 @@
 a[href$=".pdf"]::after {
-  content: " (Télécharger en PDF)";
+  content: " (Télécharger PDF)";
   font-size: 0.8em;
   margin-left: 5px;
 }
