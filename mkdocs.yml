@@ -30,11 +30,12 @@ theme:
 
 extra_css:
   - css/syntax_custom.css
+  - css/extra.css
 
 plugins:
   - search
   - with-pdf:
-      pdf_button_text: "📘 Télécharger PDF"
+ #     pdf_button_text: "📘 Télécharger PDF"
       cover: true
       cover_title: "Sea Forward Documentation"
       cover_subtitle: "Version 1.0"

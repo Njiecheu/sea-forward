@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {{ super() }}
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
+      pdfLinks.forEach(link => {
+        link.insertAdjacentHTML('afterend', '<span style="margin-left: 5px;">(Télécharger la documentation)</span>');
+      });
+    });
+  </script>
+{% endblock %}
