@@ -30,7 +30,10 @@ extra_css:
 
 plugins:
   - search
-  - pdf-export
+  - with-pdf:
+      cover: true
+      cover_title: "Sea Forward Documentation"
+      cover_subtitle: "Version 1.0"
 
 markdown_extensions:
   - pymdownx.highlight:
