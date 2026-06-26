@@ -25,11 +25,11 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
 
-extra:
-  social:
-    - icon: material/file-pdf-box
-      link: /pdf/documentation.pdf
-      name: Télécharger en PDF
+#extra:
+#  social:
+#    - icon: material/file-pdf-box
+#      link: /pdf/documentation.pdf
+#      name: Télécharger en PDF
 
 extra_css:
   - css/syntax_custom.css
