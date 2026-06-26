@@ -13,7 +13,7 @@ Before setting up the environment, you need to download (clone) the project to y
 To use SSH, you must first have an SSH key configured on your GitHub account.
 _If you haven't done this yet, please follow these instructions:_
 
-> [!IMPORTANT]
+!!!info
 > **GitHub Account Required:** If you don't have a GitHub account yet, you must first [create one](https://github.com/join). You will need the exact **email address** associated with your GitHub account to successfully generate your SSH key below.
 
 1. Generate an SSH key (choose depending on your Operating System):
@@ -171,7 +171,7 @@ Run the following command. It will navigate to the source directory, clean any o
 cd vendor/croco_pytools/prepro/Modules/tools_fort_routines && make clean && make && cd -
 ```
 
-> [!NOTE]
+!!!note
 > If the compilation is successful, you will see some compiler output ending without any "Error" messages. If you see a `gfortran: command not found` error, please verify that you ran `conda activate croco_pyenv` first.
 
 ### Step 1.5: Download Global Datasets
