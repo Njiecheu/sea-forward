@@ -46,7 +46,8 @@ plugins:
       cover_subtitle: "Version 1.0"
 
 markdown_extensions:
-  - admonition
+  #- admonition
+  - pymdownx.admonition
   - pymdownx.details
   - pymdownx.tabbed
   - codehilite:
