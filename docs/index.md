@@ -13,7 +13,7 @@ Before setting up the environment, you need to download (clone) the project to y
 To use SSH, you must first have an SSH key configured on your GitHub account.
 _If you haven't done this yet, please follow these instructions:_
 
-!!!info
+!!!tip
 > **GitHub Account Required:** If you don't have a GitHub account yet, you must first [create one](https://github.com/join). You will need the exact **email address** associated with your GitHub account to successfully generate your SSH key below.
 
 1. Generate an SSH key (choose depending on your Operating System):
