@@ -49,6 +49,6 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Accueil: index.md
-  - Introduction: introduction.md
-  - Détails du script: script.md
+  - Home: index.md
+  #- Introduction: introduction.md
+  #- Détails du script: script.md
