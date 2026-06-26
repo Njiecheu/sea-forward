@@ -25,14 +25,29 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
 
-#extra:
-#  pdf_download_text: "Télécharger le PDF"
+extra:
+  social:
+    - icon: material/file-pdf-box
+      link: /pdf/documentation.pdf
+      name: Télécharger en PDF
 
 extra_css:
   - css/syntax_custom.css
   - css/extra.css
 
 plugins:
+  - with-pdf:
+      output_path: pdf/documentation.pdf
+      cover_title: "Sea Forward Documentation"
+      cover_subtitle: "Data Download Guide"
+      author: "Opera SeaForward Team"
+      toc_level: 2
+      enabled_if_env: ENABLE_PDF
+  - print-site:
+      add_to_navigation: true
+      print_page_title: "Télécharger en PDF"
+      print_page_description: "Exporter cette page en PDF"
+      enabled_if_env: ENABLE_PRINT
   - search:
       lang: en
       separator: '[\s\-\.]+'

@@ -2,5 +2,6 @@ mkdocs>=1.5.0
 mkdocs-material>=9.5.0
 pymdown-extensions>=10.0
 pygments>=2.17.0
-mkdocs-with-pdf
-#mkdocs-pdf-export-plugin==0.5.10
+mkdocs-with-pdf>=0.9.0
+pdfkit==1.0.0
+mkdocs-print-site-plugin==0.8.2
