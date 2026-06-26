@@ -36,18 +36,18 @@ extra_css:
   - css/extra.css
 
 plugins:
-  - with-pdf:
-      output_path: pdf/documentation.pdf
-      cover_title: "Sea Forward Documentation"
-      cover_subtitle: "Data Download Guide"
-      author: "Opera SeaForward Team"
-      toc_level: 2
-      enabled_if_env: ENABLE_PDF
-  - print-site:
-      add_to_navigation: true
-      print_page_title: "Télécharger en PDF"
-      print_page_description: "Exporter cette page en PDF"
-      enabled_if_env: ENABLE_PRINT
+  #- with-pdf:
+  #    output_path: pdf/documentation.pdf
+  #    cover_title: "Sea Forward Documentation"
+  #    cover_subtitle: "Data Download Guide"
+  #    author: "Opera SeaForward Team"
+  #    toc_level: 2
+  #    enabled_if_env: ENABLE_PDF
+  #- print-site:
+  #    add_to_navigation: true
+  #    print_page_title: "Télécharger en PDF"
+  #    print_page_description: "Exporter cette page en PDF"
+  #    enabled_if_env: ENABLE_PRINT
   - search:
       lang: en
       separator: '[\s\-\.]+'
