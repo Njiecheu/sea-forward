@@ -33,7 +33,8 @@ extra_css:
   - css/extra.css
 
 plugins:
-  - search
+  - search:
+    - lang: fr
   - with-pdf:
  #     pdf_button_text: "📘 Télécharger PDF"
       cover: true
