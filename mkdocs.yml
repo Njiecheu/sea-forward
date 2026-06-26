@@ -34,7 +34,11 @@ extra_css:
 
 plugins:
   - search:
-    - lang: fr
+      lang: en
+      separator: '[\s\-\.]+'
+  - material/search:
+      highlight: true
+      highlight_threshold: 2
   - with-pdf:
  #     pdf_button_text: "📘 Télécharger PDF"
       cover: true
