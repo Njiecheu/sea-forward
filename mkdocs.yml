@@ -13,7 +13,7 @@ theme:
     # Mode sombre (Slate)
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: teal
+      primary: light blue
       accent: cyan
       toggle:
         icon: material/brightness-4
