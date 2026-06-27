@@ -11,7 +11,6 @@ _If you haven't done this yet, please follow these instructions:_
     **GitHub Account Required:** If you don't have a GitHub account yet, you must first [create one](https://github.com/join). You will need the exact **email address** associated with your GitHub account to successfully generate your SSH key below.
 
 1. Generate an SSH key (choose depending on your Operating System):
-
    - **On Linux and Mac OS:** { #linux }   Open the terminal and run these commands.
 
      ```bash
