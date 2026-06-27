@@ -63,7 +63,7 @@ markdown_extensions:
       pygments_style: monokai
   - pymdownx.highlight:
       linenums: true          # affiche les numéros de ligne
-      anchor_linenums: true   # permet de cibler une ligne précise
+      #anchor_linenums: true   # permet de cibler une ligne précise
       use_pygments: true      # utilise Pygments pour la coloration
   - pymdownx.superfences      # gère les blocs imbriqués et les langages multiples
   - pymdownx.inlinehilite     # coloration inline avec `==code==`
