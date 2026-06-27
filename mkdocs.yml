@@ -6,6 +6,7 @@ theme:
   features:
     - navigation.expand
     - navigation.top  
+    - navigation.instant
     - content.code.copy
     - navigation.footer
   palette:
