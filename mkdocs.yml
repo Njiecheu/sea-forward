@@ -13,16 +13,16 @@ theme:
     # Mode sombre (Slate)
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: cyan
-      accent: teal
+      primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
     # Mode clair (Default)
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: cyan
-      accent: teal
+      primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
