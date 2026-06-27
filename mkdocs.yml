@@ -54,22 +54,23 @@ plugins:
   - material/search:
       highlight: true
       highlight_threshold: 2
-  - with-pdf:
- #     pdf_button_text: "📘 Télécharger PDF"
-      cover: true
-      cover_title: "Sea Forward Documentation"
-      cover_subtitle: "Version 1.0"
 
 markdown_extensions:
   - admonition
-  - pymdownx.details
-  - pymdownx.tabbed
   - codehilite:
       guess_lang: false
       use_pygments: true
       pygments_style: monokai
-  - pymdownx.inlinehilite
-  - pymdownx.superfences
+  - pymdownx.highlight:
+      linenums: true          # affiche les numéros de ligne
+      anchor_linenums: true   # permet de cibler une ligne précise
+      use_pygments: true      # utilise Pygments pour la coloration
+  - pymdownx.superfences      # gère les blocs imbriqués et les langages multiples
+  - pymdownx.inlinehilite     # coloration inline avec `==code==`
+  - pymdownx.snippets         # inclure des extraits externes
+  - pymdownx.extra            # ajoute des fonctionnalités utiles
+  - pymdownx.details          # permet de créer des blocs repliables (accordéons)
+  - pymdownx.tabbed           # permet de créer des onglets pour organiser le contenu
 
 nav:
   - Home: index.md
