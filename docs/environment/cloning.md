@@ -48,7 +48,7 @@ _If you haven't done this yet, please follow these instructions:_
         - Open the **Microsoft Store** from your Windows Start menu.
         - Search for **Ubuntu** (the recommended Linux distribution).
 
-        ![wsl image](img/wsl.png)
+        ![wsl image](../img/wsl.png)
 
         - Click **Get** or **Install** to download it.
 
@@ -91,20 +91,20 @@ _If you haven't done this yet, please follow these instructions:_
 2. Add the key to GitHub:
    - Open Settings on your GitHub account
 
-    ![github settings](img/github_settings.png)
+    ![github settings](../img/github_settings.png)
 
    - Open the "SSH and GPG keys" section
 
-     ![github ssh section](img/github_ssh_section.png)
+     ![github ssh section](../img/github_ssh_section.png)
 
 
    - Click on "New SSH key"
 
-     ![github new key](img/github_new_key.png)
+     ![github new key](../img/github_new_key.png)
 
    - Paste your SSH key and save
 
-     ![github paste key](img/github_paste_key.png)
+     ![github paste key](../img/github_paste_key.png)
 
 Once your SSH key is added to GitHub, open a terminal and run:
 
