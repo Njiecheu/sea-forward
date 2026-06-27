@@ -40,7 +40,7 @@ Before creating the environment, you must have Conda installed on your machine. 
 Since you are using WSL (Windows Subsystem for Linux), you are running a Linux environment.
 
 1. Open your **Ubuntu** terminal.
-2. Follow the exact same **"On Linux"** installation instructions above to install Miniconda within WSL.
+2. Follow the exact same [On Linux](cloning.md#linux) installation instructions above to install Miniconda within WSL.
 
 ### 2.2 Setup the Environment
 
