@@ -7,13 +7,13 @@
   </video>
 
   <!-- Contenu centré -->
-  <div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center; color: white; font-weight: bold;">
+  <div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center; color: white;">
     <div>
       <h1>Sea Forward: Data Download Guide</h1>
 
       <p>
         This guide explains how to easily download environmental data  
-        (<strong>ERA5</strong>, <strong>GloFAS</strong>, <strong>Mercator/HYCOM</strong>)  
+        (<strong>ERA5</strong> atmospheric data, <strong>GloFAS</strong> river discharge data, <strong>Mercator/HYCOM</strong> ocean data)  
         for your CROCO simulations using the <strong>seaforward_data</strong> wrapper.
       </p>
     </div>
