@@ -2,7 +2,7 @@
 
 Settings are prioritized in the following order: **CLI > Env Vars > INI File > Prompt**.
 
-## 1 Method A: Command Line Arguments (Highest Priority)
+## 1. Method A: Command Line Arguments (Highest Priority)
 
 ```bash
 # ERA5 (Atmosphere)

@@ -1,6 +1,6 @@
 # Environment Creation and Installation
 
-## Prerequisite: Install Conda
+## 1. Prerequisite: Install Conda
 
 Before creating the environment, you must have Conda installed on your machine. We recommend installing **Miniconda**, which is a free, minimal installer.
 
@@ -42,7 +42,7 @@ Since you are using WSL (Windows Subsystem for Linux), you are running a Linux e
 1. Open your **Ubuntu** terminal.
 2. Follow the exact same [On Linux](cloning.md#linux) installation instructions above to install Miniconda within WSL.
 
-### 2.2 Setup the Environment
+### 2. Setup the Environment
 
 Analyzing CROCO outputs requires a dedicated Python environment with several specialized scientific libraries. The project already provides a default configuration file (`env.yml`) that contains all the base requirements.
 
