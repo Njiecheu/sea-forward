@@ -4,7 +4,7 @@
 
 Before creating the environment, you must have Conda installed on your machine. We recommend installing **Miniconda**, which is a free, minimal installer.
 
-!!!warning
+!!!info
     **Please choose and follow ONLY the instructions below that match your Operating System.**
 
 **On Linux:**
