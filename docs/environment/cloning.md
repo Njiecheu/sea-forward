@@ -12,7 +12,7 @@ _If you haven't done this yet, please follow these instructions:_
 
 1. Generate an SSH key (choose depending on your Operating System):
 
-   a. <span id="linux"><strong>On Linux and Mac OS:</strong></span> Open the terminal and run these commands.
+  a. <span id="linux"><strong>On Linux and Mac OS:</strong></span> Open the terminal and run these commands.
 
      ```bash
      ssh-keygen -t ed25519 -C "your_email@example.com"
@@ -43,7 +43,7 @@ _If you haven't done this yet, please follow these instructions:_
 
      - Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
 
-   b. **On Windows (using WSL - Windows Subsystem for Linux):**
+  b. **On Windows (using WSL - Windows Subsystem for Linux):**
      To easily run Linux commands, we recommend installing WSL.
      1. **Install WSL via the Microsoft Store:**
         - Open the **Microsoft Store** from your Windows Start menu.
