@@ -55,7 +55,6 @@ Analyzing CROCO outputs requires a dedicated Python environment with several spe
    conda env create -f env.yml
    cd -
    ```
-
 2. **Activate the Environment**:
    ```bash
    conda activate croco_pyenv
