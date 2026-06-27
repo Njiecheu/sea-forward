@@ -5,6 +5,7 @@ theme:
   logo: assets/logo.webp
   features:
     - navigation.expand
+    - navigation.top  
     - content.code.copy
     - navigation.footer
   palette:
