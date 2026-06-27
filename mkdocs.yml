@@ -72,6 +72,13 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Home: index.md
-  #- Introduction: introduction.md
-  #- Détails du script: script.md
+  - Home: home.md
+  - Environment Setup:
+      - Cloning the Repository: environment/cloning.md
+      - Environment Creation and Installation: environment/creation_installation.md
+  - Data Download Guide:
+      - Pre-Download Setup: data_download/pre_download.md
+      - How to Run the Scripts: data_download/run_scripts.md
+      - Defining the Download Area: data_download/defining_download_area.md
+      - Available parameters: data_download/available_parameters.md
+      - Help & Debugging: data_download/help_debugging.md
