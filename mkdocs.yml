@@ -21,7 +21,7 @@ theme:
     # Mode clair (Default)
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: teal
+      primary: lime
       accent: cyan
       toggle:
         icon: material/brightness-7
