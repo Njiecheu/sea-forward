@@ -72,7 +72,7 @@ markdown_extensions:
   - pymdownx.superfences
 
 nav:
-  - Home: home.md
+  - Home: index.md
   - Environment Setup:
       - Cloning the Repository: environment/cloning.md
       - Environment Creation and Installation: environment/creation_installation.md
