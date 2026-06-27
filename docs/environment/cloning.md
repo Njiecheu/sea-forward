@@ -12,7 +12,7 @@ _If you haven't done this yet, please follow these instructions:_
 
 1. Generate an SSH key (choose depending on your Operating System):
 
-   - <span id="linux"><strong>On Linux and Mac OS:</strong></span>  Open the terminal and run these commands.
+- <span id="linux"><strong>On Linux and Mac OS:</strong></span>  Open the terminal and run these commands.
 
      ```bash
      ssh-keygen -t ed25519 -C "your_email@example.com"
