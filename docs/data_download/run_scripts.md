@@ -1,7 +1,8 @@
 # How to Run the Scripts
 
-Settings are prioritized in the following order: **CLI > Env Vars > INI File > Prompt**.
+Settings are prioritized in the following order: Settings are prioritized in the following order: [CLI](#method-a) > [Env Vars](#method-b) > [INI File](#method-c) > [Prompt](#method-d)..
 
+<a id="method-a"></a>
 ## 1. Method A: Command Line Arguments (Highest Priority)
 
 ```bash
@@ -23,6 +24,7 @@ python3 seaforward_data/downloaders/hycom.py --ystart 2019 --mstart 1 --yend 201
   --ibc-dir output_croco_data/data/DATA_IBC/HYCOM/
 ```
 
+<a id="method-b"></a>
 ## 2. Method B: Environment Variables
 
 Each dataset has its own prefix to avoid conflicts.
@@ -42,6 +44,7 @@ export MERCATOR_IBC_DIR=vendor/croco_pytools/data/DATA_IBC/GLORYS/
 python3 seaforward_data/downloaders/mercator.py
 ```
 
+<a id="method-c"></a>
 ## 3. Method C: Configuration File (.ini)
 
 Default configuration files are located in `seaforward_data/config/`.
@@ -54,6 +57,7 @@ python3 seaforward_data/downloaders/mercator.py
 python3 seaforward_data/downloaders/hycom.py
 ```
 
+<a id="method-d"></a>
 ## 4. Method D: Interactive Prompt
 
 The script will politely ask for any missing required settings during execution.

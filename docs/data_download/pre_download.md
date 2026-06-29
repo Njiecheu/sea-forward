@@ -8,11 +8,12 @@ The grid calculation and some data processing steps rely on highly optimized For
 Run the following command. It will navigate to the source directory, clean any old build files, compile the tools, and return to your project root:
 
 ```bash
-cd vendor/croco_pytools/prepro/Modules/tools_fort_routines && make clean && make && cd -
+export FORT_DIR="vendor/croco_pytools/prepro/Modules/tools_fort_routines"
+make -C $FORT_DIR clean all
 ```
 
 !!!note
-    If the compilation is successful, you will see some compiler output ending without any "Error" messages. If you see a `gfortran: command not found` error, please verify that you ran `conda activate croco_pyenv` first.
+    If the compilation is successful, you will see some compiler output ending without any "Error" messages. If you see a `gfortran: command not found` error, please verify that you followed the [Environment Setup](#setup-env) and ran `conda activate croco_pyenv` first.
 
 ## 2. Step 2: Download Global Datasets
 
@@ -24,6 +25,7 @@ python3 seaforward_data/downloaders/get_datasets.py
 
 _This will automatically install data in `vendor/croco_pytools/data/DATASETS_CROCOTOOLS/`._
 
+<a id="step-3-grid"></a>
 ## 3. Step 3: Create your Grid
 
 The scripts can automatically read your grid file to detect the download area.
@@ -31,9 +33,10 @@ The scripts can automatically read your grid file to detect the download area.
 1.  Edit your grid configuration in `seaforward_data/config/grid.ini`.
 2.  Run the grid creation script:
     ```bash
-    cd vendor/croco_pytools/prepro/
-    python3 make_grid.py ../../../seaforward_data/config/grid.ini
-    cd -
+    export PREPRO_DIR="vendor/croco_pytools/prepro"
+    export CONFIG_FILE="../../../seaforward_data/config/grid.ini"
+    
+    (cd $PREPRO_DIR && python3 make_grid.py $CONFIG_FILE)
     ```
     _This creates `croco_grd.nc` in `output_croco_data/results/CROCO_FILES/`._
 
@@ -47,9 +50,5 @@ The scripts can automatically read your grid file to detect the download area.
 
 ### 4.2 Mercator (Copernicus Marine - CMEMS)
 
-1.  **Register**: Create a free account on the [Copernicus Marine registration page](https://data.marine.copernicus.eu/register).
-2.  **Authentication**:
-    - **Option 1**: Run the script; it will ask for your credentials once and save them securely.
-    - **Option 2**: Add `cmems_username` and `cmems_password` in your `seaforward_data/config/download_mercator.ini` file.
-    - **Option 3**: Use environment variables `CMEMS_USERNAME` and `CMEMS_PASSWORD`.
+Create a free account on the [Copernicus Marine registration page](https://data.marine.copernicus.eu/register) and save your credentials (username and password).
 

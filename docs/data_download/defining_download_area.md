@@ -2,7 +2,7 @@
 
 ## 1. Automatic (Using your Grid) - Recommended
 
-If you have generated a grid in Step 2, the script will automatically extract the extent.
+If you have generated a grid in [Step 3](#step-3-grid), the script will automatically extract the extent.
 
 ```bash
 python3 seaforward_data/downloaders/era5.py --ystart 2013 --mstart 1

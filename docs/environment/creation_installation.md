@@ -7,6 +7,7 @@ Before creating the environment, you must have Conda installed on your machine. 
 !!!important
     **Please choose and follow ONLY the instructions below that match your Operating System.**
 
+<a id="linux"></a>
 **On Linux:**
 
 1. Download the installer:
@@ -40,8 +41,9 @@ Before creating the environment, you must have Conda installed on your machine. 
 Since you are using WSL (Windows Subsystem for Linux), you are running a Linux environment.
 
 1. Open your **Ubuntu** terminal.
-2. Follow the exact same [On Linux](cloning.md#generate-key) installation instructions above to install Miniconda within WSL.
+2. Follow the exact same [On Linux](#linux) installation instructions above to install Miniconda within WSL.
 
+<a id="setup-env"></a>
 ### 2. Setup the Environment
 
 Analyzing CROCO outputs requires a dedicated Python environment with several specialized scientific libraries. The project already provides a default configuration file (`env.yml`) that contains all the base requirements.
@@ -51,9 +53,8 @@ Analyzing CROCO outputs requires a dedicated Python environment with several spe
    From the root of the project, navigate to the vendor directory and run this command:
 
    ```bash
-   cd vendor/croco_pytools
-   conda env create -f env.yml
-   cd -
+   export VENDOR_DIR="vendor/croco_pytools"
+   conda env create -f $VENDOR_DIR/env.yml
    ```
 2. **Activate the Environment**:
    ```bash
