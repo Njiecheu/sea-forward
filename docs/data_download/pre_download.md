@@ -13,7 +13,7 @@ make -C $FORT_DIR clean all
 ```
 
 !!!note
-    If the compilation is successful, you will see some compiler output ending without any "Error" messages. If you see a `gfortran: command not found` error, please verify that you followed the [Environment Setup](#setup-env) and ran `conda activate croco_pyenv` first.
+    If the compilation is successful, you will see some compiler output ending without any "Error" messages. If you see a `gfortran: command not found` error, please verify that you followed the [Environment Setup](creation_installation.md#setup-env) and ran `conda activate croco_pyenv` first.
 
 ## 2. Step 2: Download Global Datasets
 
