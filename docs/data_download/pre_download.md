@@ -13,7 +13,7 @@ make -C $FORT_DIR clean all
 ```
 
 !!!note
-    If the compilation is successful, you will see some compiler output ending without any "Error" messages. If you see a `gfortran: command not found` error, please verify that you followed the [Environment Setup](creation_installation.md#setup-env) and ran `conda activate croco_pyenv` first.
+    If the compilation is successful, you will see some compiler output ending without any "Error" messages. If you see a `gfortran: command not found` error, please verify that you followed the [Environment Setup](../environment/creation_installation.md#setup-env) and ran `conda activate croco_pyenv` first.
 
 ## 2. Step 2: Download Global Datasets
 
@@ -25,8 +25,8 @@ python3 seaforward_data/downloaders/get_datasets.py
 
 _This will automatically install data in `vendor/croco_pytools/data/DATASETS_CROCOTOOLS/`._
 
-<a id="step-3-grid"></a>
-## 3. Step 3: Create your Grid
+
+## 3. <span id="step-3-grid">Step 3: Create your Grid</span>
 
 The scripts can automatically read your grid file to detect the download area.
 

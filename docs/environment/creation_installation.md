@@ -43,8 +43,7 @@ Since you are using WSL (Windows Subsystem for Linux), you are running a Linux e
 1. Open your **Ubuntu** terminal.
 2. Follow the exact same [On Linux](#linux) installation instructions above to install Miniconda within WSL.
 
-<a id="setup-env"></a>
-### 2. Setup the Environment
+### 2. <span id="setup-env">Setup the Environment</span>
 
 Analyzing CROCO outputs requires a dedicated Python environment with several specialized scientific libraries. The project already provides a default configuration file (`env.yml`) that contains all the base requirements.
 
