@@ -73,7 +73,70 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Hands-on Documentation: handsOn.md
-  - Setup (from a bare machine to build-ready): 01_setup.md
-  - Building a Forecast Configuration — Hand-Edit Edition: 02_forecast_config.md
-  - Running a Forecast: 03_forecast.md
-  - Building and Running a Hindcast — Hand-Edit Edition: 04_hindcast.md
+  - Setup (from a bare machine to build-ready): 
+      - Overview: phase1/01_setup.md
+      - 0. What you are building, in one picture: phase1/step0.md
+      - 1. A Linux shell: phase1/step1.md
+      - 2. System build tools: phase1/step2.md
+      - 3. Miniconda: phase1/step3.md
+      - 4. Get the SEA-FORWARD repository: phase1/step4.md
+      - 5. Create the `seaforward` conda environment: phase1/step5.md
+      - 6. The environment file: phase1/step6.md
+      - Build the NetCDF/HDF5 stack from source:
+          - 7. Build the NetCDF/HDF5 stack from source: phase1/step7.md
+          - 7.0 The two ways to build: phase1/step70.md
+          - 7.1 Download the source tarballs: phase1/step71.md
+          - Route A — build with the scripts: phase1/routeA.md
+          - Route B — build by hand: phase1/routeB.md
+          - 7.2 HDF5: phase1/step72.md
+          - 7.3 netcdf-c: phase1/step73.md
+          - 7.4 netcdf-fortran: phase1/step74.md
+          - 7.5 Verify the stack: phase1/step75.md
+      - 8. Get CROCO and croco_pytools: phase1/step8.md
+      - 9. Reference data: phase1/step9.md
+      - 10. Final check: phase1/step10.md
+      - 11. From now on: phase1/step11.md
+      - What you have now: phase1/now.md
+      - Troubleshooting: phase1/trouble.md
+  - Building a Forecast Configuration — Hand-Edit Edition: 
+      - Overview: phase2/02_forecast_config.md
+      - Set up your environment: phase2/step0.md
+      - Create the grid definition: phase2/step1.md
+      - Build the grid: phase2/step2.md
+      - Look at the land and decide your boundaries: phase2/step3.md
+      - Write `crocotools_param.py` BY HAND: phase2/step4.md
+      - Prepare the data: phase2/step5.md
+      - Fix the GFS longitudes: phase2/step6.md
+      - Copy the CROCO source files you'll edit: phase2/step7.md
+      - Edit `cppdefs.h` BY HAND: phase2/step8.md
+      - Edit `param.h` BY HAND: phase2/step9.md
+      - Edit `croco.in` BY HAND: phase2/step10.md
+      - Edit `jobcomp` BY HAND: phase2/step11.md
+      - Compile: phase2/step12.md
+      - Run it once to prove the config: phase2/step13.md
+      - What you have now: phase2/now.md
+      - What you change for your own region: phase2/change.md
+      - The consistency rules to remember: phase2/consistency.md
+  - Running a Forecast: 
+      - Overview: phase3/03_forecast.md
+      - The single manual run: phase3/partA.md
+      - The operational driver: phase3/partB.md
+      - Why spin up before forecasting?: phase3/before.md
+      - Quick reference: phase3/reference.md
+  - Building and Running a Hindcast — Hand-Edit Edition: 
+      - Overview: phase4/04_hindcast.md
+      - Step 0 — Session ritual: phase4/step0.md
+      - Step 1 — Build the grid: phase4/step1.md
+      - Step 2 — The hindcast `crocotools_param.py`: phase4/step2.md
+      - Step 3 — Set up ERA5 access: phase4/step3.md
+      - Step 4 — Download the ocean: phase4/step4.md
+      - Step 5 — Download the atmosphere: phase4/step5.md
+      - Step 6 — Build the initial condition: phase4/step6.md
+      - Step 7 — Build the boundaries: phase4/step7.md
+      - Step 8 — The CROCO config files: phase4/step8.md
+      - Step 9 — `croco.in` for the ERA5 hindcast: phase4/step9.md
+      - Step 10 — The operational driver: phase4/step10.md
+      - What you built: phase4/built.md
+      - Forecast vs hindcast: phase4/forehin.md
+      - Quick reference: phase4/reference.md
+      - Troubleshooting: phase4/trouble.md

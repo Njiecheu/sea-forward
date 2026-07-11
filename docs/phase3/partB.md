@@ -1,56 +1,3 @@
-# SEA-FORWARD — Phase 3: Running a Forecast
-
-At the end of Phase 2 you have a **compiled forecast configuration** for your
-region — the `croco` program plus its grid, initial condition, boundary
-conditions, and surface forcing, all under `forecast/scratch/<CONFIG>/`. This
-document runs it two ways:
-
-- **Part A — a single manual run.** You already built and ran this in Phase 2;
-  here it's just recalled briefly, as the "run it once by hand" baseline.
-- **Part B — the operational driver.** One script that does the full daily cycle
-  automatically: a **2-day spin-up** followed by a **5-day forecast** initialized
-  from the spin-up's end, using data for the whole today−2 … today+5 window, saved into `forecast/model-runs/`.
-
-Part B is the real content of this phase.
-
-> **The provided driver is built for `Canary_12`.** Everything in Part B is shown
-> for the example Canary_12 configuration. When you run a **different** region,
-> update the driver's settings to match the config you built in Phase 2 (see
-> §B.4) — otherwise it runs Canary_12.
-
-> **Prerequisite:** Phase 2 complete for your region — `croco` compiled and the
-> `CROCO_FILES/` inputs present under `forecast/scratch/<CONFIG>/`.
-
----
-
-## Part A — The single manual run (recap of Phase 2)
-
-This is exactly what you produced at the end of Phase 2: a compiled model in
-`forecast/scratch/<CONFIG>/`, with `croco.in` pointed at the dated
-`croco_ini_*`/`croco_bry_*` files and the `for_croco/` forcing, run once with
-`./croco croco.in`. If you want to repeat that single run:
-
-```bash
-source ~/seaforward/env.sh
-source ~/seaforward/forecast/track.sh
-export CONFIG_NAME=Canary_12
-export FCAST=${CROCO_RUNS_ROOT}/${CONFIG_NAME}     # forecast/scratch/Canary_12
-cd ${FCAST}
-conda deactivate                                    # run outside conda
-./croco croco.in 2>&1 | tee run.log | tail -60
-```
-
-✅ It ends with `MAIN: DONE` and writes `CROCO_FILES/croco_his.nc` and
-`croco_avg.nc`. (The `IEEE_UNDERFLOW` note at the very end is harmless.)
-
-That single run is one continuous simulation with **no separate spin-up** — you
-set its `time_stepping`, `initial`, `boundary`, and `online` lines by hand in
-Phase 2. It proves the configuration works. The operational cycle below does the
-proper two-phase spin-up + forecast for you, automatically, every day — so from
-here on you use **Part B**, not the manual edits.
-
----
-
 ## Part B — The operational driver (daily cycle)
 
 `forecast/run_forecast_today.sh` runs one complete cycle for **today**, ready to
@@ -117,22 +64,15 @@ ls ${CROCO_RUNS_ROOT}/${CONFIG_NAME}/croco \
 
 ### B.4 Settings at the top of the driver
 
-> ⚠️ **The driver ships set up for `Canary_12`.** The reference
-> `run_forecast_today.sh` has the Canary_12 config name and its download box baked
-> in. **Every time you build a new region in Phase 2, you must update these
-> settings to match that config**, or the driver will try to run Canary_12
-> instead of yours. What to change for a new region:
-> - `CONFIG_NAME` → your config's exact name (must match the folder in
->   `forecast/scratch/` and `forecast/configs/`, and the `# define <NAME>` in
->   `cppdefs.h`).
-> - `EXTENTS` → the **same download box** you used in Phase 2 Step 0 for that
->   region.
-> - `FIX_GFS_LON` → `1` if the region is west of Greenwich, else `0`.
-> - `SPINUP_DAYS` / `FCST_DAYS` → only if you want a different cycle length.
->
-> A clean way to keep this straight: copy the driver per region (e.g.
-> `run_forecast_<CONFIG>.sh`) with that config's settings, so each region has its
-> own ready-to-run driver.
+!!! warning
+    ⚠️ **The driver ships set up for `Canary_12`.** The reference `run_forecast_today.sh` has the Canary_12 config name and its download box baked in. **Every time you build a new region in Phase 2, you must update these settings to match that config**, or the driver will try to run Canary_12 instead of yours. What to change for a new region:
+     - `CONFIG_NAME` → your config's exact name (must match the folder in `forecast/scratch/` and `forecast/configs/`, and the `# define <NAME>` in `cppdefs.h`).
+     - `EXTENTS` → the **same download box** you used in Phase 2 Step 0 for that region.
+     - `FIX_GFS_LON` → `1` if the region is west of Greenwich, else `0`.
+     - `SPINUP_DAYS` / `FCST_DAYS` → only if you want a different cycle length.
+
+!!! note
+    A clean way to keep this straight: copy the driver per region (e.g.`run_forecast_<CONFIG>.sh`) with that config's settings, so each region has its own ready-to-run driver.
 
 Open `forecast/run_forecast_today.sh` and check the CONFIG block:
 
@@ -231,10 +171,8 @@ forecast/model-runs/Canary_12/20260711/
 The forecast you care about is `fcst/CROCO_FILES/croco_his.nc` (and
 `croco_avg.nc`).
 
-> **scratch vs model-runs.** The built config (binary, grid) stays in
-> `forecast/scratch/<CONFIG>/`; each day's **output** is written to
-> `forecast/model-runs/<CONFIG>/<date>/`. Scratch is the workbench; model-runs
-> holds the results you keep.
+!!! note
+    **scratch vs model-runs.** The built config (binary, grid) stays in `forecast/scratch/<CONFIG>/`; each day's **output** is written to `forecast/model-runs/<CONFIG>/<date>/`. Scratch is the workbench; model-runs holds the results you keep.
 
 ### B.8 Automating (optional)
 
@@ -244,33 +182,5 @@ To run daily at, say, 06:00 UTC, add a cron entry (`crontab -e`):
 0 6 * * *  /bin/bash -lc 'source ~/seaforward/env.sh && cd ~/seaforward/forecast && ./run_forecast_today.sh >> ~/seaforward/forecast/cron.log 2>&1'
 ```
 
-> Data availability: Mercator analysis-forecast and GFS for "today" must be
-> published before your cron time. If a download comes back empty, push the cron
-> later.
-
----
-
-## Why spin up before forecasting?
-
-The initial ocean state comes from a global model at coarser resolution. Dropped
-straight onto your fine grid it is slightly out of balance and would generate
-spurious waves. Running the **2-day spin-up** first — from the **analysis** — lets
-the fine model adjust, so the **5-day forecast** starts from a self-consistent
-state. That's why the forecast is initialized from the spin-up's end, while its
-boundaries switch to the **forecast** part of the product for the future window.
-
----
-
-## Quick reference — forecast
-
-```bash
-source ~/seaforward/env.sh
-source ~/seaforward/forecast/track.sh
-conda activate seaforward
-cd ~/seaforward/forecast
-./run_forecast_today.sh
-# 2-day spin-up → 5-day forecast (init from spin-up end)
-# result: forecast/model-runs/<CONFIG>/<date>/fcst/CROCO_FILES/croco_his.nc
-```
 !!! note
-    **Next:** Phase 4 — *Running a Hindcast*, which reuses Phase 2's steps and swaps the data source (GLORYS + ERA5) for a past period.
+    **Data availability:** Mercator analysis-forecast and GFS for "today" must be published before your cron time. If a download comes back empty, push the cron later.

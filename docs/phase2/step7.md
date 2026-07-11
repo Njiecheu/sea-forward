@@ -1,0 +1,19 @@
+## Step 7 — Copy the CROCO source files you'll edit
+
+You start from CROCO's blank templates. Copy them into your **config** folder
+(the recipe), and keep pristine `.orig` backups:
+
+```bash
+cd ${CONFIG_DIR}
+cp ${CROCO_MODEL_DIR}/OCEAN/cppdefs.h .
+cp ${CROCO_MODEL_DIR}/OCEAN/param.h .
+cp ${CROCO_MODEL_DIR}/OCEAN/croco.in .
+cp ${CROCO_MODEL_DIR}/OCEAN/jobcomp .
+for f in cppdefs.h param.h croco.in jobcomp; do cp $f $f.orig; done
+```
+
+!!! important
+    **No `config.sh` to copy.** In the new setup, the compilers and the `opt_seq` NetCDF paths are already in `env.sh` (which you sourced in Step 0). There is no per-config `config.sh` to copy or source — sourcing `env.sh` at the start of the session is enough to compile later.
+
+The next four steps each open one of these and edit it **by hand**. This is the
+heart of understanding a CROCO configuration.
