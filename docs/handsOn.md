@@ -28,7 +28,7 @@ rather than repeating it.
                        └───────┬───────────────────┬───────┘
                                │                   │
               ┌────────────────▼──┐      reuse     │
-   Phase 3    │  Forecast          │     Phase 2   │
+   Phase 3 ──▶│  Forecast          │     Phase 2   │
               │  Mercator + GFS    │     steps     │
               │  today → today+N   │       │       │
               │  forecast/…        │       ▼       ▼
