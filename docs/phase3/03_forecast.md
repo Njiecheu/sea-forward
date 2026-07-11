@@ -14,6 +14,6 @@ document runs it two ways:
 Part B is the real content of this phase.
 
 !!! note
-    **The provided driver is built for `Canary_12`.** Everything in Part B is shown for the example Canary_12 configuration. When you run a **different** region, update the driver's settings to match the config you built in Phase 2 (see §B.4) — otherwise it runs Canary_12.
+    **The provided driver is built for `Canary_12`.** Everything in Part B is shown for the example Canary_12 configuration. When you run a **different** region, update the driver's settings to match the config you built in Phase 2 (see [B.4](partB.md#b4-settings-at-the-top-of-the-driver)) — otherwise it runs Canary_12.
 !!! important
     **Prerequisite:** Phase 2 complete for your region — `croco` compiled and the `CROCO_FILES/` inputs present under `forecast/scratch/<CONFIG>/`.

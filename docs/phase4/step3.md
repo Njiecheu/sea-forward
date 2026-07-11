@@ -4,14 +4,13 @@ Here's the whole thing, step by step.
 
 ### 3.1 Create a free CDS account
 
-1. Go to **https://cds.climate.copernicus.eu** and click **Login / register**
+1. Go to [Copernicus](https://cds.climate.copernicus.eu) and click **Login / register**
    (top right). Create an account (email + password), then confirm via the email
    they send and log in.
 
 ### 3.2 Get your Personal Access Token
 
-2. While logged in, open your **profile page**:
-   **https://cds.climate.copernicus.eu/profile**
+2. While logged in, open your [profile page](https://cds.climate.copernicus.eu/profile)
 3. Find the section **"Personal Access Token"** (sometimes shown under an "API
    key" / "How to use the CDS API" heading). It shows two lines you'll need —
    something like:

@@ -9,7 +9,7 @@ Two pieces of "the model side" go under `~/seaforward/code/`:
 
 The script **`install/04_get_croco.sh` does all of this for you** — it downloads
 both, extracts them, renames to the clean names, and compiles the croco_pytools
-Fortran tools (Route A). If you'd rather do it by hand (Route B), here are the
+Fortran tools [Route A](routeA.md). If you'd rather do it by hand [Route B](routeB.md), here are the
 exact steps it runs — download the two tarballs, extract, and **rename to the
 clean names**:
 

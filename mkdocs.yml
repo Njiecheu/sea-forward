@@ -73,15 +73,15 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Hands-on Documentation: handsOn.md
-  - Setup (from a bare machine to build-ready): 
+  - Phase 1 — Setup (from a bare machine to build-ready): 
       - Overview: phase1/01_setup.md
       - 0. What you are building, in one picture: phase1/step0.md
       - 1. A Linux shell: phase1/step1.md
       - 2. System build tools: phase1/step2.md
-      - 3. Miniconda (the Python package manager)  *(once per machine)*: phase1/step3.md
+      - 3. Miniconda (the Python package manager): phase1/step3.md
       - 4. Get the SEA-FORWARD repository: phase1/step4.md
-      - 5. Create the `seaforward` conda environment *(once per machine)*: phase1/step5.md
-      - 6. 6. The environment file `env.sh`: phase1/step6.md
+      - 5. Create the `seaforward` conda environment: phase1/step5.md
+      - 6. The environment file `env.sh`: phase1/step6.md
       - Build the NetCDF/HDF5 stack from source:
           - 7. Build the NetCDF/HDF5 stack from source: phase1/step7.md
           - 7.0 The two ways to build: phase1/step70.md
@@ -98,7 +98,7 @@ nav:
       - 11. From now on — the every-session ritual: phase1/step11.md
       - What you have now: phase1/now.md
       - Troubleshooting: phase1/trouble.md
-  - Building a Forecast Configuration — Hand-Edit Edition: 
+  - Phase 2 — Building a Forecast Configuration, Hand-Edit Edition: 
       - Overview: phase2/02_forecast_config.md
       - Set up your environment: phase2/step0.md
       - Step 1 — Create the grid definition: phase2/step1.md
@@ -117,13 +117,13 @@ nav:
       - What you have now: phase2/now.md
       - What you change for your own region: phase2/change.md
       - The consistency rules to remember: phase2/consistency.md
-  - Running a Forecast: 
+  - Phase 3 — Running a Forecast: 
       - Overview: phase3/03_forecast.md
       - Part A — The single manual run (recap of Phase 2): phase3/partA.md
       - Part B — The operational driver (daily cycle): phase3/partB.md
       - Why spin up before forecasting?: phase3/before.md
       - Quick reference — forecast: phase3/reference.md
-  - Building and Running a Hindcast — Hand-Edit Edition: 
+  - Phase 4 — Building and Running a Hindcast — Hand-Edit Edition: 
       - Overview: phase4/04_hindcast.md
       - Step 0 — Session ritual (the HINDCAST track): phase4/step0.md
       - Step 1 — Build the grid (its own, in the hindcast track): phase4/step1.md
@@ -134,8 +134,8 @@ nav:
       - Step 6 — Build the initial condition: phase4/step6.md
       - Step 7 — Build the boundaries: phase4/step7.md
       - Step 8 — The CROCO config files (Phase 2, with ERA5 differences): phase4/step8.md
-      - Step 9 — `croco.in` for the ERA5 hindcast: phase4/step9.md
-      - Step 10 — The operational driver — cycling over a past period: phase4/step10.md
+      - Step 9 — `croco.ini` for the ERA5 hindcast: phase4/step9.md
+      - Step 10 — The operational driver: phase4/step10.md
       - What you built (the hindcast CLI additions): phase4/built.md
       - Forecast vs hindcast — the mental model: phase4/forehin.md
       - Quick reference — hindcast: phase4/reference.md

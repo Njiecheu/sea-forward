@@ -35,4 +35,4 @@ Note there is **no separate `config.sh`** to worry about: the compilers and the
 NetCDF paths are already in `env.sh`, so once you've sourced it, you can compile.
 
 !!! note
-    **These paths point at the finished layout.** `env.sh` names where things *will* live — `code/croco`, `opt_seq`, `data/` — but you install those in §7–§9 below. So right after cloning, sourcing `env.sh` is harmless but some of the folders it names are still empty. They fill in as you work through the rest of this document. Nothing here needs those folders to exist yet.
+    **These paths point at the finished layout.** `env.sh` names where things *will* live — `code/croco`, `opt_seq`, `data/` — but you install those in [7](step7.md)–[9](step9.md) below. So right after cloning, sourcing `env.sh` is harmless but some of the folders it names are still empty. They fill in as you work through the rest of this document. Nothing here needs those folders to exist yet.
