@@ -20,8 +20,8 @@ rather than repeating it.
 
 ```
                        ┌─────────────────────────────┐
-   Phase 1  Setup  ───▶│  machine build-ready         │
-                       │  (env, conda, NetCDF, CROCO) │
+   Phase 1  Setup  ───▶│  machine build-ready        │
+                       │  (env, conda, NetCDF, CROCO)│
                        └──────────────┬──────────────┘
                                       │
                        ┌──────────────▼───────────────────┐

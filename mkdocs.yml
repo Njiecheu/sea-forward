@@ -71,9 +71,8 @@ markdown_extensions:
   - pymdownx.tabbed           # permet de créer des onglets pour organiser le contenu
 
 nav:
-  - Home: 
-      - Welcome: index/index.md
-      - Hands-on Documentation: index/index1.md
+  - Home: index.md
+    Hands-on Documentation: handsOn.md
   - Environment Setup:
       - Cloning the Repository: environment/cloning.md
       - Environment Creation and Installation: environment/creation_installation.md
