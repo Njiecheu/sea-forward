@@ -1,5 +1,3 @@
-## Step 11 — Edit `jobcomp` BY HAND (where the source lives)
-
 `jobcomp` is the build script; it needs to know where CROCO's source code is.
 Open it:
 

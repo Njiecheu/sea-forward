@@ -1,6 +1,3 @@
-
-## The consistency rules to remember
-
 Three sets of numbers must agree across files, or the run fails or is wrong:
 
 1. **Grid size:** `croco_grd.nc` (`xi_rho`,`eta_rho`) → `param.h`

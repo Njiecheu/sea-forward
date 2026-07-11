@@ -1,5 +1,3 @@
-## Forecast vs hindcast — the mental model
-
 - **Same:** grid, mask, boundary decision, vertical coordinate, `param.h`,
   `jobcomp`, compiled binary mechanics, spin-up→run handoff, scratch/model-runs
   split.

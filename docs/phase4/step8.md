@@ -1,5 +1,3 @@
-## Step 8 — The CROCO config files (Phase 2, with ERA5 differences)
-
 Copy the templates into the hindcast config folder (Phase 2 Step 7), then edit
 the four files **by hand in `nano`**. Only the ERA5 differences are spelled out
 here; everything else is exactly Phase 2.

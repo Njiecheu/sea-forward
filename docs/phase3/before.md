@@ -1,5 +1,3 @@
-## Why spin up before forecasting?
-
 The initial ocean state comes from a global model at coarser resolution. Dropped
 straight onto your fine grid it is slightly out of balance and would generate
 spurious waves. Running the **2-day spin-up** first — from the **analysis** — lets

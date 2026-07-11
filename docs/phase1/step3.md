@@ -1,5 +1,3 @@
-## 3. Miniconda (the Python package manager)  *(once per machine)*
-
 **Conda** installs and isolates Python libraries so they don't clash with your
 system. We use it for the download/pre-processing tools.
 

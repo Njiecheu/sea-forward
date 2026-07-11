@@ -1,5 +1,3 @@
-### 7.0 — The two ways to build
-
 There are two routes. They produce the identical result:
 
 - **Route A (scripts)** — run the numbered `install/` scripts. Fast, and it's

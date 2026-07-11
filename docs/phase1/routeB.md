@@ -1,5 +1,3 @@
-### Route B — build by hand (learn / debug)
-
 This is exactly what the scripts do, one library at a time. A few conventions:
 
 - We build inside a `build/` subfolder to keep the source tree clean.

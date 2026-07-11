@@ -1,5 +1,3 @@
-## 6. The environment file: `env.sh`
-
 Every working session starts by telling the shell where things live. That's what
 `env.sh` does. Look at it:
 

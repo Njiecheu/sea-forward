@@ -1,5 +1,3 @@
-## Step 6 — Build the initial condition — `make_ini_hindcast`
-
 The hindcast ini subcommand builds the ocean's starting state from GLORYS for a
 **date** (it picks the right monthly file, and reads across months if the window
 needs it):

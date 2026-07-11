@@ -1,5 +1,3 @@
-## 11. From now on — the every-session ritual
-
 Everything above was **one-time setup**. You will not repeat it. From here on,
 each time you open a terminal to work with SEA-FORWARD, you run just these three
 lines:

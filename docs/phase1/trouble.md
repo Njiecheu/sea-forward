@@ -1,5 +1,3 @@
-## Troubleshooting
-
 - **`conda: command not found`** — reopen the terminal, or run
   `source ~/miniconda3/etc/profile.d/conda.sh`.
 - **`nf-config --prefix` shows a conda path or a system path** — you have a

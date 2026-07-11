@@ -1,5 +1,3 @@
-## 0. What you are building, in one picture
-
 SEA-FORWARD runs the **CROCO** regional ocean model to make short ocean
 forecasts. To do that, the machine needs three independent things:
 

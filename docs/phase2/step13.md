@@ -1,5 +1,3 @@
-## Step 13 — Run it once to prove the config
-
 Compiling only proves the code builds — it doesn't prove your grid, boundaries,
 and data actually run. So do **one** manual run here. (The operational driver in
 Phase 3 does this automatically every day; this single run is the by-hand proof.)

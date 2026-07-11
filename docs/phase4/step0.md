@@ -1,5 +1,3 @@
-## Step 0 — Session ritual (the HINDCAST track)
-
 ```bash
 source ~/seaforward/env.sh                 # shared paths + compilers + NetCDF
 source ~/seaforward/hindcast/track.sh      # pick the HINDCAST track

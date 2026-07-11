@@ -1,5 +1,3 @@
-## Step 1 — Build the grid (its own, in the hindcast track)
-
 The hindcast builds its **own** grid so the track is self-contained — even though
 for the same region it comes out identical to the forecast's. This is Phase 2
 Steps 1–2, run under the hindcast track:

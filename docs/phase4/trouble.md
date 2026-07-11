@@ -1,5 +1,3 @@
-## Troubleshooting (hindcast-specific)
-
 - **ERA5 "authentication" / licence error** — set up `~/.cdsapirc` and accept the
   ERA5 dataset licence on the CDS site (Step 3).
 - **CROCO can't find an ERA5 file** — month padding: CROCO wants `M01` for Jan–Sep. Rename `M1`→`M01` (Step 5 WATCH) and confirm the convert uses `.zfill(2)`.

@@ -1,5 +1,3 @@
-## 9. Reference data (bathymetry & coastline)  *(once per machine, large download)*
-
 Building a grid needs global **bathymetry** (sea-floor depth, ETOPO2) and a
 **coastline** (GSHHS). CROCO distributes these as the *DATASETS_CROCOTOOLS*
 package (several GB). Place it under the repo's `data/` folder so grid.ini finds

@@ -1,5 +1,3 @@
-## Step 9 — `croco.in` for the ERA5 hindcast
-
 The one section that differs from the forecast is **`online:`**, which uses the
 ERA5 form (real byear/bmonth, not the GFS `9999` dummy dates). For a single manual
 test run (7 days, Dec 2→9, ini at D02):

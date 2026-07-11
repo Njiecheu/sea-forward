@@ -1,5 +1,3 @@
-## Step 3 — Look at the land and decide your boundaries (the key concept)
-
 Each of your four boundaries is either **open** (water flows through — the model
 reads ocean data there) or **closed** (a solid wall — because it's land). You
 don't guess this; you read it from the mask.

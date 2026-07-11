@@ -1,5 +1,3 @@
-## 1. A Linux shell
-
 CROCO and its toolchain are built for Linux. You need a Linux command line.
 
 - **Linux** — you already have one. Open a terminal.

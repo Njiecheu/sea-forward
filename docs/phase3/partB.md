@@ -1,5 +1,3 @@
-## Part B — The operational driver (daily cycle)
-
 `forecast/run_forecast_today.sh` runs one complete cycle for **today**, ready to
 run daily (e.g. from cron). It reuses the compiled model and grid from Phase 2
 and handles everything else.

@@ -1,5 +1,3 @@
-## What you built (the hindcast CLI additions)
-
 This phase added four hindcast subcommands to `seaforward.py`, parallel to the
 forecast ones:
 

@@ -1,5 +1,3 @@
-## Step 4 — Download the ocean (GLORYS) — `download_ocean_hindcast`
-
 The CLI has a hindcast ocean subcommand that pulls **GLORYS monthly files**
 (`YYYY_MM.nc`, one file per month containing that month's daily records):
 

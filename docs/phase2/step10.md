@@ -1,5 +1,3 @@
-## Step 10 — Edit `croco.in` BY HAND (the config-specific run settings)
-
 `croco.in` is the model's run recipe. For the **common** preparation you set only
 the config-specific values here; the run-length, initial/boundary file names, and
 the online path are set when you actually run (Phase 3's manual test, or the

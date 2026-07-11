@@ -1,5 +1,3 @@
-## Step 8 — Edit `cppdefs.h` BY HAND (the model's "features" switches)
-
 `cppdefs.h` is a list of on/off switches that decide which parts of the model get
 built. Open it:
 

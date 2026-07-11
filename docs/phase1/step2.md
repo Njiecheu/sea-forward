@@ -1,5 +1,3 @@
-## 2. System build tools
-
 You need a C/Fortran compiler and a few build utilities. Install them once:
 
 ```bash

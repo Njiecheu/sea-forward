@@ -1,5 +1,3 @@
-## Quick reference — hindcast
-
 ```bash
 source ~/seaforward/env.sh
 source ~/seaforward/hindcast/track.sh

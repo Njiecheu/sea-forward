@@ -1,5 +1,3 @@
-## 10. Final check — is the machine build-ready?
-
 Run this all-in-one check. Every line should succeed:
 
 ```bash

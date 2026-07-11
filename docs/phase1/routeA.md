@@ -1,5 +1,3 @@
-### Route A — build with the scripts (fast)
-
 Run the three scripts **in order**:
 
 ```bash

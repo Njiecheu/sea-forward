@@ -1,5 +1,3 @@
-## Quick reference — forecast
-
 ```bash
 source ~/seaforward/env.sh
 source ~/seaforward/forecast/track.sh

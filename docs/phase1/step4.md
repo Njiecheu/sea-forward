@@ -1,5 +1,3 @@
-## 4. Get the SEA-FORWARD repository
-
 Clone the repo into your home folder as `seaforward` (lowercase):
 
 ```bash

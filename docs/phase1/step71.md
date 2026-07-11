@@ -1,5 +1,3 @@
-### 7.1 — Download the source tarballs
-
 Either way, you need the source code. Put the tarballs in
 `${SEA_FORWARD_ROOT}/install`:
 

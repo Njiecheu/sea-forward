@@ -1,5 +1,3 @@
-#### 7.2 — HDF5
-
 ```bash
 cd ${SEA_FORWARD_ROOT}/install
 tar -xvf hdf5-1.14.6.tar.gz

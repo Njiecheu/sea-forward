@@ -1,5 +1,3 @@
-## Step 2 — The hindcast `crocotools_param.py`
-
 Create the pre-processing parameters in `CF`. It's like the forecast's, with
 GLORYS-specific values:
 

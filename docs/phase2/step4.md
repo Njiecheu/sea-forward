@@ -1,5 +1,3 @@
-## Step 4 — Write `crocotools_param.py` BY HAND
-
 This file tells the tools that build the initial and boundary conditions about
 your grid. The CLI reads it from the folder you point `make_ini`/`make_bry` at
 (your `CROCO_FILES`). Create and edit it:

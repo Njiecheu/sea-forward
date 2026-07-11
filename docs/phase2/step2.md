@@ -1,5 +1,3 @@
-## Step 2 — Build the grid (run), then read its real size
-
 ```bash
 cd ${CROCO_PYTOOLS_DIR}/prepro
 python3 make_grid.py ${CONFIG_DIR}/grid.ini 2>&1 | tail -20

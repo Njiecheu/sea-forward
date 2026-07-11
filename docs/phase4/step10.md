@@ -1,5 +1,3 @@
-## Step 10 — The operational driver: cycling over a past period
-
 `hindcast/run_hindcast_cycle.sh` automates the whole thing over a date range, in
 **2-day spin-up + 5-day hindcast** cycles. It mirrors the forecast driver, with
 GLORYS+ERA5 and a cycle loop.

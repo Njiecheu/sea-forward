@@ -1,5 +1,3 @@
-## Step 7 — Build the boundaries — `make_bry_hindcast` (cross-year capable)
-
 The hindcast bry subcommand takes a **date window** and reads whatever monthly
 GLORYS files it spans — so a window crossing Dec→Jan reads both months
 automatically:

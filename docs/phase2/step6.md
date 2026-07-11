@@ -1,5 +1,3 @@
-## Step 6 — Fix the GFS longitudes (only for western-hemisphere regions)
-
 GFS labels longitude from 0 to 360; your model uses −180 to 180. For a region
 west of Greenwich these don't match, and the model would crash reading the
 weather forcing. Check whether you're affected:

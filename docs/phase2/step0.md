@@ -1,5 +1,3 @@
-## Step 0 — Set up your environment  *(every session starts here)*
-
 You **run** this (it's not a file to edit), but understand it: these commands
 tell every tool where SEA-FORWARD lives, pick your track, step into the Python
 environment, and set the region you're building.

@@ -1,5 +1,3 @@
-## What you have now
-
 For your region you have a compiled model that has **run to completion**, with all
 its inputs and outputs in the run folder:
 

@@ -1,5 +1,3 @@
-## 5. Create the `seaforward` conda environment  *(once per machine)*
-
 This installs every Python library the tools need (xarray, copernicusmarine for
 Mercator downloads, cfgrib for GFS, netCDF4, numpy, scipy, and the CROCO
 pre-processing dependencies).

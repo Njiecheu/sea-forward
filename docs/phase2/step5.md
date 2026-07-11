@@ -1,5 +1,3 @@
-## Step 5 — Prepare the data (run the five CLI commands)
-
 These download and shape the global data. You can't hand-edit a download, so you
 run them — but each does one clear job. The CLI is `seaforward.py` in `sftools`:
 

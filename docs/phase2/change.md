@@ -1,5 +1,3 @@
-## What you change for your own region
-
 When you build a different region, these are the only things that differ:
 
 | Step / file | What you change | Set from |

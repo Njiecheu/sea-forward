@@ -1,5 +1,3 @@
-## Step 5 — Download the atmosphere (ERA5) — `download_atmosphere_hindcast`
-
 The hindcast atmosphere subcommand downloads ERA5 from CDS **and** converts it to
 CROCO online-forcing format in one command:
 

@@ -1,5 +1,3 @@
-#### 7.3 — netcdf-c (built on top of HDF5)
-
 ```bash
 cd ${SEA_FORWARD_ROOT}/install
 tar -xvf netcdf-c-4.10.0.tar.gz

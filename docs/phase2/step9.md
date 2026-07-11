@@ -1,5 +1,3 @@
-## Step 9 — Edit `param.h` BY HAND (the grid size)
-
 `param.h` tells the model how big your grid is — and this must match
 `croco_grd.nc`. Open it:
 

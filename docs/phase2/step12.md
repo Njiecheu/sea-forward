@@ -1,5 +1,3 @@
-## Step 12 — Compile (build the program)
-
 This turns the source + your four edited files into an executable called `croco`.
 It's a command, not an edit — but one detail matters a lot.
 

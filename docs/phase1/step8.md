@@ -1,5 +1,3 @@
-## 8. Get CROCO and croco_pytools into `code/`  *(once per machine)*
-
 Two pieces of "the model side" go under `~/seaforward/code/`:
 
 - **`code/croco`** — the CROCO ocean model source (Fortran).

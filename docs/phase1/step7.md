@@ -1,5 +1,3 @@
-## 7. Build the NetCDF/HDF5 stack from source (`opt_seq`)  *(once per machine)*
-
 CROCO reads and writes **NetCDF** files (the standard format for gridded
 geophysical data). NetCDF is actually **three** libraries stacked on top of each
 other, and we build them **in this order** because each needs the one before it:

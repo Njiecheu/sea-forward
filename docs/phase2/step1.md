@@ -1,5 +1,3 @@
-## Step 1 — Create the grid definition (run + read)
-
 You run a helper that writes a small text file describing the grid. In the new
 repo the config generators live under `sftools/config`:
 

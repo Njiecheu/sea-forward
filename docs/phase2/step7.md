@@ -1,5 +1,3 @@
-## Step 7 — Copy the CROCO source files you'll edit
-
 You start from CROCO's blank templates. Copy them into your **config** folder
 (the recipe), and keep pristine `.orig` backups:
 

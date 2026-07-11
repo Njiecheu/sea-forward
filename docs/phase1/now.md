@@ -1,5 +1,3 @@
-## What you have now
-
 ```
 ~/seaforward/
 ├── README.md                  # project overview

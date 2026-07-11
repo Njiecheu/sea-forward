@@ -1,5 +1,3 @@
-### 7.5 — Verify the stack (the single most important check)
-
 Whichever route you took:
 
 ```bash

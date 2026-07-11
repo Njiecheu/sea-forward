@@ -1,5 +1,3 @@
-## Step 3 — Set up ERA5 access (CDS account + API key) *(once per machine)*
-
 ERA5 comes from the **Copernicus Climate Data Store (CDS)** — a different service
 from CMEMS, with its own free account and API key. This is a one-time setup.
 Here's the whole thing, step by step.
