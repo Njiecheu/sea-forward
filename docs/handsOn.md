@@ -14,8 +14,6 @@ Phase 1 is a prerequisite for everything (once per computer). Phase 2 builds a
 reuses Phase 2's *steps* but swaps the data source — it points back to Phase 2
 rather than repeating it.
 
----
-
 ## The big picture
 
 ```
@@ -41,8 +39,6 @@ rather than repeating it.
                                        │  hindcast/…           │
                                        └──────────────────────┘
 ```
-
----
 
 ## The one-folder layout
 
@@ -70,8 +66,6 @@ rather than repeating it.
 └── docs/                 # these documents
 ```
 
----
-
 ## The session ritual (every time)
 
 ```bash
@@ -82,8 +76,6 @@ conda activate seaforward                  # the Python tools
 
 To **compile** the model, leave conda first (`conda deactivate`) so the system
 linker uses the repo's `opt_seq` NetCDF, then `./jobcomp`.
-
----
 
 ## Conventions used in these docs
 
