@@ -1,4 +1,4 @@
-# Hands-on Documentation
+# SEA-FORWARD — Hands-on Documentation
 
 ## Read them in order
 
@@ -9,10 +9,8 @@
 | 3 | [Running a Forecast](03_forecast.md) | A manual test run, then the automated daily operational driver. | Each forecast. |
 | 4 | [Running a Hindcast](04_hindcast.md) | Reuse Phases 1–2's steps, swap the data source (GLORYS + ERA5), and cycle over a past period. | Each hindcast. |
 
-Phase 1 is a prerequisite for everything (once per computer). Phase 2 builds a
-**forecast** configuration for a region and Phase 3 runs it. Phase 4 (hindcast)
-reuses Phase 2's *steps* but swaps the data source — it points back to Phase 2
-rather than repeating it.
+!!! note
+    Phase 1 is a prerequisite for everything (once per computer). Phase 2 builds a **forecast** configuration for a region and Phase 3 runs it. Phase 4 (hindcast) reuses Phase 2's *steps* but swaps the data source — it points back to Phase 2 rather than repeating it.
 
 ## The big picture
 
@@ -78,7 +76,7 @@ To **compile** the model, leave conda first (`conda deactivate`) so the system
 linker uses the repo's `opt_seq` NetCDF, then `./jobcomp`.
 
 !!! important
-    ## Conventions used in these docs :**
+    ## Conventions used in these docs :
       - Commands are shown for the **Canary_12** example region (22°W–15.5°W, 14°N–24°N, 1/12°). Replace its numbers with your region's.
        - `~/seaforward` is the repository root; `<you>` is your Linux username.
        - A ✅ check after a step tells you what a correct result looks like.
