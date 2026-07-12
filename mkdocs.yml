@@ -6,7 +6,7 @@ theme:
   features:
     #- navigation.expand
     - navigation.collapse
-    - navigation.sections
+    #- navigation.sections
     - navigation.top  
     - navigation.instant
     - content.code.copy
