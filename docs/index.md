@@ -14,7 +14,7 @@
 
       <p>
         SEA-FORWARD runs the <strong>CROCO</strong> regional ocean model to produce short ocean
-        <strong>forecasts</strong> and <strong>hindcasts</strong> off a chosen coastline. These documents take you, step by step, from a bare machine to running the model yourself. Every step is hands-on: real commands, real paths, real checks.Everything lives under one folder on your machine, `~/seaforward`, so nothing is scattered around your system.
+        <strong>forecasts</strong> and <strong>hindcasts</strong> off a chosen coastline. These documents take you, step by step, from a bare machine to running the model yourself. Every step is hands-on: real commands, real paths, real checks.Everything lives under one folder on your machine, <span style="background: rgba(238, 236, 236, 0.25); padding: 0.1em 0.35em; border-radius: 0.3em;"><code style="background: transparent; color: inherit;">~/seaforward</code></span>, so nothing is scattered around your system.
       </p>
 </div>
 

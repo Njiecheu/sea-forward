@@ -4,7 +4,9 @@ theme:
   name: material
   logo: assets/logo.webp
   features:
-    - navigation.expand
+    #- navigation.expand
+    - navigation.collapse
+    - navigation.sections
     - navigation.top  
     - navigation.instant
     - content.code.copy
