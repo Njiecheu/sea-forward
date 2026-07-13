@@ -2,7 +2,7 @@
 .md-footer__inner {
     display: flex;
     justify-content: center !important;
-    gap: 2rem; /* Espace entre les deux boutons */
+    gap: 1rem; /* Espace entre les deux boutons */
 }
 
 .md-footer__link {
