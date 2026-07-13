@@ -164,7 +164,9 @@ nav:
       - Step 5 — Build the child config files (Phase-2 Steps 7–11, refined): phase6/step5.md
       - Step 6 — Compile the child: phase6/step6.md
       - Step 7 — Run the nested child: phase6/step7.md
-      - Step 8 — Validate — does the finer grid resolve more? (the payoff): phase6/step8.md
+      - Step 8:
+          - Part A — Validate — does the finer grid resolve more? (the payoff): phase6/partA.md
+          - Part B — The operational nesting driver (`run_nest_today.sh`): phase6/partB.md
   - Phase 7 — Region Gallery:
       - Phase 7 — Overview: phase7/07_regions.md
       - Canary — `Canary_12` (1/12°): phase7/canary.md
