@@ -18,7 +18,7 @@ print('east :', int(m[:,-1].sum()),'/',m.shape[0]); print('   S', strip(m[:,-1])
 
 **Mostly `O` → open (write `1`). Mostly `.` → closed (write `0`).**
 
-!!! success
+!!! check
     ✅ **Canary_12 reads:**
       - west: 123/123 ocean → **open (1)**
       - east: ~1/123 ocean — it's the African coast → **closed (0)**

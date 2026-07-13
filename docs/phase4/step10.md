@@ -126,7 +126,7 @@ and likewise `20251230/` (cycle 2) and `20260104/` (cycle 3).
 !!! important
     **Why `gen_*` and generic names both exist.** The generator writes dated files (e.g `croco_ini_GLORYS_Y2025M12D23.nc`) into `gen_spinup/`; the driver then copies them into the run dir under the **generic** names `croco_ini.nc` / `croco_bry.nc` that `croco.in` points at. So the run dirs always use simple names, and `gen_*` keeps the provenance (which date each file was built for).
 
-!!! success
+!!! check
     **✅ Verify all cycles succeeded** — check every hindcast produced a history file and reached `MAIN: DONE`:
     ```bash
         export CONFIG_NAME=Canary_12
@@ -144,7 +144,7 @@ and likewise `20251230/` (cycle 2) and `20260104/` (cycle 3).
         done
     ```
 
-!!! success
+!!! check
     ✅ You want three lines, one per cycle, each `✅ hindcast DONE`.
 
 **Peek at a result** (e.g. cycle 2's history — confirm it has real records and a

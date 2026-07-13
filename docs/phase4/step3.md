@@ -78,7 +78,7 @@ print("CDS client initialised OK")
 EOF
 ```
 
-!!! success
+!!! check
     ✅ All three should succeed: `cdsapi OK`, the `.cdsapirc` listing, and `CDS client initialised OK`.
 
 !!! warning

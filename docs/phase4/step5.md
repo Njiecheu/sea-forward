@@ -17,7 +17,7 @@ python seaforward.py download_atmosphere_hindcast \
 !!! note
     **CDS queues.** ERA5 requests queue on CDS's servers; a month is usually a few minutes but can be longer under load. The command handles request→convert automatically.
 
-!!! success
+!!! check
     ✅ **CHECK** — 10 converted files per month in `for_croco/`, named `<VAR>_Y<year>M<month>.nc`:
     ```bash
     ls ${HCAST}/downloaded_data/ERA5/for_croco/ | sort

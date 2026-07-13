@@ -42,5 +42,5 @@ numbers:
 cpp -DREGIONAL -DCANARY_12 param.h 2>/dev/null | grep "parameter (LLm0" | head
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** — it prints `parameter (LLm0=79, MMm0=121, N=50)` (your numbers). If it shows `xx` or a BENGUELA number, your branch name or placement is off — reopen and fix.

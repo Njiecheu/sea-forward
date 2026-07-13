@@ -15,7 +15,7 @@ Now read the **real** grid dimensions from the file it produced:
 ncdump -h ${CF}/croco_grd.nc | grep -E "xi_rho|eta_rho"
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** for Canary_12: `xi_rho = 81`, `eta_rho = 123`.
 
 **Write these two numbers down.** You'll need them (minus 2) for `param.h` later:

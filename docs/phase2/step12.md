@@ -27,7 +27,7 @@ keeps `opt_seq/bin` on `PATH` and the compilers set.
 !!! warning
     ⚠️ **WATCH — `which nf-config` must show `opt_seq`, not a conda path.** If it shows conda, run `conda deactivate`, `source ~/seaforward/env.sh`, and re-check before `./jobcomp`.
 
-!!! success
+!!! check
     ✅ **CHECK** — after a few minutes you see the CROCO ASCII logo and **`CROCO is OK`**, and a `croco` program appears:
      ```bash
       ls -lh ${FCAST}/croco

@@ -13,5 +13,5 @@ python3 make_grid.py ${CONFIG_DIR}/grid.ini 2>&1 | tail -20
 ncdump -h ${CF}/croco_grd.nc | grep -E "xi_rho|eta_rho"
 ```
 
-!!! success
+!!! check
     ✅ `xi_rho = 81`, `eta_rho = 123` (→ `LLm0=79, MMm0=121`), written to `hindcast/scratch/Canary_12/CROCO_FILES/croco_grd.nc`.

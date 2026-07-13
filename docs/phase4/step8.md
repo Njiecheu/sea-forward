@@ -46,7 +46,7 @@ Change `define` to `undef  ` on that line:
 
 Save: `Ctrl-O`, Enter. Exit: `Ctrl-X`.
 
-!!! success
+!!! check
     ✅ **Verify:**
     ```bash
     grep -nE "define +CANARY_12|define +ONLINE|define +ERA_ECMWF|undef +AROME|OBC_EAST|OBC_WEST|OBC_NORTH|OBC_SOUTH" cppdefs.h
@@ -81,7 +81,7 @@ Save `Ctrl-O` Enter, exit `Ctrl-X`. Verify:
 cpp -DREGIONAL -DCANARY_12 param.h 2>/dev/null | grep "parameter (LLm0"
 ```
 
-!!! success
+!!! check
     ✅ Expect `parameter (LLm0=79, MMm0=121, N=50)`.
 
 ### 8.3 `jobcomp` — source path (identical to forecast)

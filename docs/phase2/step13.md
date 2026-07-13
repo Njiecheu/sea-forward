@@ -44,7 +44,7 @@ source ~/seaforward/env.sh
 counting toward 2016. The kinetic-energy column should stay small and steady (not
 grow), and `trd` should be `0`.
 
-!!! success
+!!! check
     ✅ **CHECK** — it ends with **`MAIN: DONE`** and writes the outputs:
      ```bash
       ls -lh ${CF}/croco_his.nc ${CF}/croco_avg.nc

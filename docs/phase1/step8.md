@@ -29,7 +29,7 @@ mv croco_pytools-v2.0.4 croco_pytools
 rm croco_pytools-v2.0.4.tar.gz
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** — both folders exist with the clean names:
     ```bash
     ls -d ~/seaforward/code/croco ~/seaforward/code/croco_pytools && echo "both present"

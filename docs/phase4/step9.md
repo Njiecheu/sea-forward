@@ -56,7 +56,7 @@ online:    byear  bmonth recordsperday byearend bmonthend / data path
 
 Save: `Ctrl-O`, Enter. Exit: `Ctrl-X`.
 
-!!! success
+!!! check
     ✅ **Verify all edits:**
     ```bash
     grep -nA1 "^time_stepping:" croco.in

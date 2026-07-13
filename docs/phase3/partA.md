@@ -13,7 +13,7 @@ conda deactivate                                    # run outside conda
 ./croco croco.in 2>&1 | tee run.log | tail -60
 ```
 
-!!! success
+!!! check
     ✅ It ends with `MAIN: DONE` and writes `CROCO_FILES/croco_his.nc` and `croco_avg.nc`. (The `IEEE_UNDERFLOW` note at the very end is harmless.)
 
 That single run is one continuous simulation with **no separate spin-up** — you

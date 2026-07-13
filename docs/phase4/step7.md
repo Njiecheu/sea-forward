@@ -15,7 +15,7 @@ gathers the monthly files spanning the window (± a day buffer) and hands the li
 to the interpolation, which concatenates them across time. It processes the
 **open** boundaries (south, west, north) and **skips east** (your `obc_dict`).
 
-!!! success
+!!! check
     ✅ **CHECK** — writes `croco_bry_GLORYS_Y...D..._to_Y...D....nc` with `bry_time` referenced to 1993 and the open-boundary variables (no `_east`):
     ```bash
     ls -lh ${CF}/croco_bry_GLORYS_*.nc ncdump -h ${CF}/croco_bry_GLORYS_*to*.nc | grep -E "bry_time = |since|_south|_west|_north"

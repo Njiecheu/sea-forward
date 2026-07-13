@@ -142,3 +142,30 @@ nav:
       - Forecast vs hindcast — the mental model: phase4/forehin.md
       - Quick reference — hindcast: phase4/reference.md
       - Troubleshooting (hindcast-specific): phase4/trouble.md
+  - Phase 5 — Post-processing & Validation:
+      - Overview: phase5/05_postprocessing.md
+      - 5.1 Quick start: phase5/step51.md
+      - 5.2 Loading CROCO output — `postprocess`: phase5/step52.md
+      - 5.3 Extracting fields — `postprocess`: phase5/step53.md
+      - 5.4 Attributes & display — `define_attrs`: phase5/step54.md
+      - 5.5 Plotting — `plotting`: phase5/step55.md
+      - 5.6 Validation — `validation`: phase5/step56.md
+      - 5.7 Interpreting the results: phase5/step57.md
+      - 5.8 Reference — module layout: phase5/step58.md
+  - Phase 6 — Nesting — Increasing Resolution:
+      - Overview: phase6/06_nesting.md
+      - Step 0 — Session setup: phase6/step0.md
+      - Step 1 — Create the child grid (finer resolution, same box): phase6/step1.md
+      - Step 2 — Write the child `crocotools_param.py` (the vertical refinement): phase6/step2.md
+      - Step 3 — Convert the parent output to Mercator format (the new step): phase6/step3.md
+      - Step 4 — Build the child initial and boundary conditions: phase6/step4.md
+      - Step 5 — Build the child config files (Phase-2 Steps 7–11, refined): phase6/step5.md
+      - Step 6 — Compile the child: phase6/step6.md
+      - Step 7 — Run the nested child: phase6/step7.md
+      - Step 8 — Validate — does the finer grid resolve more? (the payoff): phase6/step8.md
+  - Phase 7 — Region Gallery:
+      - Overview: phase7/07_regions.md
+      - Canary — `Canary_12` (1/12°): phase7/canary.md
+      - Gulf of Guinea — `IGOG_12` (1/12°): phase7/guinea.md
+      - Agulhas — `Agulhas_12` (1/12°) — *coming soon*: phase7/agulhas.md
+      - The pattern — what always changes vs stays the same: phase7/pattern.md

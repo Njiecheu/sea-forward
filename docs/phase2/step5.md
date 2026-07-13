@@ -38,7 +38,7 @@ python seaforward.py make_forcing \
 ls ${FCAST}/downloaded_data/GFS/for_croco/*.nc | wc -l   # expect 10
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** — 5c reports it works through Temperature, Humidity, Precipitation, the four radiation fluxes, U/V wind, and pressure, then `10` files exist.
 
 **5d — build the initial condition** (the ocean's state at the start).
@@ -50,7 +50,7 @@ python seaforward.py make_ini \
     --run_date "${RUN_DT}" --hdays ${HDAYS} --Yorig ${YORIG}
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** — it interpolates temp/salt/u/v onto the sigma layers and prints `Initial file created … croco_ini_MERCATOR_<date>_00.nc`.
 
 **5e — build the boundary conditions** (what flows in at the open edges over
@@ -62,7 +62,7 @@ python seaforward.py make_bry \
     --run_date "${RUN_DT}" --hdays ${HDAYS} --fdays ${FDAYS} --Yorig ${YORIG}
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** — 5e processes **south, west, north** and **skips east**. That's your `obc_dict` in action: it only builds data for the *open* boundaries. Confirm both files exist:
      ```bash
       ls -lh ${CF}/croco_ini_MERCATOR*.nc ${CF}/croco_bry_MERCATOR*.nc

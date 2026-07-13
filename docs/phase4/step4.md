@@ -19,7 +19,7 @@ python seaforward.py download_ocean_hindcast \
 !!! important
     **Which GLORYS product / does it cover my dates?** The daily multiyear reanalysis `cmems_mod_glo_phy_my_0.083deg_P1D-m` covers 1993 → ~present (verify the current end date on the CMEMS product page). For very recent dates beyond the reanalysis, you'd switch to the interim (`myint`) or the anfc analysis. Check coverage with `copernicusmarine describe --dataset-id <id>` if unsure.
 
-!!! success
+!!! check
     ✅ **CHECK** — one file per month appears:
     ```bash
     ls -lh ${HCAST}/downloaded_data/GLORYS/ncdump -h ${HCAST}/downloaded_data/GLORYS/2025_12.nc | grep -E "time = |zos|thetao|depth ="

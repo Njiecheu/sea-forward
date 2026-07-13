@@ -78,5 +78,5 @@ Save (`Ctrl-O`, Enter) and exit (`Ctrl-X`). Then confirm your edits:
 grep -nE "define CANARY_12|define ONLINE|OBC_EAST|OBC_WEST|OBC_NORTH|OBC_SOUTH|undef  TIDES|undef  USE_CALENDAR" cppdefs.h | head
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** — `CANARY_12` and `ONLINE` are `define`d; `OBC_EAST` is `undef`, the other three `OBC_*` are `define`d; `TIDES` and `USE_CALENDAR` are `undef` (already off in the template — good: we're not using tides, and calendar-off is the mode forecasts use).
