@@ -85,7 +85,7 @@ nav:
       - 4. Get the SEA-FORWARD repository: phase1/step4.md
       - 5. Create the `seaforward` conda environment: phase1/step5.md
       - 6. The environment file `env.sh`: phase1/step6.md
-      - Build the NetCDF/HDF5 stack from source:
+      - 7. Build the NetCDF/HDF5 stack from source:
           - 7. Build the NetCDF/HDF5 stack from source: phase1/step7.md
           - 7.0 The two ways to build: phase1/step70.md
           - 7.1 Download the source tarballs: phase1/step71.md
