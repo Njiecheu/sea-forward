@@ -21,7 +21,7 @@ ls -lh ${CF}/croco_his.nc
 tail -5 run.log
 ```
 
-!!! atention
+!!! warning
     ⚠️ **WATCH — instability (`BLOW UP` / `NaN` / KE exploding).** At 1/25° this usually means the timestep is too large or the boundaries are reflecting. Fixes, in order: (1) turn the **sponge on** (`X_SPONGE 25000. 400.`) if you had it off; (2) reduce `dt` to 120 (`NTIMES=3600`); (3) re-check the open boundaries match the mask. Sponge and timestep are runtime values — no recompile needed, just re-stage `croco.in` and rerun.
 
 ## What you have now

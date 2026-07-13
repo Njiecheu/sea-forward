@@ -76,7 +76,7 @@ nav:
   - Home: index.md
   - Hands-on Documentation: handsOn.md
   - Phase 1 — Setup (from a bare machine to build-ready): 
-      - Overview: phase1/01_setup.md
+      - Phase 1 — Overview: phase1/01_setup.md
       - 0. What you are building, in one picture: phase1/step0.md
       - 1. A Linux shell: phase1/step1.md
       - 2. System build tools: phase1/step2.md
@@ -101,7 +101,7 @@ nav:
       - What you have now: phase1/now.md
       - Troubleshooting: phase1/trouble.md
   - Phase 2 — Building a Forecast Configuration, Hand-Edit Edition: 
-      - Overview: phase2/02_forecast_config.md
+      - Phase 2 — Overview: phase2/02_forecast_config.md
       - Set up your environment: phase2/step0.md
       - Step 1 — Create the grid definition: phase2/step1.md
       - Step 2 — Build the grid (run), then read its real size: phase2/step2.md
@@ -120,13 +120,13 @@ nav:
       - What you change for your own region: phase2/change.md
       - The consistency rules to remember: phase2/consistency.md
   - Phase 3 — Running a Forecast: 
-      - Overview: phase3/03_forecast.md
+      - Phase 3 — Overview: phase3/03_forecast.md
       - Part A — The single manual run (recap of Phase 2): phase3/partA.md
       - Part B — The operational driver (daily cycle): phase3/partB.md
       - Why spin up before forecasting?: phase3/before.md
       - Quick reference — forecast: phase3/reference.md
   - Phase 4 — Building and Running a Hindcast — Hand-Edit Edition: 
-      - Overview: phase4/04_hindcast.md
+      - Phase 4 — Overview: phase4/04_hindcast.md
       - Step 0 — Session ritual (the HINDCAST track): phase4/step0.md
       - Step 1 — Build the grid (its own, in the hindcast track): phase4/step1.md
       - Step 2 — The hindcast `crocotools_param.py`: phase4/step2.md
@@ -143,7 +143,7 @@ nav:
       - Quick reference — hindcast: phase4/reference.md
       - Troubleshooting (hindcast-specific): phase4/trouble.md
   - Phase 5 — Post-processing & Validation:
-      - Overview: phase5/05_postprocessing.md
+      - Phase 5 — Overview: phase5/05_postprocessing.md
       - 5.1 Quick start: phase5/step51.md
       - 5.2 Loading CROCO output — `postprocess`: phase5/step52.md
       - 5.3 Extracting fields — `postprocess`: phase5/step53.md
@@ -153,7 +153,7 @@ nav:
       - 5.7 Interpreting the results: phase5/step57.md
       - 5.8 Reference — module layout: phase5/step58.md
   - Phase 6 — Nesting — Increasing Resolution:
-      - Overview: phase6/06_nesting.md
+      - Phase 6 — Overview: phase6/06_nesting.md
       - Step 0 — Session setup: phase6/step0.md
       - Step 1 — Create the child grid (finer resolution, same box): phase6/step1.md
       - Step 2 — Write the child `crocotools_param.py` (the vertical refinement): phase6/step2.md
@@ -164,7 +164,7 @@ nav:
       - Step 7 — Run the nested child: phase6/step7.md
       - Step 8 — Validate — does the finer grid resolve more? (the payoff): phase6/step8.md
   - Phase 7 — Region Gallery:
-      - Overview: phase7/07_regions.md
+      - Phase 7 — Overview: phase7/07_regions.md
       - Canary — `Canary_12` (1/12°): phase7/canary.md
       - Gulf of Guinea — `IGOG_12` (1/12°): phase7/guinea.md
       - Agulhas — `Agulhas_12` (1/12°) — *coming soon*: phase7/agulhas.md
