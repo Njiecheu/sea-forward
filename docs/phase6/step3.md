@@ -37,7 +37,7 @@ print('surface temp mean:', round(float(d.thetao.isel(time=0,depth=0).mean()),2)
 "
 ```
 
-!!! success
+!!! check
     ✅ **CHECK** — `vars: ['thetao','so','uo','vo','zos']`, sensible times and SST. That's a Mercator file — made from your own model.
 
 !!! note
