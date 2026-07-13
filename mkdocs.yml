@@ -91,7 +91,7 @@ nav:
           - 7.1 Download the source tarballs: phase1/step71.md
           - Route A — build with the scripts (fast): phase1/routeA.md
           - Route B — build by hand (learn / debug): 
-              - Route B: phase1/routeB.md
+              - Route B — build by hand (learn / debug): phase1/routeB.md
               - 7.2 HDF5: phase1/step72.md
               - 7.3 netcdf-c (built on top of HDF5): phase1/step73.md
               - 7.4 netcdf-fortran (built on top of netcdf-c): phase1/step74.md
