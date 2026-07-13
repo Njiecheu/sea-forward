@@ -23,7 +23,7 @@ from a real Mercator file to the ini/bry tools.
 !!! warning
     **Why `Yorig=2000`.** The parent is a **forecast** run, whose CROCO time origin is the year 2000. (A hindcast parent would use `Yorig=1993`.) Passing the right origin makes the dates decode correctly — otherwise every timestamp shifts by the difference in reference years. Match `Yorig` to the parent's track.
 
-!!! success
+!!! check
     ✅ **CHECK** — it prints `Created Mercator-format parent: .../parent_20260712.nc` with `21 time(s), 50 depths, grid 123 x 81`. Verify it looks like Mercator:
 
 ```bash
