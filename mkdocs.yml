@@ -8,7 +8,7 @@ theme:
     - navigation.collapse
     #- navigation.expand #garde la section active
     - navigation.top  
-    - navigation.tabs
+    #- navigation.tabs
     - navigation.instant
     - content.code.copy
     - navigation.footer
