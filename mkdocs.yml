@@ -1,21 +1,43 @@
-site_name: Sea-Forward
-#site_url: https://www.mkdocs.org/
-site_description: Sea-Forward documentation .
-#site_author: MkDocs Team
-
-#repo_url: https://github.com/mkdocs/mkdocs/
-edit_uri: blob/master/docs/
-
+site_name: Sea-Forward Documentation
+docs_dir: docs
 theme:
   name: rtd-dropdown
-  color_mode: auto
-  user_color_mode_toggle: true
-  locale: en
-  analytics: {gtag: 'G-274394082'}
-  #highlightjs: true
-  #hljs_languages:
-  #  - yaml
-  #  - django
+  logo: assets/logo.webp
+features:
+    #- navigation.sections
+    - navigation.collapse
+    #- navigation.expand #garde la section active
+    - navigation.top  
+    #- navigation.tabs
+    - navigation.instant
+    - content.code.copy
+    - navigation.footer
+#extra:
+#  social:
+#    - icon: material/file-pdf-box
+#      link: /pdf/documentation.pdf
+#      name: Télécharger en PDF
+
+extra_css:
+  - css/syntax_custom.css
+  - css/extra.css
+
+plugins:
+  #- with-pdf:
+  #    output_path: pdf/documentation.pdf
+  #    cover_title: "Sea Forward Documentation"
+  #    cover_subtitle: "Data Download Guide"
+  #    author: "Opera SeaForward Team"
+  #    toc_level: 2
+  #    enabled_if_env: ENABLE_PDF
+  #- print-site:
+  #    add_to_navigation: true
+  #    print_page_title: "Télécharger en PDF"
+  #    print_page_description: "Exporter cette page en PDF"
+  #    enabled_if_env: ENABLE_PRINT
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
 
 markdown_extensions:
   - admonition
@@ -24,17 +46,17 @@ markdown_extensions:
       use_pygments: true
       pygments_style: monokai
   - pymdownx.highlight:
-      linenums: true
-      anchor_linenums: true
-      use_pygments: true
-      auto_title: true
-      guess_lang: false
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.extra
-  - pymdownx.details
-  - pymdownx.tabbed
+      linenums: true          # affiche les numéros de ligne
+      anchor_linenums: true   # permet de cibler une ligne précise
+      use_pygments: true      # coloration syntaxique via Pygments
+      auto_title: true        # affiche le langage en haut du bloc
+      guess_lang: false       # évite les mauvaises détections
+  - pymdownx.superfences      # gère les blocs imbriqués et multi-langages
+  - pymdownx.inlinehilite     # coloration inline avec `==code==`
+  - pymdownx.snippets         # inclure des extraits externes
+  - pymdownx.extra            # ajoute des fonctionnalités utiles
+  - pymdownx.details          # permet de créer des blocs repliables (accordéons)
+  - pymdownx.tabbed           # permet de créer des onglets pour organiser le contenu
 
 nav:
   - Home: index.md
@@ -136,54 +158,3 @@ nav:
       - Gulf of Guinea — `IGOG_12` (1/12°): phase7/guinea.md
       - Agulhas — `Agulhas_12` (1/12°) — *coming soon*: phase7/agulhas.md
       - The pattern — what always changes vs stays the same: phase7/pattern.md
-
-extra_css:
-  - css/extra.css
-
-exclude_docs: |
-  *.py
-
-markdown_extensions:
-  - toc:
-      permalink: 
-  - attr_list
-  - def_list
-  - tables
-  - pymdownx.highlight:
-      use_pygments: false
-  - pymdownx.snippets
-  - pymdownx.superfences
-  - callouts
-  - mdx_gh_links:
-      user: mkdocs
-      repo: mkdocs
-  - mkdocs-click
-
-copyright: Copyright &copy; 2026 <a href="https://twitter.com/starletdreaming">Tom Christie</a>, Maintained by the <a href="/about/release-notes/#maintenance-team">MkDocs Team</a>.
-
-hooks:
-  - docs/hooks.py
-
-plugins:
-  - search
-  - redirects:
-      redirect_maps:
-        user-guide/plugins.md: dev-guide/plugins.md
-        user-guide/custom-themes.md: dev-guide/themes.md
-        user-guide/styling-your-docs.md: user-guide/choosing-your-theme.md
-  - autorefs
-  - literate-nav:
-      nav_file: README.md
-      implicit_index: true
-  - mkdocstrings:
-      handlers:
-        python:
-          options:
-            docstring_section_style: list
-            members_order: source
-            show_root_heading: true
-            show_source: false
-            show_signature_annotations: true
-
-watch:
-  - mkdocs
