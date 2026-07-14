@@ -10,3 +10,12 @@
     width: auto !important;
     margin: 0 !important; /* Supprime les marges auto (margin-left: auto sur le bouton Next) */
 }
+
+/* Fix : le thème rtd-dropdown écrase white-space sur les blocs de code,
+   ce qui fusionne toutes les lignes en une seule. On restaure le comportement normal. */
+.highlight pre,
+.highlight pre code,
+pre code.hljs {
+    white-space: pre !important;
+    overflow-x: auto;
+}
