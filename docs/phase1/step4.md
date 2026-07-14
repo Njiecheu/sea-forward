@@ -75,19 +75,19 @@ _If you haven't done this yet, please follow these instructions:_
 2. Add the key to GitHub:
    - Open Settings on your GitHub account
 
-    ![GitHub Settings](img/github_settings.png)
+    ![GitHub Settings](../img/github_settings.png)
 
    - Open the "SSH and GPG keys" section
 
-    ![SSH and GPG keys section](img/github_ssh_section.png)
+    ![SSH and GPG keys section](../img/github_ssh_section.png)
 
    - Click on "New SSH key"
     
-    ![New SSH key button](img/github_new_key.png)
+    ![New SSH key button](../img/github_new_key.png)
 
    - Paste your SSH key and save
 
-    ![Paste SSH key](img/github_paste_key.png)
+    ![Paste SSH key](../img/github_paste_key.png)
 
 Once your SSH key is added to GitHub, open a terminal and run:
 
