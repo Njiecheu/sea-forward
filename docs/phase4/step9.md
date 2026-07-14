@@ -74,8 +74,26 @@ GLORYS ini with NRREC=1, boundary → the GLORYS bry, sponge `50000. 400.`, onli
 !!! important
     **`start_date`/`end_date`** — as in the forecast, with `USE_CALENDAR` off these are ignored for the manual run; leave them. (CROCO prints a harmless `Unrecognized keyword: start_date DISREGARDED`.) The operational driver patches them per phase for bookkeeping.
 
-Then **compile** (Phase 2 Step 12 — outside conda, `opt_seq` NetCDF: `conda
-deactivate; source ~/seaforward/env.sh; which nf-config` must show `opt_seq`, then
-`./jobcomp`) and **run** (Phase 2 Step 13: `./croco croco.in`). Success =
-`CROCO is OK` at compile, then `MAIN: DONE` at run, producing `croco_his.nc` +
-`croco_avg.nc`. That proves the hindcast config.
+Then **compile** follow these instructions
+
+```bash
+cd ${HCAST}
+cp ${CONFIG_DIR}/{cppdefs.h,param.h,croco.in,jobcomp} .
+```
+
+Then set the compile environment and build. **Compile outside conda** so the
+system linker uses your `opt_seq` NetCDF, not conda's:
+
+```bash
+conda deactivate                 # leave conda for the link step
+source ~/seaforward/env.sh       # ensures opt_seq's nf-config + compilers are set
+which nf-config                  # must show .../seaforward/opt_seq/bin/nf-config
+./jobcomp 2>&1 | tee compile.log | tail -40
+```
+
+!!! check
+    ✅ **CHECK** — after a few minutes you see the CROCO ASCII logo and **`CROCO is OK`**, and a `croco` program appears:
+
+```bash
+ls -lh ${HCAST}/croco
+```
