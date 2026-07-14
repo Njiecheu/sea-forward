@@ -111,7 +111,7 @@ ls
 
 ### 4.3 Verify the clone
 ```bash 
-`git clone https://github.com opera-seaforward/seaforward.git`
+git clone https://github.com/opera-seaforward/seaforward.git
 ```
 You should see folders like `sftools/`, `install/`, `forecast/`, `hindcast/`,
 `code/`, and files `env.sh`, `environment.yml`.

@@ -3,7 +3,7 @@ docs_dir: docs
 theme:
   name: rtd-dropdown
   logo: assets/logo.webp
-features:
+  features:
     #- navigation.sections
     - navigation.collapse
     #- navigation.expand #garde la section active
@@ -21,6 +21,9 @@ features:
 extra_css:
   - css/syntax_custom.css
   - css/extra.css
+
+extra_javascript:
+  - javascripts/copy-button.js
 
 plugins:
   #- with-pdf:
