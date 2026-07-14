@@ -1,5 +1,5 @@
-mkdocs>=1.6.0
-mkdocs-readthedocs-theme
+mkdocs>=1.5.0
+mkdocs-readthedocs-theme>=1.4.0
 #mkdocs-material>=9.5.0
 pymdown-extensions>=10.0
 pygments>=2.17.0
