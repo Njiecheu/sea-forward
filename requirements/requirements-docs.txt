@@ -26,6 +26,8 @@
 # - pyyaml>=5.1
 # - watchdog>=2.0
 #
+pymdown-extensions>=10.0
+pygments>=2.17.0
 mkdocs-rtd-dropdown
 click==8.1.7
     # via
