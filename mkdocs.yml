@@ -3,32 +3,6 @@ docs_dir: docs
 theme:
   name: readthedocs
   logo: assets/logo.webp
-  features:
-    #- navigation.sections
-    - navigation.collapse
-    #- navigation.expand #garde la section active
-    - navigation.top  
-    #- navigation.tabs
-    - navigation.instant
-    - content.code.copy
-    - navigation.footer
-  #palette:
-    # Mode sombre (Slate)
-  #  - media: "(prefers-color-scheme: dark)"
-  #    scheme: slate
-  #    primary: teal
-  #    accent: cyan
-  #    toggle:
-  #      icon: material/brightness-4
-  #      name: Switch to light mode
-    # Mode clair (Default)
-  #  - media: "(prefers-color-scheme: light)"
-  #    scheme: default
-  #    primary: teal
-  #    accent: cyan
-  #    toggle:
-  #      icon: material/brightness-7
-  #      name: Switch to dark mode
 
 #extra:
 #  social:
@@ -56,9 +30,6 @@ plugins:
   - search:
       lang: en
       separator: '[\s\-\.]+'
-  - material/search:
-      highlight: true
-      highlight_threshold: 2
 
 markdown_extensions:
   - admonition
