@@ -1,7 +1,7 @@
 site_name: Sea-Forward Documentation
 docs_dir: docs
 theme:
-  name: mkdocs
+  name: rtd-dropdown
   logo: assets/logo.webp
 features:
     #- navigation.sections
