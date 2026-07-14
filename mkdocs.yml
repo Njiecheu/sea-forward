@@ -1,4 +1,4 @@
-site_name: Sea Forward Documentation
+site_name: Sea-Forward Documentation
 docs_dir: docs
 theme:
   name: readthedocs
@@ -12,23 +12,23 @@ theme:
     - navigation.instant
     - content.code.copy
     - navigation.footer
-  palette:
+  #palette:
     # Mode sombre (Slate)
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: teal
-      accent: cyan
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
+  #  - media: "(prefers-color-scheme: dark)"
+  #    scheme: slate
+  #    primary: teal
+  #    accent: cyan
+  #    toggle:
+  #      icon: material/brightness-4
+  #      name: Switch to light mode
     # Mode clair (Default)
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: cyan
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
+  #  - media: "(prefers-color-scheme: light)"
+  #    scheme: default
+  #    primary: teal
+  #    accent: cyan
+  #    toggle:
+  #      icon: material/brightness-7
+  #      name: Switch to dark mode
 
 #extra:
 #  social:
