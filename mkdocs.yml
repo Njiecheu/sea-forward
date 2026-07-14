@@ -35,9 +35,11 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight:
       linenums: true          # affiche les numéros de ligne
-      #anchor_linenums: true   # permet de cibler une ligne précise
-      use_pygments: true      # utilise Pygments pour la coloration
-  - pymdownx.superfences      # gère les blocs imbriqués et les langages multiples
+      anchor_linenums: true   # permet de cibler une ligne précise
+      use_pygments: true      # coloration syntaxique via Pygments
+      auto_title: true        # affiche le langage en haut du bloc
+      guess_lang: false       # évite les mauvaises détections
+  - pymdownx.superfences      # gère les blocs imbriqués et multi-langages
   - pymdownx.inlinehilite     # coloration inline avec `==code==`
   - pymdownx.snippets         # inclure des extraits externes
   - pymdownx.extra            # ajoute des fonctionnalités utiles
