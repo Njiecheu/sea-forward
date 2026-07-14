@@ -18,7 +18,7 @@
 pre code.hljs {
     white-space: pre !important;
     overflow-x: auto;
-    font-size: 1.1rem;   /* ajuste selon le rendu voulu : 1rem = taille par défaut du thème */
+    font-size: 0.5rem;   /* ajuste selon le rendu voulu : 1rem = taille par défaut du thème */
     line-height: 1.5;
 }
 
