@@ -93,7 +93,6 @@ which nf-config                  # must show .../seaforward/opt_seq/bin/nf-confi
 
 !!! check
     ✅ **CHECK** — after a few minutes you see the CROCO ASCII logo and **`CROCO is OK`**, and a `croco` program appears:
-
-```bash
-ls -lh ${HCAST}/croco
-```
+     ```bash
+      ls -lh ${HCAST}/croco
+     ```
