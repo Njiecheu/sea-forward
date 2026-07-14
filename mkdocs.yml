@@ -43,6 +43,7 @@ markdown_extensions:
   - admonition
   - pymdownx.highlight:
       linenums: true          # affiche les numéros de ligne
+      linenums_style: pymdownx-inline
       anchor_linenums: true   # permet de cibler une ligne précise
       use_pygments: true      # coloration syntaxique via Pygments
       auto_title: true        # affiche le langage en haut du bloc
