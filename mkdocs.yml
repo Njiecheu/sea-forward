@@ -4,7 +4,7 @@ site_description: Sea-Forward documentation .
 #site_author: MkDocs Team
 
 #repo_url: https://github.com/mkdocs/mkdocs/
-#edit_uri: blob/master/docs/
+edit_uri: blob/master/docs/
 
 theme:
   name: mkdocs
