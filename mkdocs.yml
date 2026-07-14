@@ -1,9 +1,17 @@
 site_name: Sea-Forward Documentation
 docs_dir: docs
 theme:
-  name: alabaster
+  name: rtd-dropdown
   logo: assets/logo.webp
-
+features:
+    - navigation.sections
+    - navigation.collapse
+    #- navigation.expand #garde la section active
+    - navigation.top  
+    #- navigation.tabs
+    - navigation.instant
+    - content.code.copy
+    - navigation.footer
 #extra:
 #  social:
 #    - icon: material/file-pdf-box
