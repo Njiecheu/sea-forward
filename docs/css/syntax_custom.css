@@ -41,6 +41,61 @@ pre code.hljs {
     transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease;
 }
 
+.highlight {
+    position: relative;
+    background: #272822;              /* fond Monokai */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    margin: 1.2em 0;
+}
+
+.highlight .filename {
+    display: flex;
+    align-items: center;
+    background: #1e1f1c;              /* légèrement plus sombre que le fond, comme avant */
+    color: #9a9b8f;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    padding: 8px 14px 8px 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    position: relative;
+}
+
+.highlight .filename::before {
+    content: "";
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ff5f56;
+    box-shadow: 18px 0 0 #ffbd2e, 36px 0 0 #27c93f;
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 16px 18px;
+    background: transparent;
+    overflow-x: auto;
+}
+
+.highlight code.hljs {
+    background: transparent;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.highlight .linenos {
+    color: #75715e;                   /* gris-brun Monokai pour les numéros de ligne */
+    font-family: "JetBrains Mono", monospace;
+    margin-right: 1em;
+    user-select: none;
+}
+
 .highlight:hover .copy-code-button {
     opacity: 1;
 }
