@@ -8,7 +8,7 @@
 </video>
 
   <!-- Contenu centré -->
-  <div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center; color: white;">
+  <div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center; color: black;">
     <div>
       <h1>Sea Forward: Data Download Guide</h1>
 
