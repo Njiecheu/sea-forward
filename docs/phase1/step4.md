@@ -1,4 +1,95 @@
-Clone the repo into your home folder as `seaforward` (lowercase):
+Before setting up the environment, you need to download (clone) the project to your local machine. You can do this using either **SSH** (recommended for frequent contributors) or **HTTPS** (easier for beginners).
+
+### 4.1 Option A: Clone via SSH (Recommended)
+
+To use SSH, you must first have an SSH key configured on your GitHub account.
+_If you haven't done this yet, please follow these instructions:_
+
+!!! important
+    **GitHub Account Required:** If you don't have a GitHub account yet, you must first [create one](https://github.com join). You will need the exact **email address** associated with your GitHub account to successfully generate your SSH key below.
+
+1. Generate an SSH key (choose depending on your Operating System):
+   - **On Linux and Mac os:** Open the terminal and run these commands:
+
+     ```bash
+     ssh-keygen -t ed25519 -C "your_email@example.com"
+     ```
+
+     **Example Output:**
+
+     ```text
+     Generating public/private ed25519 key pair.
+     Enter file in which to save the key (/home/user/.ssh/id_ed25519): [Press Enter]
+     Enter passphrase (empty for no passphrase): [Press Enter]
+     Enter same passphrase again: [Press Enter]
+     Your identification has been saved in /home/user/.ssh/id_ed25519
+     Your public key has been saved in /home/user/.ssh/id_ed25519.pub
+     ```
+
+     Then, display the generated key:
+
+     ```bash
+     cat ~/.ssh/id_ed25519.pub
+     ```
+
+     **Example Output:**
+
+     ```text
+     ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP... your_email@example.com
+     ```
+
+     - Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
+
+   - **On Windows (using WSL):**
+     Open the **Ubuntu** terminal you configured in Section 1 and run these commands:
+
+     ```bash
+     ssh-keygen -t ed25519 -C "your_email@example.com"
+     ```
+
+          **Example Output:**
+
+          ```text
+          Generating public/private ed25519 key pair.
+          Enter file in which to save the key (/home/user/.ssh/id_ed25519): [Press Enter]
+          Enter passphrase (empty for no passphrase): [Press Enter]
+          Enter same passphrase again: [Press Enter]
+          Your identification has been saved in /home/user/.ssh/id_ed25519
+          Your public key has been saved in /home/user/.ssh/id_ed25519.pub
+          ```
+
+          Then, display the generated key:
+
+          ```bash
+          cat ~/.ssh/id_ed25519.pub
+          ```
+
+          **Example Output:**
+
+          ```text
+          ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP... your_email@example.com
+          ```
+
+        - Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
+
+2. Add the key to GitHub:
+   - Open Settings on your GitHub account
+
+    ![GitHub Settings](img/github_settings.png)
+
+   - Open the "SSH and GPG keys" section
+
+    ![SSH and GPG keys section](img/github_ssh_section.png)
+
+   - Click on "New SSH key"
+    
+    ![New SSH key button](img/github_new_key.png)
+
+   - Paste your SSH key and save
+
+    ![Paste SSH key](img/github_paste_key.png)
+
+Once your SSH key is added to GitHub, open a terminal and run:
 
 ```bash
 cd ~
@@ -7,11 +98,21 @@ cd seaforward
 ls
 ```
 
-!!! important
-    If you don't have SSH set up with GitHub, use the HTTPS URL instead:
-    ```bash 
-    `git clone https://github.com opera-seaforward/seaforward.git`
-    ```
+### 4.2 Option B: Clone via HTTPS
+
+If you don't want to set up SSH keys right now, you can clone using HTTPS. You may be prompted to enter your GitHub username and password/personal access token.
+
+```bash
+cd ~
+git clone https://github.com/opera-seaforward/seaforward.git
+cd seaforward
+ls
+```
+
+### 4.3 Verify the clone
+```bash 
+`git clone https://github.com opera-seaforward/seaforward.git`
+```
 You should see folders like `sftools/`, `install/`, `forecast/`, `hindcast/`,
 `code/`, and files `env.sh`, `environment.yml`.
 

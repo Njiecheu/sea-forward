@@ -8,15 +8,26 @@ CROCO and its toolchain are built for Linux. You need a Linux command line.
 
 ### Installing WSL2 (Windows only)
 
+You can install WSL2 using either the command line or the Microsoft Store.
+
+**Method 1: Command Line (Fastest)**
+
 Open **PowerShell as Administrator** and run:
 
 ```powershell
 wsl --install -d Ubuntu
 ```
 
-Restart when asked. Launch **Ubuntu** from the Start menu, and create your Linux
-username and password when prompted. From now on, every command in these
-documents is typed in that Ubuntu terminal.
+**Method 2: Microsoft Store**
+
+1. Open the **Microsoft Store** from your Windows Start menu.
+2. Search for **Ubuntu** (the recommended Linux distribution) and click **Get** or **Install**.
+  ![WSL Ubuntu in Microsoft Store](img/wsl.png)
+
+**After installing (both methods):**
+Restart your computer if asked. Launch **Ubuntu** from the Start menu, and wait a few moments for the initial setup to finish. It will ask you to create a **UNIX username** and a **password**. _(Note: when typing your password, characters won't appear on screen, this is a normal security feature)._
+
+From now on, every command in these documents is typed in that Ubuntu terminal.
 
 Check you're in Linux:
 
