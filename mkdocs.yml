@@ -12,10 +12,29 @@ theme:
   user_color_mode_toggle: true
   locale: en
   analytics: {gtag: 'G-274394082'}
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - django
+  #highlightjs: true
+  #hljs_languages:
+  #  - yaml
+  #  - django
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      use_pygments: true
+      pygments_style: monokai
+  - pymdownx.highlight:
+      linenums: true
+      anchor_linenums: true
+      use_pygments: true
+      auto_title: true
+      guess_lang: false
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.extra
+  - pymdownx.details
+  - pymdownx.tabbed
 
 nav:
   - Home: index.md
