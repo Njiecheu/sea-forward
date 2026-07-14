@@ -4,7 +4,7 @@ theme:
   name: rtd-dropdown
   logo: assets/logo.webp
 features:
-    - navigation.sections
+    #- navigation.sections
     - navigation.collapse
     #- navigation.expand #garde la section active
     - navigation.top  
