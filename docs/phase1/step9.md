@@ -1,11 +1,21 @@
 Building a grid needs global **bathymetry** (sea-floor depth, ETOPO2) and a
 **coastline** (GSHHS). CROCO distributes these as the *DATASETS_CROCOTOOLS*
-package (several GB). Place it under the repo's `data/` folder so grid.ini finds
-it at:
+package (several GB). If you already have the datasets, place it in the repository's `data/` directory. Otherwise, download it using the following commands:
 
-```
-~/seaforward/data/DATASETS_CROCOTOOLS/Topo/etopo2.nc
-~/seaforward/data/DATASETS_CROCOTOOLS/gshhs/GSHHS_shp/i/GSHHS_i_L1.shp
+```bash
+# This can be postponed for later when it's needed. It also takes a lot of time; do it overnight. 
+# Use -c option with wget to resume downloading a partially downloaded file instead of starting the download over from the beginning.
+# this can take some time; do it overnight.
+
+mkdir -p ${SEA_FORWARD_ROOT}/data
+cd ${SEA_FORWARD_ROOT}/data
+
+wget https://data-croco.ifremer.fr/DATASETS/DATASETS_CROCOTOOLS.tar.gz
+wget https://data-croco.ifremer.fr/CONFIGS_EXAMPLES/DATASETS_GLOB_INTER/CROCO/MERCATOR_GLOB_201301.tar.gz
+wget https://data-croco.ifremer.fr/CONFIGS_EXAMPLES/DATASETS_GLOB_INTER/CROCO/MERCATOR_GLOB_201302.tar.gz
+wget https://data-croco.ifremer.fr/CONFIGS_EXAMPLES/DATASETS_GLOB_INTER/CROCO/MERCATOR_GLOB_201303.tar.gz
+
+tar -xzf DATASETS_CROCOTOOLS.tar.gz -C data/
 ```
 
 !!! note
