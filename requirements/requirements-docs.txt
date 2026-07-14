@@ -26,7 +26,7 @@
 # - pyyaml>=5.1
 # - watchdog>=2.0
 #
-
+mkdocs-rtd-dropdown
 click==8.1.7
     # via
     #   hatch.envs.docs
