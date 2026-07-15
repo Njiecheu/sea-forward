@@ -63,7 +63,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Hands-on Documentation: handsOn.md
-  - Phase 1 — Setup (from a bare machine to build-ready): 
+  - Phase 1 — Setup: 
       - Phase 1 — Overview: phase1/01_setup.md
       - 0. What you are building, in one picture: phase1/step0.md
       - 1. A Linux shell: phase1/step1.md
@@ -72,7 +72,7 @@ nav:
       - 4. Get the SEA-FORWARD repository: phase1/step4.md
       - 5. Create the `seaforward` conda environment: phase1/step5.md
       - 6. The environment file `env.sh`: phase1/step6.md
-      - 7. Build the NetCDF/HDF5 stack from source:
+      - 7. Build the NetCDF/HDF5:
           - 7. Build the NetCDF/HDF5 stack from source: phase1/step7.md
           - 7.0 The two ways to build: phase1/step70.md
           - 7.1 Download the source tarballs: phase1/step71.md
@@ -89,7 +89,7 @@ nav:
       - 11. From now on — the every-session ritual: phase1/step11.md
       - What you have now: phase1/now.md
       - Troubleshooting: phase1/trouble.md
-  - Phase 2 — Building a Forecast Configuration, Hand-Edit Edition: 
+  - Phase 2 — Building a Forecast Config: 
       - Phase 2 — Overview: phase2/02_forecast_config.md
       - Set up your environment: phase2/step0.md
       - Step 1 — Create the grid definition: phase2/step1.md
@@ -114,7 +114,7 @@ nav:
       - Part B — The operational driver (daily cycle): phase3/partB.md
       - Why spin up before forecasting?: phase3/before.md
       - Quick reference — forecast: phase3/reference.md
-  - Phase 4 — Building and Running a Hindcast — Hand-Edit Edition: 
+  - Phase 4 — Running a Hindcast: 
       - Phase 4 — Overview: phase4/04_hindcast.md
       - Step 0 — Session ritual (the HINDCAST track): phase4/step0.md
       - Step 1 — Build the grid (its own, in the hindcast track): phase4/step1.md
@@ -141,7 +141,7 @@ nav:
       - 5.6 Validation — `validation`: phase5/step56.md
       - 5.7 Interpreting the results: phase5/step57.md
       - 5.8 Reference — module layout: phase5/step58.md
-  - Phase 6 — Nesting — Increasing Resolution:
+  - Phase 6 — Nesting:
       - Phase 6 — Overview: phase6/06_nesting.md
       - Step 0 — Session setup: phase6/step0.md
       - Step 1 — Create the child grid (finer resolution, same box): phase6/step1.md
