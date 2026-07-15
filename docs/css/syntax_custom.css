@@ -114,12 +114,12 @@ pre code.hljs {
 
 /* Élargit la sidebar de navigation */
 .wy-nav-side {
-    width: 300px;   /* défaut généralement ~300px, ajuste selon ton besoin */
+    width: 305px;   /* défaut généralement ~300px, ajuste selon ton besoin */
 }
 
 /* Décale le contenu principal pour compenser la nouvelle largeur */
 .wy-nav-content-wrap {
-    margin-left: 300px;   /* doit correspondre exactement à la largeur ci-dessus */
+    margin-left: 305px;   /* doit correspondre exactement à la largeur ci-dessus */
 }
 
 /* Si le thème limite aussi la largeur max du bloc de contenu central */
