@@ -1,23 +1,151 @@
-<div style="position: relative; height: 100vh; overflow: hidden;">
+<!-- BANNER IMAGE GOES HERE -->
+<!-- e.g. ![SEA-FORWARD](assets/banner.png) -->
 
-  <!-- Vidéo en arrière-plan -->
+# SEA-FORWARD
 
-<video autoplay muted loop playsinline 
-         style="position: absolute; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-<source src="videos/sea.mp4" type="video/mp4">
-</video>
+**Simple Educational Access for Forecast and Warning Developers**
 
-  <!-- Contenu centré -->
-  <div style="display: flex; justify-content: center; align-items: center; height: 100%; text-align: center; color: black;">
-    <div>
-      <h1>Sea Forward: Data Download Guide</h1>
+SEA-FORWARD is a free, open-source toolkit that teaches you to build and run a
+complete ocean forecasting system on your own computer — from raw input data
+through to a validated 5-day forecast you can plot and interpret.
 
-      <p>
-        SEA-FORWARD runs the <strong>CROCO</strong> regional ocean model to produce short ocean
-        <strong>forecasts</strong> and <strong>hindcasts</strong> off a chosen coastline. These documents take you, step by step, from a bare machine to running the model yourself. Every step is hands-on: real commands, real paths, real checks.Everything lives under one folder on your machine, <span style="background: rgba(238, 236, 236, 0.25); padding: 0.1em 0.35em; border-radius: 0.3em;"><code style="background: transparent; color: inherit;">~/seaforward</code></span>, so nothing is scattered around your system.
-      </p>
-</div>
+It is aimed at practitioners who understand oceanography but have not yet built
+or operated a forecasting system. Every step is explicit and manual by design:
+there is no automated installer, because the goal is not just to produce a
+forecast — it is to understand each link in the chain that produces it.
 
-  </div>
+No supercomputer is required. SEA-FORWARD runs on commodity hardware.
 
-</div>
+
+## What you will build
+
+A complete operational forecasting chain following the **OceanPrediction-A**
+blueprint of the OceanPrediction DCC Architecture:
+
+**Upstream data → Ocean model → Validation → Visualization**
+
+| Layer | Process | In SEA-FORWARD |
+|---|---|---|
+| Upstream Data (U) | U2, U4, U5 | ERA5 atmospheric forcing, CMEMS ocean boundary conditions, GEBCO 2024 bathymetry |
+| Core Forecasting Engine (C) | C1 | The CROCO v2.0 ocean model, compiled from source |
+| Verification & Analysis (V) | V1 | Automated validation against a canonical reference run (RMSE, bias, spatial correlation) |
+| Downstream Applications (D) | D1 | Jupyter notebooks for SST, SSH, currents, MLD and salinity, with guided exercises |
+
+The forecasting strategy follows Tchonang et al. (2024): each cycle is
+initialized from the global 1/12° GLORYS12v1 reanalysis, integrated through a
+2-day spin-up for dynamical adjustment, then run forward as a 5-day forecast —
+repeated every 2 days in a rolling cycle for continuous coverage.
+
+Every component in the documentation is cross-referenced to the
+OceanPrediction DCC Architecture process it implements, so what you learn here
+maps directly onto real operational systems.
+
+## Regions
+
+SEA-FORWARD ships with three contrasting African test configurations, chosen
+because each poses a different forecasting challenge:
+
+- **Canary Upwelling System** — one of the four major Eastern Boundary Upwelling
+  Systems, driven by trade winds along Northwest Africa. Highly variable
+  wind-driven coastal upwelling, mesoscale eddies and offshore filaments.
+- **Inner Gulf of Guinea** — equatorial seasonal upwelling, sensitive to remote
+  forcing from the Atlantic Niño and to coupled atmosphere-ocean feedbacks.
+- **Agulhas Current System** — the strongest western boundary current in the
+  Southern Hemisphere, with large-amplitude meanders, retroflection and ring
+  shedding.
+
+See the [region gallery](phase7/) for what is available today.
+
+## Two ways in
+
+| | **Direct Access** | **Component Access** |
+|---|---|---|
+| What you get | A containerized, ready-to-run forecasting system plus the analysis tools, driven from a local JupyterLab server | The full SEA-FORWARD repository: tools to fetch the model and data, prepare inputs, run forecasts, validate and analyse |
+| Best for | Getting a result quickly, and for teaching | Learning how the system is actually built; running at full speed |
+| Trade-off | Runs on a single processor, so expect longer run times | You build each piece yourself |
+
+Most users working through the phases below are on the Component Access path.
+
+## Requirements at a glance
+
+- **Minimum:** 4-core CPU, 8 GB RAM, 50 GB free disk
+- **Comfortable:** 8-core CPU, 16 GB RAM — canonical run completes in under 30 minutes
+- **OS:** Ubuntu 20.04+ (primary), CentOS 7+, macOS 12+; Windows via WSL2
+- **You should know:** basic Linux and Python, and have a physical oceanography background
+- **Time:** a user with that background should complete installation and a first run within one working day
+
+Grids up to roughly 128×128 run comfortably on a standard laptop or desktop. Higher resolutions need a multicore machine.
+
+## Where to start
+
+!!! tip "New here?"
+    Read this page, then go to **[Quickstart](quickstart/)** to get a forecast
+    running with the least friction. Come back to Phase 1 when you want to
+    build the full stack yourself.
+
+| If you want to… | Go to |
+|---|---|
+| See a forecast run, fast | [Quickstart](quickstart/) |
+| Set up a machine from scratch | [Phase 1 — Setup](phase1/01_setup.md) |
+| Configure a forecast | [Phase 2](phase2/02_forecast_config.md) |
+| Run forecasts, manually or automated | [Phase 3](phase3/03_forecast.md) |
+| Build and run a hindcast | [Phase 4](phase4/04_hindcast.md) |
+| Post-process and validate results | [Phase 5](phase5/05_postprocessing.md) |
+| Increase resolution with nesting | [Phase 6](phase6/06_nesting.md) |
+| Start from a ready-made region | [Phase 7 — Region gallery](phase7/07_regions.md) |
+
+## Context: the OPERA Capacity Development Activities
+
+SEA-FORWARD is delivered under **Task 1.3** of the **OPERA (Ocean Prediction
+Enhancement in Regions of Africa) Capacity Development Activities** — a 38-month
+initiative led by the **ICMPA-UNESCO Chair** (Université d'Abomey-Calavi, Benin)
+and the **Gulf of Guinea Ocean Sciences Summer School (GGOSSS)**.
+
+OPERA is a five-year project implemented by **Mercator Ocean International**,
+funded by the **European Union** as part of the **Arc X programme**, and framed
+within the **OceanPrediction Decade Collaborative Centre (DCC)**. Its purpose is
+to strengthen regional, pan-African and international cooperation for the
+development of ocean forecasting systems, services and applications.
+
+OPERA serves three audiences — the general public, intermediate-level
+practitioners, and advanced-level developers — structured around the
+OceanPrediction DCC *virtuous loop*, which moves through four thematic periods:
+
+1. Fundamentals of Ocean Forecasting
+2. Building an Ocean Forecasting System
+3. Operating an Ocean Forecasting Service
+4. Applications and Digital Twins
+
+**SEA-FORWARD is the advanced-level entry point into that loop.** It deliberately
+implements OceanPrediction-A — a single deterministic run without data
+assimilation — because that exposes the full value chain without the added
+complexity of observational ingestion or ensemble methods. The architecture
+keeps clear hook points for future progression to OceanPrediction-B (data
+assimilation) and for CROCO-AGRIF nesting.
+
+## Partners
+
+| | |
+|---|---|
+| **Project owner / implementer** | Mercator Ocean International |
+| **Funder** | European Union — Arc X programme |
+| **Lead institutions** | ICMPA-UNESCO Chair, Université d'Abomey-Calavi (Benin); Gulf of Guinea Ocean Sciences Summer School (GGOSSS) |
+| **Framework** | OceanPrediction Decade Collaborative Centre (DCC) |
+| **Ocean model** | CROCO — Coastal and Regional Ocean COmmunity model |
+| **Data sources** | Copernicus Climate Data Store (ERA5); CMEMS / GLORYS12v1 (Mercator Ocean International); GEBCO |
+
+![Global Gateway · Funded by the European Union · OceanPrediction UN Decade Collaborative Centre · Mercator Ocean International · Gulf of Guinea Ocean Sciences Summer School (GGOSSS) · Université d'Abomey-Calavi · CIPMA – Chaire UNESCO](assets/mooc-footer.png)
+
+## Learn more
+
+- [OceanPrediction DCC Architecture Guide](https://doi.org/10.48670/oofsarchitecture) — Alvarez Fanjul et al.
+- [ETOOFS Guide](https://www.unoceanprediction.org/en/resources/etoofs-guide)
+- [Ocean Rating List (ORL) Guide](https://www.unoceanprediction.org/en/resources/orl)
+- [CROCO Ocean Engine](https://www.croco-ocean.org/)
+- [CF Conventions v1.8](https://cfconventions.org)
+
+## Citing and licence
+
+SEA-FORWARD is released under an open-source licence, with input data and reference results archived on Zenodo with permanent DOIs. See [LICENSE](https://github.com/) and the citation guidance in the repository.
+
+<!-- TODO: replace with the real repository URL, licence name and DOI once issued -->
