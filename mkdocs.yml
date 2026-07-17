@@ -2,13 +2,14 @@ site_name: Sea-Forward Documentation
 docs_dir: docs
 theme:
   name: rtd-dropdown
+  custom_dir: overrides
   logo: assets/logo.webp
   features:
     - navigation.collapse
     #- navigation.top
     - navigation.instant
     #- content.code.copy
-    - navigation.footer
+    #- navigation.footer
 #extra:
 #  social:
 #    - icon: material/file-pdf-box

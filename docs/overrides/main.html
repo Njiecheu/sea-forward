@@ -2,13 +2,11 @@
 
 {% block content %}
   {{ super() }}
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const pdfLinks = document.querySelectorAll('a[href$=".pdf"]');
-      pdfLinks.forEach(link => {
-        link.insertAdjacentHTML('afterend', '<span style="margin-left: 5px;">(Télécharger la documentation)</span>');
-      });
-    });
-  </script>
+{% endblock %}
+
+{% block footer %}
+  <div style="text-align:center; padding:10px;">
+    <img src="../img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
+    <p>© {{ config.site_name }} {{ now().year }} — Documentation générée avec MkDocs</p>
+  </div>
 {% endblock %}
