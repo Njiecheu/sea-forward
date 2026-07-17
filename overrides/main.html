@@ -7,3 +7,16 @@
     <p>© {{ config.extra.year }} Sea-Forward — Documentation générée avec MkDocs</p>
   </div>
 {% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Collapse all navigation items by default
+      const details = document.querySelectorAll('nav details');
+      details.forEach(detail => {
+        detail.removeAttribute('open');
+      });
+    });
+  </script>
+{% endblock %}
