@@ -22,6 +22,9 @@ extra:
       <p>© {{ now().year }} Sea-Forward — Documentation générée avec MkDocs</p>
     </div>
 
+hooks:
+  - docs/hooks.py
+
 extra_css:
   - css/syntax_custom.css
   - css/extra.css
