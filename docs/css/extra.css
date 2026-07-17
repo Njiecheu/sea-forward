@@ -4,6 +4,26 @@
   margin-left: 5px;
 }*/
 /* css/extra.css */
+
+/* Collapse all navigation levels by default */
 .wy-menu-vertical li.toctree-l1 > ul {
   display: none;
+}
+.wy-menu-vertical li.toctree-l2 > ul {
+  display: none;
+}
+.wy-menu-vertical li.toctree-l3 > ul {
+  display: none;
+}
+
+/* Show submenu only for current/active sections */
+.wy-menu-vertical li.toctree-l1.current > ul,
+.wy-menu-vertical li.toctree-l2.current > ul,
+.wy-menu-vertical li.toctree-l3.current > ul {
+  display: block;
+}
+
+/* Alternative: Apply to all li elements with 'current' class */
+.wy-menu-vertical li.current > ul {
+  display: block;
 }
