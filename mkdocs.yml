@@ -24,7 +24,7 @@ extra:
     </div>
 
 hooks:
-  - docs/hooks.py
+  - hooks.py
 
 extra_css:
   - css/syntax_custom.css
