@@ -114,15 +114,21 @@ pre code.hljs {
 
 /* Réduit la largeur de la sidebar */
 .wy-nav-side {
-    width: 290px;   /* défaut généralement ~300px — ajuste selon le rendu voulu */
+    width: 315px;   /* défaut généralement ~300px — ajuste selon le rendu voulu */
 }
 
 /* Décale le contenu principal pour compenser la nouvelle largeur */
 .wy-nav-content-wrap {
-    margin-left: 290px;   /* doit correspondre exactement à la largeur ci-dessus */
+    margin-left: 315px;   /* doit correspondre exactement à la largeur ci-dessus */
 }
 
 /* Si le thème limite aussi la largeur max du bloc de contenu central */
 .wy-nav-content {
     max-width: none;   /* optionnel : retire la limite si tu veux profiter de l'espace gagné */
+}
+
+/* Empêche la sidebar de changer de largeur visuelle selon l'apparition de la scrollbar */
+.wy-side-scroll {
+    overflow-y: scroll;        /* toujours réserver l'espace de la scrollbar, même sans contenu débordant */
+    scrollbar-gutter: stable;  /* équivalent moderne, pris en compte par les navigateurs récents */
 }
