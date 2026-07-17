@@ -1,10 +1,3 @@
-/*a[href$=".pdf"]::after {
-  content: " (Télécharger PDF)";
-  font-size: 0.8em;
-  margin-left: 5px;
-}*/
-/* css/extra.css */
-
 /* Collapse all navigation levels by default */
 .wy-menu-vertical li.toctree-l1 > ul {
   display: none;
@@ -28,8 +21,3 @@
   display: block;
 }
 
-/* Force Phase 1 and Phase 7 to stay collapsed */
-.wy-menu-vertical li:has(> a:contains("Phase 1")) > ul,
-.wy-menu-vertical li:has(> a:contains("Phase 7")) > ul {
-  display: none !important;
-}
