@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block footer %}
+  {{ super() }}
   <div style="text-align:center; padding:10px;">
     <img src="{{ base_url }}/img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
     <p>© {{ config.extra.year }} Sea-Forward — Documentation générée avec MkDocs</p>

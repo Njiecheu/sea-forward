@@ -8,8 +8,10 @@ theme:
     - navigation.collapse
     #- navigation.top
     - navigation.instant
+    - navigation.footer
     #- content.code.copy
     #- navigation.footer
+
 #extra:
 #  social:
 #    - icon: material/file-pdf-box
