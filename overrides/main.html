@@ -7,3 +7,22 @@
     <p>© {{ config.extra.year }} Sea-Forward — Documentation générée avec MkDocs</p>
   </div>
 {% endblock %}
+
+{% block scripts %}
+  {{ super() }}
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Force Phase 1 and Phase 7 to stay collapsed
+      const menuItems = document.querySelectorAll('.wy-menu-vertical li.toctree-l1');
+      menuItems.forEach(item => {
+        const link = item.querySelector('> a');
+        if (link && (link.textContent.includes('Phase 1') || link.textContent.includes('Phase 7'))) {
+          const submenu = item.querySelector('> ul');
+          if (submenu) {
+            submenu.style.display = 'none';
+          }
+        }
+      });
+    });
+  </script>
+{% endblock %}

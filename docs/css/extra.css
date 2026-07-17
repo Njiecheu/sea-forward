@@ -27,3 +27,9 @@
 .wy-menu-vertical li.current > ul {
   display: block;
 }
+
+/* Force Phase 1 and Phase 7 to stay collapsed */
+.wy-menu-vertical li:has(> a:contains("Phase 1")) > ul,
+.wy-menu-vertical li:has(> a:contains("Phase 7")) > ul {
+  display: none !important;
+}
