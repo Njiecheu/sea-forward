@@ -17,3 +17,13 @@
 .navtree.label {
     cursor: pointer;
 }
+
+/* Neutralise le !important natif du thème qui verrouillait "current" en display:block */
+.wy-menu-vertical ul.tocbase ul.navtree.current {
+    display: none !important;
+}
+
+/* Notre propre système reprend la main : seul js-open détermine l'ouverture */
+.wy-menu-vertical ul.tocbase ul.navtree.js-open {
+    display: block !important;
+}
