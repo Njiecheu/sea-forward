@@ -4,19 +4,24 @@ theme:
   name: rtd-dropdown
   logo: assets/logo.webp
   features:
-    #- navigation.sections
+    features:
     - navigation.collapse
-    #- navigation.expand #garde la section active
-    - navigation.top  
-    #- navigation.tabs
+    #- navigation.top
     - navigation.instant
-    - content.code.copy
+    #- content.code.copy
     - navigation.footer
 #extra:
 #  social:
 #    - icon: material/file-pdf-box
 #      link: /pdf/documentation.pdf
 #      name: Télécharger en PDF
+
+extra:
+  footer: |
+    <div style="text-align:center; padding:10px;">
+      <img src="../docs/img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
+      <p>© {{ now().year }} Sea-Forward — Documentation générée avec MkDocs</p>
+    </div>
 
 extra_css:
   - css/syntax_custom.css
