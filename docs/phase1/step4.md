@@ -10,67 +10,59 @@ _If you haven't done this yet, please follow these instructions:_
 
 1. Generate an SSH key (choose depending on your Operating System):
      - **On Linux and Mac os:** Open the terminal and run these commands:
-
      ```bash
      ssh-keygen -t ed25519 -C "your_email@example.com"
      ```
 
 **Example Output:**
-
-     ```text
-     Generating public/private ed25519 key pair.
-     Enter file in which to save the key (/home/user/.ssh/id_ed25519): [Press Enter]
-     Enter passphrase (empty for no passphrase): [Press Enter]
-     Enter same passphrase again: [Press Enter]
-     Your identification has been saved in /home/user/.ssh/id_ed25519
-     Your public key has been saved in /home/user/.ssh/id_ed25519.pub
-     ```
+```text
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/user/.ssh/id_ed25519): [Press Enter]
+Enter passphrase (empty for no passphrase): [Press Enter]
+Enter same passphrase again: [Press Enter]
+Your identification has been saved in /home/user/.ssh/id_ed25519
+Your public key has been saved in /home/user/.ssh/id_ed25519.pub
+```
 
 Then, display the generated key:
-
-     ```bash
-     cat ~/.ssh/id_ed25519.pub
-     ```
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
 
 **Example Output:**
+```text
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP... your_email@example.com
+```
 
-     ```text
-     ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP... your_email@example.com
-     ```
+- Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
 
-     - Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
-
-     - **On Windows (using WSL):**
+- **On Windows (using WSL):**
      Open the **Ubuntu** terminal you configured in Section 1 and run these commands:
-
-     ```bash
-     ssh-keygen -t ed25519 -C "your_email@example.com"
-     ```
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
 
 **Example Output:**
-
-          ```text
-          Generating public/private ed25519 key pair.
-          Enter file in which to save the key (/home/user/.ssh/id_ed25519): [Press Enter]
-          Enter passphrase (empty for no passphrase): [Press Enter]
-          Enter same passphrase again: [Press Enter]
-          Your identification has been saved in /home/user/.ssh/id_ed25519
-          Your public key has been saved in /home/user/.ssh/id_ed25519.pub
-          ```
+```text
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/user/.ssh/id_ed25519): [Press Enter]
+Enter passphrase (empty for no passphrase): [Press Enter]
+Enter same passphrase again: [Press Enter]
+Your identification has been saved in /home/user/.ssh/id_ed25519
+Your public key has been saved in /home/user/.ssh/id_ed25519.pub
+```
 
 Then, display the generated key:
-
-          ```bash
-          cat ~/.ssh/id_ed25519.pub
-          ```
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
 
 **Example Output:**
+```text
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP... your_email@example.com
+```
 
-          ```text
-          ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP... your_email@example.com
-          ```
-
-     - Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
+- Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
 
 2. Add the key to GitHub:
    - Open Settings on your GitHub account
