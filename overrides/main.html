@@ -11,14 +11,26 @@
 {% block scripts %}
   {{ super() }}
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Phase 1 et Phase 7 démarrent fermées, mais restent cliquables ensuite
-      const menuItems = document.querySelectorAll('.wy-menu-vertical li.toctree-l1');
-      menuItems.forEach(item => {
-        const link = item.querySelector('> a');
-        if (link && (link.textContent.includes('Phase 1') || link.textContent.includes('Phase 7'))) {
-          item.classList.remove('current');
-        }
+    document.addEventListener('DOMContentLoaded', function () {
+      const sections = document.querySelectorAll('.wy-menu-vertical li.toctree-l1');
+
+      sections.forEach(function (item) {
+        const submenu = item.querySelector('> ul');
+        if (!submenu) return; // pas de sous-menu, rien à déplier
+
+        const header = item.querySelector('> a') || item.querySelector('> span');
+        if (!header) return;
+
+        header.addEventListener('click', function (e) {
+          const href = header.getAttribute('href');
+          const isRealLink = header.tagName === 'A' && href && href !== '#';
+
+          if (!isRealLink) {
+            e.preventDefault(); // évite un saut de page inutile si c'est juste un titre de catégorie
+          }
+
+          item.classList.toggle('menu-open');
+        });
       });
     });
   </script>

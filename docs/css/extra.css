@@ -1,23 +1,38 @@
-/* Collapse all navigation levels by default */
+/* =========================================================
+   Sidebar — collapse des phases (niveau 1) au clic
+   ========================================================= */
+
+/* Collapse toutes les phases (niveau 1) par défaut */
 .wy-menu-vertical li.toctree-l1 > ul {
-  display: none;
+    display: none;
 }
+
+/* Affiche uniquement la phase actuellement ouverte
+   (classe posée par notre JS dans main.html, indépendante
+   de la classe "current" native de MkDocs) */
+.wy-menu-vertical li.toctree-l1.menu-open > ul {
+    display: block;
+}
+
+/* Curseur "cliquable" sur les titres de phase */
+.wy-menu-vertical li.toctree-l1 > a,
+.wy-menu-vertical li.toctree-l1 > span {
+    cursor: pointer;
+}
+
+/* =========================================================
+   Sidebar — niveaux plus profonds (2 et 3)
+   Comportement automatique : suit la page active
+   ========================================================= */
+
 .wy-menu-vertical li.toctree-l2 > ul {
-  display: none;
+    display: none;
 }
 .wy-menu-vertical li.toctree-l3 > ul {
-  display: none;
+    display: none;
 }
 
-/* Show submenu only for current/active sections */
-.wy-menu-vertical li.toctree-l1.current > ul,
 .wy-menu-vertical li.toctree-l2.current > ul,
 .wy-menu-vertical li.toctree-l3.current > ul {
-  display: block;
+    display: block;
 }
-
-/* Alternative: Apply to all li elements with 'current' class */
-.wy-menu-vertical li.current > ul {
-  display: block;
-}
-
