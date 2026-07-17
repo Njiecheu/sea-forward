@@ -12,24 +12,15 @@
   {{ super() }}
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const sections = document.querySelectorAll('.wy-menu-vertical li.toctree-l1');
+      document.querySelectorAll('li.navtree.label').forEach(function (label) {
+        var groupLi = label.nextElementSibling;
+        if (!groupLi || !groupLi.classList.contains('group')) return;
 
-      sections.forEach(function (item) {
-        const submenu = item.querySelector('> ul');
-        if (!submenu) return; // pas de sous-menu, rien à déplier
+        var submenu = groupLi.querySelector(':scope > ul.navtree');
+        if (!submenu) return;
 
-        const header = item.querySelector('> a') || item.querySelector('> span');
-        if (!header) return;
-
-        header.addEventListener('click', function (e) {
-          const href = header.getAttribute('href');
-          const isRealLink = header.tagName === 'A' && href && href !== '#';
-
-          if (!isRealLink) {
-            e.preventDefault(); // évite un saut de page inutile si c'est juste un titre de catégorie
-          }
-
-          item.classList.toggle('menu-open');
+        label.addEventListener('click', function () {
+          submenu.classList.toggle('js-open');
         });
       });
     });

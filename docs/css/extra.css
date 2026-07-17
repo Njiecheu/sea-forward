@@ -1,38 +1,19 @@
 /* =========================================================
-   Sidebar — collapse des phases (niveau 1) au clic
+   Sidebar — collapse générique de tous les groupes (toutes phases, tous niveaux)
    ========================================================= */
 
-/* Collapse toutes les phases (niveau 1) par défaut */
-.wy-menu-vertical li.toctree-l1 > ul {
+/* Collapse par défaut tous les sous-menus */
+.navtree.group > ul.navtree {
     display: none;
 }
 
-/* Affiche uniquement la phase actuellement ouverte
-   (classe posée par notre JS dans main.html, indépendante
-   de la classe "current" native de MkDocs) */
-.wy-menu-vertical li.toctree-l1.menu-open > ul {
+/* Affiche le sous-menu si : chemin actif (posé par MkDocs) OU ouvert manuellement (posé par notre JS) */
+.navtree.group > ul.navtree.current,
+.navtree.group > ul.navtree.js-open {
     display: block;
 }
 
-/* Curseur "cliquable" sur les titres de phase */
-.wy-menu-vertical li.toctree-l1 > a,
-.wy-menu-vertical li.toctree-l1 > span {
+/* Titre de groupe cliquable */
+.navtree.label {
     cursor: pointer;
-}
-
-/* =========================================================
-   Sidebar — niveaux plus profonds (2 et 3)
-   Comportement automatique : suit la page active
-   ========================================================= */
-
-.wy-menu-vertical li.toctree-l2 > ul {
-    display: none;
-}
-.wy-menu-vertical li.toctree-l3 > ul {
-    display: none;
-}
-
-.wy-menu-vertical li.toctree-l2.current > ul,
-.wy-menu-vertical li.toctree-l3.current > ul {
-    display: block;
 }
