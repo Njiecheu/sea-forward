@@ -4,7 +4,6 @@ theme:
   name: rtd-dropdown
   logo: assets/logo.webp
   features:
-    features:
     - navigation.collapse
     #- navigation.top
     - navigation.instant
@@ -19,7 +18,7 @@ theme:
 extra:
   footer: |
     <div style="text-align:center; padding:10px;">
-      <img src="../docs/img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
+      <img src="/img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
       <p>© {{ now().year }} Sea-Forward — Documentation générée avec MkDocs</p>
     </div>
 
