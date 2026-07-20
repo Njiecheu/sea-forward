@@ -170,3 +170,26 @@ nav:
       - Gulf of Guinea — `IGOG_12` (1/12°): phase7/guinea.md
       - Agulhas — `Agulhas_12` (1/12°) — *coming soon*: phase7/agulhas.md
       - The pattern — what always changes vs stays the same: phase7/pattern.md
+  - Phase 8 — AGRIF nesting:
+      - Phase 8 — Overview: phase8/08_agrif.md
+      - Why bother — what two-way actually buys you: phase8/bother.md
+      - The hard constraints: phase8/constraint.md
+      - Step 1 — Choose the child box, and check it against the mask: phase8/step1.md
+      - Step 2 — Build the child grid: phase8/step2.md
+      - Step 3 — Build the child's initial condition: phase8/step3.md
+      - Step 4 — Assemble the run directory: phase8/step4.md
+      - Step 5 — `croco.in.1`, the child's runtime settings: phase8/step5.md
+      - Step 6 — Turn AGRIF on and compile: phase8/step6.md
+      - Step 7 — Run it (one-way): phase8/step7.md
+      - Step 8 — Switch to two-way, and measure it: phase8/step8.md
+      - Worked example 2 — a coastal child: phase8/example.md
+      - Gotchas — the short list: phase8/gotchas.md
+      - What this chapter does not cover: phase8/chapter.md
+  - Phase 9 — Worked example — Agulhas, from nothing to a nested forecast:
+      - Phase 9 — Overview: phase9/09_agulhas.md
+      - Phase A — the parent: phase9/phaseA.md
+      - Phase B — the AGRIF child: phase9/phaseB.md
+      - Phase C — the driver: phase9/phaseC.md
+      - Checking the nested run: phase9/checking.md
+      - The numbers, collected: phase9/numbers.md
+      - What Agulhas taught that IGOG didn't: phase9/taught.md
