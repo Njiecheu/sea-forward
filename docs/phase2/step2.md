@@ -1,3 +1,7 @@
+![build progress](../img/wf_02_grid.png)
+
+*Step 2 builds the **model grid** from bathymetry (ETOPO2) and coastline (GSHHS).*
+
 ```bash
 cd ${CROCO_PYTOOLS_DIR}/prepro
 python3 make_grid.py ${CONFIG_DIR}/grid.ini 2>&1 | tail -20

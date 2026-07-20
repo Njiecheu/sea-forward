@@ -1,3 +1,5 @@
+![build progress](../img/wf_04_param.png)
+
 This file tells the tools that build the initial and boundary conditions about
 your grid. The CLI reads it from the folder you point `make_ini`/`make_bry` at
 (your `CROCO_FILES`). Create and edit it:

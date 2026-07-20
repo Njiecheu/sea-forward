@@ -1,46 +1,28 @@
-`param.h` tells the model how big your grid is — and this must match
-`croco_grd.nc`. Open it:
+`jobcomp` is the build script; it needs to know where CROCO's source code is.
+Open it:
 
 ```bash
-nano param.h
+nano jobcomp
 ```
 
-`Ctrl-W`, type `YOUR REGIONAL CONFIG`, Enter. You'll land near this block:
+`Ctrl-W`, type `SOURCE1=`, Enter. You'll find:
 
 ```
-#  elif defined GIBRALTAR_VHR5
-       parameter (LLm0=348, MMm0=198,  N=40)
-# else
-      parameter (LLm0=xx,   MMm0=xx,   N=xx)   ! YOUR REGIONAL CONFIG
-# endif
+SOURCE1=../croco/OCEAN
 ```
 
-Add a new branch **just above the `# else` line**, so the block becomes:
+Change it to your actual source path (the clean new-repo path):
 
 ```
-#  elif defined GIBRALTAR_VHR5
-       parameter (LLm0=348, MMm0=198,  N=40)
-# elif defined  CANARY_12
-      parameter (LLm0=79,   MMm0=121,   N=50)   ! Canary_12  81x123
-# else
-      parameter (LLm0=xx,   MMm0=xx,   N=xx)   ! YOUR REGIONAL CONFIG
-# endif
+SOURCE1=/home/<you>/seaforward/code/croco/OCEAN
 ```
 
-**What:** this tells the model your grid is 79×121 (interior points) with 50
-vertical levels. **Why:** the numbers come from Step 2 (`xi_rho=81 → LLm0=79`,
-`eta_rho=123 → MMm0=121`), and `N=50` matches your `sigma_params`. The name
-`CANARY_12` must be **identical** to the one you set in `cppdefs.h`.
+(Replace `<you>` with your username, or write `${HOME}/seaforward/code/croco/OCEAN`.)
 
-!!! warning
-    ⚠️ **WATCH — the new `# elif` goes ABOVE `# else`, never below it.** An `# elif` after `# else` is a compile error. Put your two lines between the `GIBRALTAR_VHR5` block and the `# else`.
+**What:** tells the compiler where the model's `.F` source files are. **Why:** the
+default `../croco/OCEAN` is a relative path that doesn't exist in your layout.
+`jobcomp` finds the NetCDF library automatically via `nf-config` (which points at
+`opt_seq` after you sourced `env.sh`), so there are **no NetCDF paths to
+hand-edit**.
 
-Save (`Ctrl-O`, Enter), exit (`Ctrl-X`), and verify the model will pick up your
-numbers:
-
-```bash
-cpp -DREGIONAL -DCANARY_12 param.h 2>/dev/null | grep "parameter (LLm0" | head
-```
-
-!!! check
-    ✅ **CHECK** — it prints `parameter (LLm0=79, MMm0=121, N=50)` (your numbers). If it shows `xx` or a BENGUELA number, your branch name or placement is off — reopen and fix.
+Save (`Ctrl-O`, Enter), exit (`Ctrl-X`).

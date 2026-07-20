@@ -105,17 +105,19 @@ nav:
       - Step 1 — Create the grid definition: phase2/step1.md
       - Step 2 — Build the grid (run), then read its real size: phase2/step2.md
       - Step 3 — Look at the land and decide your boundaries: phase2/step3.md
-      - Step 4 — Write `crocotools_param.py` BY HAND: phase2/step4.md
-      - Step 5 — Prepare the data (run the five CLI commands) : phase2/step5.md
-      - Step 6 — Fix the GFS longitudes: phase2/step6.md
-      - Step 7 — Copy the CROCO source files you'll edit: phase2/step7.md
-      - Step 8 — Edit `cppdefs.h` BY HAND: phase2/step8.md
-      - Step 9 — Edit `param.h` BY HAND: phase2/step9.md
-      - Step 10 — Edit `croco.in` BY HAND: phase2/step10.md
-      - Step 11 — Edit `jobcomp` BY HAND: phase2/step11.md
-      - Step 12 — Compile: phase2/step12.md
-      - Step 13 — Run it once to prove the config: phase2/step13.md
+      - Step 4 — Write `crocotools_param.py`: phase2/step4.md
+      - Step 5 — Prepare the data: phase2/step5.md
+      - Step 6 — Copy the CROCO source files you'll edit: phase2/step6.md
+      - Step 7 — Edit `cppdefs.h` (the model's "features" switches): phase2/step7.md
+      - Step 8 — Edit `param.h` (the grid size): phase2/step8.md
+      - Step 9 — Edit `jobcomp` (where the source lives): phase2/step9.md
+      - Step 10 — Compile (build the program): phase2/step10.md
+      - Step 11 — Edit `croco.in` (the config-specific run settings): phase2/step11.md
+      - Step 12 — Run it once to prove the config: phase2/step12.md
+      #- Step 13 — Run it once to prove the config: phase2/step13.md
       - What you have now: phase2/now.md
+      - Going further — the AGRIF nest: phase2/further.md
+      - Toward an operational workflow: phase2/toward.md
       - What you change for your own region: phase2/change.md
       - The consistency rules to remember: phase2/consistency.md
   - Phase 3 — Running a Forecast: 

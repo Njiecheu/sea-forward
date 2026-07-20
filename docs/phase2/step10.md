@@ -1,54 +1,40 @@
-`croco.in` is the model's run recipe. For the **common** preparation you set only
-the config-specific values here; the run-length, initial/boundary file names, and
-the online path are set when you actually run (Phase 3's manual test, or the
-operational driver, patch them). Open it:
+![build progress](../img/wf_12_compile.png)
+
+*Step 10 **compiles** the model into a runnable program.*
+
+This turns the source + your compile-time files into an executable called `croco`.
+It's a command, not an edit — but one detail matters a lot.
+
+First, **stage** the three compile-time files from the recipe folder into the run
+folder (where the build happens). `croco.in` is *not* needed yet — it's a run-time
+file, edited next in Step 11 — so only these three go in now:
 
 ```bash
-nano croco.in
+cd ${FCAST}
+cp ${CONFIG_DIR}/{cppdefs.h,param.h,jobcomp} .
 ```
 
-### 10.1 — Title
-
-`Ctrl-W`, `BENGUELA TEST`, Enter. Change the title line to your config's name:
-
-```
-        CANARY_12 FORECAST
-```
-
-Cosmetic, but keeps configs identifiable.
-
-### 10.2 — The S-coordinate (check it matches)
-
-`Ctrl-W`, `S-coord`, Enter. The line below should read:
-
-```
-           7.0d0     2.0d0      200.0d0
-```
-
-**Confirm** it's `7.0 / 2.0 / 200.0` — these are `theta_s / theta_b / hc`, and
-they **must equal** your `sigma_params` from Step 4. The template usually already
-has these — check, don't assume.
-
-### 10.3 — The sponge (remove the placeholders)
-
-`Ctrl-W`, `X_SPONGE`, Enter. The line **below** the header may show `XXX  XXX`.
-Change it to real numbers:
-
-```
-                    50000.            400.
-```
-
-**What:** a 50 km "sponge" band near the open boundaries that absorbs outgoing
-waves so they don't reflect back inward. `50000.` is its width in metres (≈5–6
-cells at 1/12°); `400.` is the peak viscosity (m²/s). **Why:** the template
-leaves `XXX` placeholders that would make CROCO error — you must set real values.
-(Finer grids use smaller numbers.)
-
-Save (`Ctrl-O`, Enter), exit (`Ctrl-X`), and confirm no placeholder remains:
+Then set the compile environment and build. **Compile outside conda** so the
+system linker uses your `opt_seq` NetCDF, not conda's:
 
 ```bash
-grep -n "XXX" croco.in && echo "STILL HAS XXX — fix it" || echo "no XXX left — good"
+conda deactivate                 # leave conda for the link step
+source ~/seaforward/env.sh       # ensures opt_seq's nf-config + compilers are set
+which nf-config                  # must show .../seaforward/opt_seq/bin/nf-config
+./jobcomp 2>&1 | tee compile.log | tail -40
 ```
 
-!!! note
-    The `time_stepping`, `initial`, `boundary`, and `online` lines are set at run time (Phase 3). The many `diagnostics`, `floats`, `stations`, `psource`, `sediment`, `biology`, `wkb_*` sections are inert unless their CPP switch is on, so you can ignore them for this configuration.
+**Why `conda deactivate` first:** conda ships its own NetCDF, and if it's ahead
+on the path the build fails with a confusing `libcurl` / `CURL_OPENSSL` error.
+Leaving conda lets the system linker use your `opt_seq` build. Sourcing `env.sh`
+keeps `opt_seq/bin` on `PATH` and the compilers set.
+
+!!! warning
+    ⚠️ **WATCH — `which nf-config` must show `opt_seq`, not a conda path.** If it shows conda, run `conda deactivate`, `source ~/seaforward/env.sh`, and re-check before `./jobcomp`.
+
+!!! check
+    ✅ **CHECK** — after a few minutes you see the CROCO ASCII logo and **`CROCO is OK`**, and a `croco` program appears:
+
+```bash
+ls -lh ${FCAST}/croco
+```

@@ -17,10 +17,9 @@ conda activate seaforward                  # the Python tools
 - `track.sh` sets the **per-track** variables — where configs and runs live:
   - `forecast/track.sh` → `CROCO_CONFIGS_ROOT=…/forecast/configs`,
     `CROCO_RUNS_ROOT=…/forecast/scratch`
-  - `hindcast/track.sh` → the same under `…/hindcast/`
 
-!!! note
-    **Why a track?** The repo keeps forecast and hindcast fully separate so their configs and runs never mix. Sourcing a `track.sh` is how you say which one you're working on. This document uses the **forecast** track; a hindcast of the same region uses `hindcast/track.sh` and lives entirely under `hindcast/`.
+!!! important
+    **Why a track?** Sourcing `forecast/track.sh` sets the paths for the forecast workflow — configs under `forecast/configs`, runs under `forecast/scratch`. This document uses the **forecast** track throughout.
 
 Now set **your region** (the only numbers you change for a different region):
 
@@ -54,8 +53,8 @@ tools that interpolate global data onto your grid need data slightly *beyond*
 your grid edges. If the download box is too tight, `make_ini`/`make_bry` fail
 with "extents not sufficient."
 
-!!! warning
+!!! warning 
     ⚠️ **WATCH — the region variables live only in this terminal.** The scripts below read them; if one is missing, a tool guesses a wrong path and stops. If you open a fresh terminal later, re-run the whole Step 0 block first (the ritual **and** the region variables).
 
-!!! note
+!!! important
     **`bc -l` for the resolution.** We compute `1/12` with `bc -l` so you never hand-round it to `0.0833`. The full-precision value is what makes the grid come out to the expected point count.

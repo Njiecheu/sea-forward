@@ -17,9 +17,7 @@ forecast/scratch/Canary_12/
 └── downloaded_data/            # Mercator + GFS (+ for_croco forcing)
 ```
 
-!!! note
-    **Next:** Phase 3 — *Running a Forecast*. Part A there is simply this single run you just did; Part B is the automated operational driver (2-day spin-up + 5-day forecast). If you're doing a hindcast, Phase 4 reuses everything here and swaps the data source (GLORYS + ERA5) and the track.
-
-!!! important
-    **If this is a new region (not Canary_12):** the operational driver(`forecast/run_forecast_today.sh`) is provided set up for Canary_12. Before you run it in Phase 3, update its `CONFIG_NAME`, `EXTENTS` (your download box), and `FIX_GFS_LON` to match the config you just built — otherwise it runs Canary_12, not your region. Details in Phase 3 §B.4.
-
+**Next:** the raw output is CROCO NetCDF (`croco_his.nc`, `croco_avg.nc`), and a
+restart file (`croco_rst.nc`) that can seed a subsequent run. Turning those raw
+files into plots and CF-compliant products is **postprocessing**, covered in its
+own chapter.
