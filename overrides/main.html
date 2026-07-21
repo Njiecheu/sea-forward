@@ -1,40 +1,45 @@
 {% extends "base.html" %}
 
 {% block footer %}
-  {{ super() }}
-  <div style="text-align:center; padding:10px;">
-    <img src="{{ base_url }}/img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
-    <p>© {{ config.extra.year }} Sea-Forward — Documentation générée avec MkDocs</p>
-  </div>
+{{ super() }}
+<div style="text-align:center; padding:10px;">
+  <img src="{{ base_url }}/img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
+  <p>© {{ config.extra.year }} Sea-Forward — Documentation générée avec MkDocs</p>
+</div>
 {% endblock %}
 
 {% block libs %}
-  {{ super() }}
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelectorAll('li.navtree.label').forEach(function (label) {
-        var groupLi = label.nextElementSibling;
-        if (!groupLi || !groupLi.classList.contains('group')) return;
+{{ super() }}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 1. Au chargement : ouvre automatiquement la phase qui contient la page active
+    document.querySelectorAll('li.navtree.group > ul.navtree.current').forEach(function (submenu) {
+      submenu.classList.add('js-open');
+    });
 
-        var submenu = groupLi.querySelector(':scope > ul.navtree');
-        if (!submenu) return;
+    // 2. Attache le comportement accordéon au clic sur chaque titre
+    document.querySelectorAll('li.navtree.label').forEach(function (label) {
+      var groupLi = label.nextElementSibling;
+      if (!groupLi || !groupLi.classList.contains('group')) return;
 
-        label.addEventListener('click', function () {
-          var isTopLevelPhase = groupLi.classList.contains('toctree-l1');
-          var willOpen = !submenu.classList.contains('js-open');
+      var submenu = groupLi.querySelector(':scope > ul.navtree');
+      if (!submenu) return;
 
-          if (isTopLevelPhase) {
-            // Ferme toutes les autres phases (niveau 1) avant d'ouvrir celle-ci
-            document.querySelectorAll('li.navtree.group.toctree-l1 > ul.navtree.js-open').forEach(function (openSubmenu) {
-              if (openSubmenu !== submenu) {
-                openSubmenu.classList.remove('js-open');
-              }
-            });
-          }
+      label.addEventListener('click', function () {
+        var isTopLevelPhase = groupLi.classList.contains('toctree-l1');
+        var willOpen = !submenu.classList.contains('js-open');
 
-          submenu.classList.toggle('js-open', willOpen);
-        });
+        if (isTopLevelPhase) {
+          document.querySelectorAll('li.navtree.group.toctree-l1 > ul.navtree.js-open').forEach(function (openSubmenu) {
+            if (openSubmenu !== submenu) {
+              openSubmenu.classList.remove('js-open');
+            }
+          });
+        }
+
+        submenu.classList.toggle('js-open', willOpen);
       });
     });
-  </script>
+  });
+</script>
 {% endblock %}
