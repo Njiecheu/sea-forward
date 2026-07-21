@@ -20,7 +20,19 @@
         if (!submenu) return;
 
         label.addEventListener('click', function () {
-          submenu.classList.toggle('js-open');
+          var isTopLevelPhase = groupLi.classList.contains('toctree-l1');
+          var willOpen = !submenu.classList.contains('js-open');
+
+          if (isTopLevelPhase) {
+            // Ferme toutes les autres phases (niveau 1) avant d'ouvrir celle-ci
+            document.querySelectorAll('li.navtree.group.toctree-l1 > ul.navtree.js-open').forEach(function (openSubmenu) {
+              if (openSubmenu !== submenu) {
+                openSubmenu.classList.remove('js-open');
+              }
+            });
+          }
+
+          submenu.classList.toggle('js-open', willOpen);
         });
       });
     });

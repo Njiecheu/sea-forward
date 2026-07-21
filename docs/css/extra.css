@@ -27,3 +27,10 @@
 .wy-menu-vertical ul.tocbase ul.navtree.js-open {
     display: block !important;
 }
+
+/* Réserve toujours l'espace de la scrollbar du navigateur,
+   pour que la largeur totale ne bouge jamais selon le contenu affiché */
+html {
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
