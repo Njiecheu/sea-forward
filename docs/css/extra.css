@@ -63,3 +63,9 @@ html {
     color: #1996f5;      /* couleur au choix, ex: orange pour bien la distinguer du bleu des phases */
     font-weight: 600;
 }
+
+/* Couleur du titre de phase correspondant à la page actuellement consultée */
+.navtree.label.active-phase .caption {
+    color: #e67e22;   /* couleur au choix */
+    font-weight: 600;
+}

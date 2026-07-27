@@ -1,7 +1,7 @@
 <!-- BANNER IMAGE GOES HERE -->
 <!-- e.g. ![SEA-FORWARD](assets/banner.png) -->
 
-# SEA-FORWARD
+## SEA-FORWARD
 
 **Simple Educational Access for Forecast and Warning Developers**
 
