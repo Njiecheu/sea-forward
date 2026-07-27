@@ -13,6 +13,15 @@
     display: block;
 }
 
+/* Titres de phase : seule la première lettre en majuscule */
+.navtree.toctree-l1.label .caption {
+    text-transform: lowercase;
+}
+
+.navtree.toctree-l1.label .caption::first-letter {
+    text-transform: uppercase;
+}
+
 /* Titre de groupe cliquable */
 .navtree.label {
     cursor: pointer;
