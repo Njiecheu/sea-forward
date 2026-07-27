@@ -69,3 +69,12 @@ html {
     color: #e67e22;   /* couleur au choix */
     font-weight: 600;
 }
+
+/* Liens de premier niveau qui sont des pages directes (Home, Hands-on Documentation) */
+.navtree.toctree-l1.page > a {
+    color: #1a73e8;   /* même bleu que les titres de phase */
+}
+
+.navtree.toctree-l1.page > a {
+    color: #1a73e8 !important;
+}
