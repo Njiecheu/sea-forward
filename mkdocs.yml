@@ -216,7 +216,7 @@ nav:
       - References: phase11/references.md
       - Regenerating the diagram: phase11/regenerating.md
   - Phase 12 — River (Runoff) Forcing in SEA-FORWARD:
-      - Phase 12 — Overview: phase12/12_river.md
+      - Phase 12 — Overview: phase12/12_rivers.md
       - 1. What are we doing, and why?: phase12/1.md
       - 2. The data — Dai & Trenberth river climatology: phase12/2.md
       - 3. Step 1 — Extract your region's rivers: phase12/3.md
