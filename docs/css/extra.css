@@ -44,6 +44,11 @@ html {
     scrollbar-gutter: stable;
 }
 
+/* Liens de premier niveau qui ne sont pas des catégories (Home, Hands-on Documentation) */
+.navtree.toctree-l1 > a {
+    color: #1a73e8;
+}
+
 /* Titres de phase en bleu */
 .navtree.toctree-l1.label .caption {
     color: #1a73e8;   /* ajuste la teinte de bleu selon ton goût */
@@ -51,4 +56,10 @@ html {
 
 .navtree.toctree-l1.label:hover .caption {
     color: #0d47a1;   /* un bleu plus foncé au survol */
+}
+
+/* Élément de la page actuellement affichée */
+.navtree.active > a {
+    color: #1996f5;      /* couleur au choix, ex: orange pour bien la distinguer du bleu des phases */
+    font-weight: 600;
 }

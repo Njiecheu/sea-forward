@@ -196,7 +196,7 @@ nav:
       - The numbers, collected: phase9/numbers.md
       - What Agulhas taught that IGOG didn't: phase9/taught.md
   - Phase 10 — Tides:
-      - Phase 10 — Tides: phase10/10_tides.md
+      - Phase 10 — Overview: phase10/10_tides.md
       - Step 1 — the tide tool: phase10/step1.md
       - Step 2 — the TPXO data and its param file: phase10/step2.md
       - Step 3 — generate and check: phase10/step3.md
@@ -206,8 +206,8 @@ nav:
       - Step 7 — the operational option: phase10/step7.md
       - What this buys you, and its honest limit: phase10/what.md
       - Recap — the whole tide path: phase10/recap.md
-  - Phase 11 — SEA-FORWARD as an Ocean-Forecasting Architecture:
-      - Phase 11 — SEA-FORWARD as an Ocean-Forecasting Architecture: phase11/11_architecture.md
+  - Phase 11 — Ocean-Forecasting Architecture:
+      - Phase 11 — Overview: phase11/11_architecture.md
       - Where the reference architecture comes from: phase11/where.md
       - The value chain, and the three roles: phase11/value.md
       - The map — SEA-FORWARD's components in the value chain: phase11/map.md
@@ -215,8 +215,8 @@ nav:
       - Why this framing matters: phase11/why.md
       - References: phase11/references.md
       - Regenerating the diagram: phase11/regenerating.md
-  - Phase 12 — River (Runoff) Forcing in SEA-FORWARD — A Complete Walkthrough:
-      - Phase 12 — River (Runoff) Forcing in SEA-FORWARD — A Complete Walkthrough: phase12/12_river.md
+  - Phase 12 — River (Runoff) Forcing in SEA-FORWARD:
+      - Phase 12 — Overview: phase12/12_river.md
       - 1. What are we doing, and why?: phase12/1.md
       - 2. The data — Dai & Trenberth river climatology: phase12/2.md
       - 3. Step 1 — Extract your region's rivers: phase12/3.md
