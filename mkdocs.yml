@@ -101,7 +101,7 @@ nav:
       - Troubleshooting: phase1/trouble.md
   - Phase 2 — Building a Forecast Config: 
       - Phase 2 — Overview: phase2/02_forecast_config.md
-      - Set up your environment: phase2/step0.md
+      - Step 0 — Set up your environment (every session starts here): phase2/step0.md
       - Step 1 — Create the grid definition: phase2/step1.md
       - Step 2 — Build the grid (run), then read its real size: phase2/step2.md
       - Step 3 — Look at the land and decide your boundaries: phase2/step3.md
