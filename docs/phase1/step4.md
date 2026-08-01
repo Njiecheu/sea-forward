@@ -17,7 +17,7 @@ _If you haven't done this yet, please follow these instructions:_
 ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
 
-    **Example Output:**
+**Example Output:**
     ```text
     Generating public/private ed25519 key pair.
     Enter file in which to save the key (/home/user/.ssh/id_ed25519): [Press Enter]
