@@ -32,13 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    var filenameBar = block.querySelector(".filename");
-    if (filenameBar) {
-      filenameBar.style.position = "relative";
-      filenameBar.appendChild(button);
-    } else {
-      block.style.position = "relative";
-      block.appendChild(button);
-    }
+    block.style.position = "relative";
+    block.appendChild(button);
   });
 });
