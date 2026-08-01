@@ -1,4 +1,11 @@
 /* =========================================================
+   Global Typography
+   ========================================================= */
+body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
+    font-family: 'Lexend', sans-serif !important;
+}
+
+/* =========================================================
    Sidebar — collapse générique de tous les groupes (toutes phases, tous niveaux)
    ========================================================= */
 
