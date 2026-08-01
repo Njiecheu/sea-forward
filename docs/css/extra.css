@@ -131,7 +131,7 @@ html {
 /* Titres de phase en bleu */
 .navtree.toctree-l1.label .caption {
     color: #2980b9;   /* ajuste la teinte de bleu selon ton goût */
-    font-size: 1.05rem;
+    font-size: 0.85rem;
 }
 
 .navtree.toctree-l1.label:hover .caption {
@@ -158,4 +158,53 @@ html {
 .wy-menu-vertical li.with-children > a[href^="#"] {
     margin-left: 0 !important;
     padding-left: 3rem !important;
+}
+
+/* =========================================================
+   Ajustements de la barre latérale (Largeur et Pied de page)
+   ========================================================= */
+
+/* 1. Masquer la boîte « Previous / Next » en bas de la barre latérale */
+.rst-versions {
+    display: none !important;
+}
+
+/* 2. Augmenter la largeur de la barre latérale sur grand écran */
+@media screen and (min-width: 769px) {
+    .wy-nav-side {
+        width: 380px !important;  
+    }
+    .wy-nav-content-wrap {
+        margin-left: 380px !important; 
+    }
+    .wy-side-nav-search{
+        width: 380px !important; 
+    }
+    .wy-menu-vertical a.current{
+        width: 380px !important; 
+    }
+    .wy-menu-vertical li.toctree-l1 > a,
+.navtree.toctree-l1 > a,
+.navtree.toctree-l1.page > a
+{
+    width: 380px !important; 
+}
+}
+
+@media screen and (max-width: 768px) {
+    .wy-nav-side {
+        width: 380px !important;
+        max-width: 100% !important; 
+    }
+    .wy-nav-top {
+        width: 380px !important;
+        max-width: 100% !important;
+    }
+}
+
+.rst-footer-buttons .btn {
+    padding: 15px 40px !important;
+    font-size: 1.05rem !important;
+    min-width: 180px;
+    text-align: center;
 }

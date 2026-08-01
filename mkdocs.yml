@@ -1,4 +1,4 @@
-site_name: Sea Forward Documentation
+site_name: Sea Forward
 docs_dir: docs
 theme:
   name: rtd-dropdown
@@ -59,23 +59,23 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.highlight:
-      linenums: true          # affiche les numéros de ligne
+      linenums: true # affiche les numéros de ligne
       linenums_style: pymdownx-inline
-      anchor_linenums: true   # permet de cibler une ligne précise
-      use_pygments: true      # coloration syntaxique via Pygments
-      auto_title: true        # affiche le langage en haut du bloc
-      guess_lang: false       # évite les mauvaises détections
-  - pymdownx.superfences      # gère les blocs imbriqués et multi-langages
-  - pymdownx.inlinehilite     # coloration inline avec `==code==`
-  - pymdownx.snippets         # inclure des extraits externes
-  - pymdownx.extra            # ajoute des fonctionnalités utiles
-  - pymdownx.details          # permet de créer des blocs repliables (accordéons)
-  - pymdownx.tabbed           # permet de créer des onglets pour organiser le contenu
+      anchor_linenums: true # permet de cibler une ligne précise
+      use_pygments: true # coloration syntaxique via Pygments
+      auto_title: true # affiche le langage en haut du bloc
+      guess_lang: false # évite les mauvaises détections
+  - pymdownx.superfences # gère les blocs imbriqués et multi-langages
+  - pymdownx.inlinehilite # coloration inline avec `==code==`
+  - pymdownx.snippets # inclure des extraits externes
+  - pymdownx.extra # ajoute des fonctionnalités utiles
+  - pymdownx.details # permet de créer des blocs repliables (accordéons)
+  - pymdownx.tabbed # permet de créer des onglets pour organiser le contenu
 
 nav:
   - Home: index.md
   - Hands-on Documentation: handsOn.md
-  - Setup: 
+  - Setup:
       - Overview: phase1/01_setup.md
       #- 0. What you are building, in one picture: phase1/step0.md
       - System build tools: phase1/step1.md
@@ -89,7 +89,7 @@ nav:
           - The two ways to build: phase1/step70.md
           - Download the source tarballs: phase1/step71.md
           - Route A — build with the scripts (fast): phase1/routeA.md
-          - Route B — build by hand (learn / debug): 
+          - Route B — build by hand (learn / debug):
               - Route B — build by hand (learn / debug): phase1/routeB.md
               - HDF5: phase1/step72.md
               - netcdf-c (built on top of HDF5): phase1/step73.md
@@ -101,7 +101,7 @@ nav:
       - From now on — the every-session ritual: phase1/step11.md
       - What you have now: phase1/now.md
       - Troubleshooting: phase1/trouble.md
-  - Building a Forecast Config: 
+  - Building a Forecast Config:
       - Overview: phase2/02_forecast_config.md
       - Step 0 — Set up your environment (every session starts here): phase2/step0.md
       - Step 1 — Create the grid definition: phase2/step1.md
@@ -122,13 +122,13 @@ nav:
       - Toward an operational workflow: phase2/toward.md
       - What you change for your own region: phase2/change.md
       - The consistency rules to remember: phase2/consistency.md
-  - Running a Forecast: 
+  - Running a Forecast:
       - Overview: phase3/03_forecast.md
       - Part A — The single manual run (recap of Phase 2): phase3/partA.md
       - Part B — The operational driver (daily cycle): phase3/partB.md
       - Why spin up before forecasting?: phase3/before.md
       - Quick reference — forecast: phase3/reference.md
-  - Running a Hindcast: 
+  - Running a Hindcast:
       - Overview: phase4/04_hindcast.md
       - Step 0 — Session ritual (the HINDCAST track): phase4/step0.md
       - Step 1 — Build the grid (its own, in the hindcast track): phase4/step1.md
