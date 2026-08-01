@@ -38,7 +38,6 @@ ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP... your_email@example.com
 ```
 
 - Select the text starting with `ssh-ed25519` (the output of the `cat` command) and right-click to copy it.
-
 2. Add the key to GitHub:
 
    - Open Settings on your GitHub account
