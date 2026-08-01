@@ -6,46 +6,52 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
 }
 
 /* =========================================================
-   Sidebar — collapse générique de tous les groupes (toutes phases, tous niveaux)
+   Sidebar — Indentation et Menu Déroulant (Dropdown/Accordion)
    ========================================================= */
 
-/* Collapse par défaut tous les sous-menus */
-.navtree.group > ul.navtree {
+/* 1. Indentation (Décalage) des sous-sections par rapport aux grands titres */
+.wy-menu-vertical li.toctree-l1 > ul {
+    margin-left: 1.5rem !important; /* Décalage des sous-éléments */
+}
+
+/* 2. Comportement du Dropdown (Caché par défaut) */
+.wy-menu-vertical li.has-children > ul {
     display: none;
 }
 
-/* Affiche le sous-menu si : chemin actif (posé par MkDocs) OU ouvert manuellement (posé par notre JS) */
-.navtree.group > ul.navtree.current,
-.navtree.group > ul.navtree.js-open {
+/* 3. Afficher le sous-menu si la section est active OU ouverte manuellement via JS */
+.wy-menu-vertical li.has-children.current > ul,
+.wy-menu-vertical li.has-children.js-open > ul {
     display: block;
 }
 
-/* Titres de phase : seule la première lettre en majuscule */
-.navtree.toctree-l1.label .caption {
-    text-transform: lowercase;
+/* 4. Indicateur visuel (Flèche) pour les sections avec sous-menus */
+.wy-menu-vertical li.has-children > a::before,
+.wy-menu-vertical li.has-children > .caption::before {
+    content: "▶";
+    display: inline-block;
+    font-size: 0.7em;
+    margin-right: 8px;
+    transition: transform 0.2s ease;
 }
 
-.navtree.toctree-l1.label .caption::first-letter {
+/* Pivoter la flèche quand c'est ouvert */
+.wy-menu-vertical li.has-children.current > a::before,
+.wy-menu-vertical li.has-children.current > .caption::before,
+.wy-menu-vertical li.has-children.js-open > a::before,
+.wy-menu-vertical li.has-children.js-open > .caption::before {
+    transform: rotate(90deg);
+}
+
+/* Titres de phase : seule la première lettre en majuscule */
+.wy-menu-vertical .caption {
+    text-transform: lowercase;
+}
+.wy-menu-vertical .caption::first-letter {
     text-transform: uppercase;
 }
 
-/* Titre de groupe cliquable */
-.navtree.label {
-    cursor: pointer;
-}
-
-/* Neutralise le !important natif du thème qui verrouillait "current" en display:block */
-.wy-menu-vertical ul.tocbase ul.navtree.current {
-    display: none !important;
-}
-
-/* Notre propre système reprend la main : seul js-open détermine l'ouverture */
-.wy-menu-vertical ul.tocbase ul.navtree.js-open {
-    display: block !important;
-}
-
-.wy-menu-vertical a.current,
-.navtree a.current {
+.wy-menu-vertical a.current {
     color: #2980b9 !important;
 }
 
@@ -84,12 +90,7 @@ html {
 
 /* Cache le signe "+" par défaut sur tous les titres */
 .toctree-expand {
-    display: none;
-}
-
-/* Ne l'affiche que si le titre a réellement des sous-titres */
-li.with-children > a > .toctree-expand {
-    display: inline-block;
+    display: none !important;
 }
 
 /* Liens de premier niveau qui ne sont pas des catégories (Home, Hands-on Documentation) */
