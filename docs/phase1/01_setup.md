@@ -1,6 +1,6 @@
 # SEA FORWARD — Phase 1: Setup (from a bare machine to build-ready)
 
-This is the **first** document. By the end of it you will have, on your own
+This is the **first** document. By the end of it you will have on your own
 computer:
 
 - a working Linux shell (via WSL2 if you're on Windows),
