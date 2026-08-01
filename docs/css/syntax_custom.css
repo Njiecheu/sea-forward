@@ -124,7 +124,7 @@ pre code.hljs {
 
 /* Si le thème limite aussi la largeur max du bloc de contenu central */
 .wy-nav-content {
-    max-width: 70vw;   /* optionnel : retire la limite si tu veux profiter de l'espace gagné */
+    max-width: 50vw;   /* optionnel : retire la limite si tu veux profiter de l'espace gagné */
 }
 
 /* Empêche la sidebar de changer de largeur visuelle selon l'apparition de la scrollbar */
