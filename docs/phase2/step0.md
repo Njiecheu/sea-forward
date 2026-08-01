@@ -1,5 +1,5 @@
 You **run** this (it's not a file to edit), but understand it: these commands
-tell every tool where SEA-FORWARD lives, pick your track, step into the Python
+tell every tool where SEA FORWARD lives, pick your track, step into the Python
 environment, and set the region you're building.
 
 Open a terminal and run the three-line **session ritual**:

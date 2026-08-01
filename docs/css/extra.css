@@ -82,8 +82,8 @@ li.with-children > a > .toctree-expand {
 
 /* Couleur du titre de phase correspondant à la page actuellement consultée */
 .navtree.label.active-phase .caption {
-    color: #e67e22;   /* couleur au choix */
-    font-weight: 600;
+    color: #1996f5;   /* couleur au choix */
+    font-weight: 200;
 }
 
 /* Liens de premier niveau qui sont des pages directes (Home, Hands-on Documentation) */

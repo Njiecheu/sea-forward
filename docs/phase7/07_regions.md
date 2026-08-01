@@ -1,4 +1,4 @@
-# SEA-FORWARD — Region Gallery
+# SEA FORWARD — Region Gallery
 
 This is a **reference gallery**, not a tutorial. Each card is a worked region built
 with the Phase 2 recipe — a compact "what does this domain look like and how was it

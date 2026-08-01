@@ -1,4 +1,4 @@
-# SEA-FORWARD — Phase 1: Setup (from a bare machine to build-ready)
+# SEA FORWARD — Phase 1: Setup (from a bare machine to build-ready)
 
 This is the **first** document. By the end of it you will have, on your own
 computer:
@@ -8,7 +8,7 @@ computer:
 - the `seaforward` conda environment (all the Python libraries),
 - a **self-contained NetCDF/HDF5 stack** compiled from source (`opt_seq/`),
 - the **CROCO** ocean model and **croco_pytools** pre-processing toolbox,
-- the SEA-FORWARD repository laid out and ready to build a configuration.
+- the SEA FORWARD repository laid out and ready to build a configuration.
 
 Everything lives under **one folder**, `~/seaforward`, so nothing on your
 machine is scattered around. When you finish, Phase 2 (Building a Forecast Config) picks up

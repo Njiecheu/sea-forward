@@ -1,4 +1,4 @@
-# Sea Forward — Hands-on Documentation
+# SEA FORWARD — Hands-on Documentation
 
 ## Read them in order
 

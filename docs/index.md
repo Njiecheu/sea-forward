@@ -1,11 +1,11 @@
 <!-- BANNER IMAGE GOES HERE -->
-<!-- e.g. ![SEA-FORWARD](assets/banner.png) -->
+<!-- e.g. ![SEA FORWARD](assets/banner.png) -->
 
-# SEA-FORWARD
+# SEA FORWARD
 
 **Simple Educational Access for Forecast and Warning Developers**
 
-SEA-FORWARD is a free, open-source toolkit that teaches you to build and run a
+SEA FORWARD is a free, open-source toolkit that teaches you to build and run a
 complete ocean forecasting system on your own computer — from raw input data
 through to a validated 5-day forecast you can plot and interpret.
 
@@ -14,7 +14,7 @@ or operated a forecasting system. Every step is explicit and manual by design:
 there is no automated installer, because the goal is not just to produce a
 forecast — it is to understand each link in the chain that produces it.
 
-No supercomputer is required. SEA-FORWARD runs on commodity hardware.
+No supercomputer is required. SEA FORWARD runs on commodity hardware.
 
 
 ## What you will build
@@ -24,7 +24,7 @@ blueprint of the OceanPrediction DCC Architecture:
 
 **Upstream data → Ocean model → Validation → Visualization**
 
-| Layer | Process | In SEA-FORWARD |
+| Layer | Process | In SEA FORWARD |
 |---|---|---|
 | Upstream Data (U) | U2, U4, U5 | ERA5 atmospheric forcing, CMEMS ocean boundary conditions, GEBCO 2024 bathymetry |
 | Core Forecasting Engine (C) | C1 | The CROCO v2.0 ocean model, compiled from source |
@@ -42,7 +42,7 @@ maps directly onto real operational systems.
 
 ## Regions
 
-SEA-FORWARD ships with three contrasting African test configurations, chosen
+SEA FORWARD ships with three contrasting African test configurations, chosen
 because each poses a different forecasting challenge:
 
 - **Canary Upwelling System** — one of the four major Eastern Boundary Upwelling
@@ -60,7 +60,7 @@ See the [region gallery](phase7/) for what is available today.
 
 | | **Direct Access** | **Component Access** |
 |---|---|---|
-| What you get | A containerized, ready-to-run forecasting system plus the analysis tools, driven from a local JupyterLab server | The full SEA-FORWARD repository: tools to fetch the model and data, prepare inputs, run forecasts, validate and analyse |
+| What you get | A containerized, ready-to-run forecasting system plus the analysis tools, driven from a local JupyterLab server | The full SEA FORWARD repository: tools to fetch the model and data, prepare inputs, run forecasts, validate and analyse |
 | Best for | Getting a result quickly, and for teaching | Learning how the system is actually built; running at full speed |
 | Trade-off | Runs on a single processor, so expect longer run times | You build each piece yourself |
 
@@ -96,7 +96,7 @@ Grids up to roughly 128×128 run comfortably on a standard laptop or desktop. Hi
 
 ## Context: the OPERA Capacity Development Activities
 
-SEA-FORWARD is delivered under **Task 1.3** of the **OPERA (Ocean Prediction
+SEA FORWARD is delivered under **Task 1.3** of the **OPERA (Ocean Prediction
 Enhancement in Regions of Africa) Capacity Development Activities** — a 38-month
 initiative led by the **ICMPA-UNESCO Chair** (Université d'Abomey-Calavi, Benin)
 and the **Gulf of Guinea Ocean Sciences Summer School (GGOSSS)**.
@@ -116,7 +116,7 @@ OceanPrediction DCC *virtuous loop*, which moves through four thematic periods:
 3. Operating an Ocean Forecasting Service
 4. Applications and Digital Twins
 
-**SEA-FORWARD is the advanced-level entry point into that loop.** It deliberately
+**SEA FORWARD is the advanced-level entry point into that loop.** It deliberately
 implements OceanPrediction-A — a single deterministic run without data
 assimilation — because that exposes the full value chain without the added
 complexity of observational ingestion or ensemble methods. The architecture
@@ -146,6 +146,6 @@ assimilation) and for CROCO-AGRIF nesting.
 
 ## Citing and licence
 
-SEA-FORWARD is released under an open-source licence, with input data and reference results archived on Zenodo with permanent DOIs. See [LICENSE](https://github.com/) and the citation guidance in the repository.
+SEA FORWARD is released under an open-source licence, with input data and reference results archived on Zenodo with permanent DOIs. See [LICENSE](https://github.com/) and the citation guidance in the repository.
 
 <!-- TODO: replace with the real repository URL, licence name and DOI once issued -->

@@ -21,8 +21,8 @@ theme:
 extra:
   footer: |
     <div style="text-align:center; padding:10px;">
-      <img src="/img/mooc.png" alt="Sea-Forward Footer Logo" height="40">
-      <p>© {{ now().year }} Sea-Forward — Documentation générée avec MkDocs</p>
+      <img src="/img/mooc.png" alt="SEA FORWARD Footer Logo" height="40">
+      <p>© {{ now().year }} SEA FORWARD — Documentation générée avec MkDocs</p>
     </div>
 
 hooks:
@@ -80,7 +80,7 @@ nav:
       - 1. A Linux shell: phase1/step1.md
       - 2. System build tools: phase1/step2.md
       - 3. Miniconda (the Python package manager): phase1/step3.md
-      - 4. Get the SEA-FORWARD repository: phase1/step4.md
+      - 4. Get the SEA FORWARD repository: phase1/step4.md
       - 5. Create the `seaforward` conda environment: phase1/step5.md
       - 6. The environment file `env.sh`: phase1/step6.md
       - 7. Build the NetCDF/HDF5:
@@ -211,7 +211,7 @@ nav:
       - Overview: phase11/11_architecture.md
       - Where the reference architecture comes from: phase11/where.md
       - The value chain, and the three roles: phase11/value.md
-      - The map — SEA-FORWARD's components in the value chain: phase11/map.md
+      - The map — SEA FORWARD's components in the value chain: phase11/map.md
       - What changes when the system runs operationally: phase11/changes.md
       - Why this framing matters: phase11/why.md
       - References: phase11/references.md

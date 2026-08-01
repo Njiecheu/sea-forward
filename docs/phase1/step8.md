@@ -59,4 +59,4 @@ ls ~/seaforward/code/croco_pytools/prepro/Modules/toolsf*.so && echo "croco_pyto
 ```
 
 !!! note
-    **Note on the pre-processing toolbox.** SEA-FORWARD ships a **vendored** copy of the exact croco_pytools modules its pre-processing code needs, inside `sftools/croco_pytools/`. The CLI uses that vendored copy, so the download and pre-processing tools work even before you install the full `code/croco_pytools`. You still install `code/croco_pytools` for grid-building.
+    **Note on the pre-processing toolbox.** SEA FORWARD ships a **vendored** copy of the exact croco_pytools modules its pre-processing code needs, inside `sftools/croco_pytools/`. The CLI uses that vendored copy, so the download and pre-processing tools work even before you install the full `code/croco_pytools`. You still install `code/croco_pytools` for grid-building.

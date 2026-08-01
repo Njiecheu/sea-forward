@@ -25,7 +25,7 @@ onto the child grid. Not from the parent's output. (somisana does the same: thei
 ### 3b — Which tool, and why it matters
 
 !!! note
-    **Use SEA-FORWARD's own `make_ini`, not croco_pytools'.**
+    **Use SEA FORWARD's own `make_ini`, not croco_pytools'.**
 
 This is not a style preference. croco_pytools ships a zoom-aware IC builder and it
 *looks* right — there's even an example config, `Examples/benguela_multifiles/
@@ -192,7 +192,7 @@ print('time =', float(d.scrum_time.values.ravel()[0]) / 86400, 'days')
 You want `u`/`v` within about ±1 m/s, zero NaNs, and **the same `scrum_time` as the
 parent's IC**. Compare the two:
 
-| | croco_pytools | SEA-FORWARD `make_ini` |
+| | croco_pytools | SEA FORWARD `make_ini` |
 |---|---|---|
 | `u` max | `9.969e+36` ✗ | **0.6396** ✓ |
 | `v` max | `9.969e+36` ✗ | **0.3081** ✓ |
@@ -202,7 +202,7 @@ parent's IC**. Compare the two:
 
 The parent and child ICs must start at the **same instant**. Two traps:
 
-- SEA-FORWARD's forecast ICs are named for the **cycle date**, not their valid time.
+- SEA FORWARD's forecast ICs are named for the **cycle date**, not their valid time.
   `croco_ini_MERCATOR_20260713_00.nc` is the ocean state at **2026-07-11**, because
   the driver runs `--hdays 2` of spin-up before the cycle date.
 - A Mercator download's record 0 may not be the day you think. Check:

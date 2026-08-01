@@ -15,7 +15,7 @@ Operationally, continuity is the point: yesterday's forecast becomes today's
 starting point, and the global products enter only at the boundaries while the
 regional interior evolves under its own dynamics.
 
-SEA-FORWARD already implements this pattern **within** a cycle. The driver runs a
+SEA FORWARD already implements this pattern **within** a cycle. The driver runs a
 short **spin-up** initialized from the global analysis, then hands the spin-up's
 `croco_rst.nc` to the **forecast** as its initial condition; the forecast never
 cold-starts. Full operational cycling extends the same handoff **across** cycles —
