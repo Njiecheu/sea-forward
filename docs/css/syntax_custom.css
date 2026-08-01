@@ -12,55 +12,79 @@
 }
 
 /* =========================================================
-   Blocs de code — style carte claire minimaliste (façon GitHub)
+   Blocs de code — style carte claire moderne
    ========================================================= */
 
+/* Fix : le thème rtd-dropdown écrase white-space sur les blocs de code,
+   ce qui fusionnait toutes les lignes en une seule. On restaure le
+   comportement normal, et on neutralise le double scroll du thème. */
+.highlight,
+.highlight > div,
+.highlight table,
+.highlight td {
+    overflow: visible !important;
+}
+
+.highlight pre,
+.highlight pre code,
+pre code.hljs {
+    white-space: pre !important;
+}
+
+/* Carte du bloc de code */
 .highlight {
     position: relative;
-    background: #f6f8fa;
+    background: #fafafa;
     border: none;
-    border-radius: 8px;
-    box-shadow: none;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
     overflow: hidden;
     margin: 1.2em 0;
 }
 
-/* On masque le bandeau "filename" (langage) — pas présent dans le modèle voulu */
+/* Bandeau supérieur avec le nom du langage */
 .highlight .filename {
-    display: none;
+    display: flex;
+    align-items: center;
+    background: #f0f0f1;
+    color: #6e7781;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-bottom: 1px solid #e5e5e6;
 }
 
 .highlight pre {
     margin: 0;
     padding: 16px 18px;
     background: transparent;
-    overflow-x: auto;
-    border: none !important;
-    box-shadow: none !important;
+    overflow-x: auto;          /* seul niveau de scroll horizontal autorisé */
 }
 
 .highlight code.hljs {
     background: transparent;
     font-family: "JetBrains Mono", monospace;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #24292f;
+    font-size: 1rem;           /* remets à 0.5rem ici si tu voulais vraiment du texte plus petit */
+    line-height: 1.6;
 }
 
-/* Numéros de ligne masqués, pour matcher le modèle */
 .highlight .linenos {
-    display: none;
+    color: #b0b0b0;
+    font-family: "JetBrains Mono", monospace;
+    margin-right: 1em;
+    user-select: none;
 }
 
 /* =========================================================
-   Bouton copier — icône "carrés superposés", en haut à droite
+   Bouton copier — icône seule, sans fond parasite
    ========================================================= */
 
 .copy-code-button {
-    all: unset;
+    all: unset;                /* reset total du style natif du bouton */
     box-sizing: border-box;
     position: absolute;
-    top: 10px;
+    top: 8px;
     right: 10px;
     display: flex;
     align-items: center;
@@ -68,16 +92,20 @@
     width: 28px;
     height: 28px;
     cursor: pointer;
-    color: #57606a;
-    background: #eef0f2;
-    border-radius: 6px;
-    opacity: 1;   /* toujours visible ici, contrairement au style précédent au survol */
-    transition: background 0.15s ease, color 0.15s ease;
+    color: #8a8f98;
+    opacity: 0;
+    transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+.highlight:hover .copy-code-button,
+.copy-code-button:hover,
+.copy-code-button:focus-visible,
+.copy-code-button.copied {
+    opacity: 1;
 }
 
 .copy-code-button:hover {
-    background: #dde1e4;
-    color: #24292f;
+    color: #1a1a1a;
 }
 
 .copy-code-button.copied {
