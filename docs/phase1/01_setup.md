@@ -10,13 +10,6 @@ forecasts. To do that, the machine needs three independent things:
 3. **The CROCO model itself** (Fortran code you compile into a program) — lives
    in `~/seaforward/code/croco`.
 
-The repository ties them together with a few small scripts (`env.sh`,
-`install/`, `sftools/`). This document installs all three.
-
-Everything lives under **one folder**, `~/seaforward`, so nothing on your
-machine is scattered around. When you finish, Phase 2 (Building a Forecast Config) picks up
-from here.
-
 !!! note
     **Audience.** This assumes very little. If a step looks obvious to you, skip it. If a term is new (conda, NetCDF, compiling), each is explained the first time it appears.
 
