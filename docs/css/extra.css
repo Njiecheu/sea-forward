@@ -42,16 +42,16 @@
     color: #2980b9 !important;
 }
 
-.wy-side-nav-search::after {
+/*.wy-side-nav-search::after {
     content: "";
     display: block;
     background-image: url("./assets/sf.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    height: 60px;            /* ajuste selon la taille voulue du logo */
+    height: 60px;            
     margin-top: 10px;
-}
+}*/
 
 /* Réserve toujours l'espace de la scrollbar du navigateur,
    pour que la largeur totale ne bouge jamais selon le contenu affiché */
