@@ -87,6 +87,6 @@ li.with-children > a > .toctree-expand {
     font-size: 1.05rem;
 }
 
-.navtree.toctree-l1.page > a {
+.navtree.toctree-l1.page > a.current {
     color: #2980b9 !important;
 }
