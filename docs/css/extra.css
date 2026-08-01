@@ -44,6 +44,16 @@ html {
     scrollbar-gutter: stable;
 }
 
+/* Cache le signe "+" par défaut sur tous les titres */
+.toctree-expand {
+    display: none;
+}
+
+/* Ne l'affiche que si le titre a réellement des sous-titres */
+li.with-children > a > .toctree-expand {
+    display: inline-block;
+}
+
 /* Liens de premier niveau qui ne sont pas des catégories (Home, Hands-on Documentation) */
 .navtree.toctree-l1 > a {
     color: #1a73e8;

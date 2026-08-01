@@ -11,16 +11,6 @@
     margin: 0 !important; /* Supprime les marges auto (margin-left: auto sur le bouton Next) */
 }
 
-/* Cache le signe "+" par défaut sur tous les titres */
-.toctree-expand {
-    display: none;
-}
-
-/* Ne l'affiche que si le titre a réellement des sous-titres */
-li.with-children > a > .toctree-expand {
-    display: inline-block;
-}
-
 /* =========================================================
    Blocs de code — style carte claire moderne
    ========================================================= */
