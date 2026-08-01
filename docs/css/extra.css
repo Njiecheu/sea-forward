@@ -56,17 +56,17 @@ li.with-children > a > .toctree-expand {
 
 /* Liens de premier niveau qui ne sont pas des catégories (Home, Hands-on Documentation) */
 .navtree.toctree-l1 > a {
-    color: #1a73e8;
+    color: #2980B9;
 }
 
 /* Titres de phase en bleu */
 .navtree.toctree-l1.label .caption {
-    color: #1a73e8;   /* ajuste la teinte de bleu selon ton goût */
+    color: #2980b9;   /* ajuste la teinte de bleu selon ton goût */
     font-size: 1.05rem;
 }
 
 .navtree.toctree-l1.label:hover .caption {
-    color: #0d47a1;   /* un bleu plus foncé au survol */
+    color: #1996f5;   /* un bleu plus foncé au survol */
 }
 
 /* Élément de la page actuellement affichée */
@@ -83,10 +83,10 @@ li.with-children > a > .toctree-expand {
 
 /* Liens de premier niveau qui sont des pages directes (Home, Hands-on Documentation) */
 .navtree.toctree-l1.page > a {
-    color: #1a73e8;   /* même bleu que les titres de phase */
+    color: #2980b9;   /* même bleu que les titres de phase */
     font-size: 1.05rem;
 }
 
 .navtree.toctree-l1.page > a {
-    color: #1a73e8 !important;
+    color: #2980b9 !important;
 }
