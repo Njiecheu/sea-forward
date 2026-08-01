@@ -31,7 +31,7 @@ linker uses the repo's `opt_seq` NetCDF, then `./jobcomp`.-->
 
 !!! important
     **Conventions used in these docs :**
-      - Commands are shown for the **Canary_12** example region (22°W–15.5°W, 14°N–24°N, 1/12°). Replace its numbers with your region's.
+       - Commands are shown for the **Canary_12** example region (22°W–15.5°W, 14°N–24°N, 1/12°). Replace its numbers with your region's.
        - `~/seaforward` is the repository root; `<you>` is your Linux username.
        - ✅ check after a step tells you what a correct result looks like.
        - ⚠️ marks a place people commonly trip; read those twice.
