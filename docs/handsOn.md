@@ -15,7 +15,7 @@
 
 ![Phase 1-4](./img/phase.png)
 
-## The one-folder layout
+## Sea Forward Directory Structure
 
 ```
 ~/seaforward/
