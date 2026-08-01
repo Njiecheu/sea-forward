@@ -24,8 +24,8 @@ wsl --install -d Ubuntu
 2. Search for **Ubuntu** (the recommended Linux distribution) and click **Get** or **Install**.
   ![WSL Ubuntu in Microsoft Store](../img/wsl.png)
 
-**After installing (both methods):**
-Restart your computer if asked. Launch **Ubuntu** from the Start menu, and wait a few moments for the initial setup to finish. It will ask you to create a **UNIX username** and a **password**. _(Note: when typing your password, characters won't appear on screen, this is a normal security feature)._
+**After installing :**
+Restart your computer if asked. Launch **Ubuntu** from the Start menu, and wait a few moments for the initial setup to finish. It will ask you to create a **UNIX username** and a **password**. _(Note: when typing your password, characters won't appear on screen, this is a normal security feature).
 
 From now on, every command in these documents is typed in that Ubuntu terminal.
 
@@ -39,6 +39,7 @@ whoami            # your linux username
 !!! note
     **RAM note.** Building the libraries and running the model is comfortable with **16 GB** of RAM. With less, use fewer parallel compile jobs (shown later).
 
+### Installing dependencies
 You need a C/Fortran compiler and a few build utilities. Install them once:
 
 ```bash
