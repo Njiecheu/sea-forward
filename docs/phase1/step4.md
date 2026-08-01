@@ -76,12 +76,32 @@ cd seaforward
 ls
 ```
 
-### Verify the clone
-```bash 
-git clone https://github.com/opera-seaforward/seaforward.git
+## Sea Forward Directory Structure
+
 ```
-You should see folders like `sftools/`, `install/`, `forecast/`, `hindcast/`,
-`code/`, and files `env.sh`, `environment.yml`.
+~/seaforward/
+├── env.sh                # sourced each session: shared paths + compilers + NetCDF
+├── environment.yml       # the conda environment
+├── install/              # 00..04 build scripts (system libs + CROCO)
+├── sftools/              # the Python CLI (download + pre-process) + vendored toolbox
+├── code/                 # CROCO + croco_pytools (obtained by install/04 — git-ignored)
+│   ├── croco/            # CROCO model source
+│   └── croco_pytools/    # pre-processing toolbox
+├── opt_seq/              # NetCDF/HDF5 stack, compiled from source (git-ignored)
+├── data/                 # DATASETS_CROCOTOOLS bathymetry/coastline (git-ignored)
+├── forecast/
+│   ├── track.sh          # forecast per-track paths
+│   ├── configs/          # forecast config recipes
+│   ├── scratch/          # forecast test builds (binary + grid)
+│   ├── model-runs/       # kept forecast outputs
+│   └── run_forecast_today.sh
+├── hindcast/
+│   ├── track.sh
+│   ├── configs/  scratch/  model-runs/
+│   └── run_hindcast_cycle.sh
+└── docs/                 # these documents
+```
+
 
 !!! note
     **The golden rule of this project:** everything lives under `~/seaforward`. The scripts assume `SEA_FORWARD_ROOT=${HOME}/seaforward`. If you clone it somewhere else, adjust that variable in `env.sh`.

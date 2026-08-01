@@ -15,31 +15,7 @@
 
 ![Phase 1-4](./img/phase.png)
 
-## Sea Forward Directory Structure
 
-```
-~/seaforward/
-├── env.sh                # sourced each session: shared paths + compilers + NetCDF
-├── environment.yml       # the conda environment
-├── install/              # 00..04 build scripts (system libs + CROCO)
-├── sftools/              # the Python CLI (download + pre-process) + vendored toolbox
-├── code/                 # CROCO + croco_pytools (obtained by install/04 — git-ignored)
-│   ├── croco/            # CROCO model source
-│   └── croco_pytools/    # pre-processing toolbox
-├── opt_seq/              # NetCDF/HDF5 stack, compiled from source (git-ignored)
-├── data/                 # DATASETS_CROCOTOOLS bathymetry/coastline (git-ignored)
-├── forecast/
-│   ├── track.sh          # forecast per-track paths
-│   ├── configs/          # forecast config recipes
-│   ├── scratch/          # forecast test builds (binary + grid)
-│   ├── model-runs/       # kept forecast outputs
-│   └── run_forecast_today.sh
-├── hindcast/
-│   ├── track.sh
-│   ├── configs/  scratch/  model-runs/
-│   └── run_hindcast_cycle.sh
-└── docs/                 # these documents
-```
 <!--
 ## The session ritual (every time)
 
@@ -48,10 +24,10 @@ source ~/seaforward/env.sh                 # shared paths + compilers + NetCDF
 source ~/seaforward/forecast/track.sh      # OR hindcast/track.sh — pick the track
 conda activate seaforward                  # the Python tools
 ```
--->
+
 
 To **compile** the model, leave conda first (`conda deactivate`) so the system
-linker uses the repo's `opt_seq` NetCDF, then `./jobcomp`.
+linker uses the repo's `opt_seq` NetCDF, then `./jobcomp`.-->
 
 !!! important
     ## Conventions used in these docs :
