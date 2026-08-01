@@ -37,6 +37,11 @@
     display: block !important;
 }
 
+.wy-menu-vertical a.current,
+.navtree a.current {
+    color: #2980b9 !important;
+}
+
 /* Réserve toujours l'espace de la scrollbar du navigateur,
    pour que la largeur totale ne bouge jamais selon le contenu affiché */
 html {
