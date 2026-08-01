@@ -34,17 +34,17 @@ pre code.hljs {
 /* Carte du bloc de code (Design inspiré de l'image : fond vert/jaune pâle) */
 .highlight {
     position: relative;
-    background: #f4fbdf; /* Fond vert pâle / jaune pâle */
-    border: 1px solid #dcdcdc; /* Bordure simple */
-    border-radius: 2px;
-    box-shadow: none;
+    background: #f4fbdf !important; /* Fond vert pâle / jaune pâle */
+    border: 1px solid #dcdcdc !important; /* Bordure simple */
+    border-radius: 2px !important;
+    box-shadow: none !important;
     overflow: hidden;
     margin: 1.2em 0;
 }
 
 /* Bandeau supérieur (masqué pour correspondre à l'image) */
 .highlight .filename {
-    display: none;
+    display: none !important;
 }
 
 .highlight pre {
@@ -55,9 +55,9 @@ pre code.hljs {
 }
 
 .highlight code.hljs {
-    background: transparent;
+    background: transparent !important;
     font-family: "JetBrains Mono", monospace;
-    font-size: 1rem;           /* remets à 0.5rem ici si tu voulais vraiment du texte plus petit */
+    font-size: 0.9rem !important;
     line-height: 1.6;
 }
 

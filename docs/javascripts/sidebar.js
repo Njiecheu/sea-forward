@@ -1,42 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // --- 1. Identifier et Cacher toutes les sections de force ---
+    // Les thèmes génèrent souvent les titres de phase de différentes manières (p.caption, li.caption, etc.)
+    var captions = document.querySelectorAll(".wy-menu-vertical .caption, .wy-menu-vertical p.caption, .wy-menu-vertical li.caption");
+    var phaseUls = [];
+    
+    captions.forEach(function (caption) {
+        var ul = caption.nextElementSibling;
+        if (!ul || ul.tagName.toLowerCase() !== "ul") {
+            ul = caption.querySelector("ul");
+        }
+        if (ul && ul.tagName.toLowerCase() === "ul") {
+            phaseUls.push(ul);
+            ul.classList.add("nav-collapsible");
+        }
+    });
+
+    // Sous-sections
+    var subUls = document.querySelectorAll(".wy-menu-vertical li.toctree-l1 > ul, .wy-menu-vertical li.toctree-l2 > ul");
+    subUls.forEach(function(ul) { ul.classList.add("nav-collapsible"); });
+
     // === INITIALISATION ===
-    // MkDocs met "current" sur le ul actif. On transfère cet état en "js-open" pour que JS gère tout.
-    var currentUl = document.querySelector(".wy-menu-vertical p.caption + ul.current");
+    var currentUl = document.querySelector(".wy-menu-vertical ul.current");
     if (currentUl) {
         currentUl.classList.add("js-open");
-        if (currentUl.previousElementSibling && currentUl.previousElementSibling.tagName.toLowerCase() === "p") {
+        if (currentUl.previousElementSibling && currentUl.previousElementSibling.classList.contains("caption")) {
             currentUl.previousElementSibling.classList.add("js-open");
         }
     }
 
-    // 1. Gérer les grands titres (Phases) qui sont des <p class="caption">
-    var captions = document.querySelectorAll(".wy-menu-vertical p.caption");
-    var allPhaseUls = document.querySelectorAll(".wy-menu-vertical p.caption + ul");
-
+    // --- 2. Gérer le Clic sur les Phases (Grands titres) ---
     captions.forEach(function (caption) {
-        caption.style.cursor = "pointer";
-        caption.classList.add("is-collapsible");
+        var ul = caption.nextElementSibling;
+        if (!ul || ul.tagName.toLowerCase() !== "ul") {
+            ul = caption.querySelector("ul");
+        }
         
-        var nextUl = caption.nextElementSibling;
-        if (nextUl && nextUl.tagName.toLowerCase() === "ul") {
-            caption.addEventListener("click", function () {
+        if (ul && ul.tagName.toLowerCase() === "ul") {
+            caption.style.cursor = "pointer";
+            caption.classList.add("is-collapsible");
+            
+            caption.addEventListener("click", function (e) {
+                // Si c'est un lien cliquable, on ne navigue pas si c'est vide
+                var link = caption.tagName.toLowerCase() === "a" ? caption : caption.querySelector("a");
+                if (link && (!link.getAttribute("href") || link.getAttribute("href") === "#")) {
+                    e.preventDefault();
+                }
+
                 var wasOpen = caption.classList.contains("js-open");
 
-                // Mode Accordéon : on ferme toutes les phases avant d'ouvrir la cible
+                // Accordéon : on ferme toutes les autres phases
                 captions.forEach(function(c) { c.classList.remove("js-open"); });
-                allPhaseUls.forEach(function(u) { u.classList.remove("js-open"); });
+                phaseUls.forEach(function(u) { u.classList.remove("js-open"); });
                 
-                // Si la phase cliquée n'était pas déjà ouverte, on l'ouvre
-                // (Si elle était ouverte, le fait d'avoir tout fermé agit comme un "toggle" fermé)
                 if (!wasOpen) {
                     caption.classList.add("js-open");
-                    nextUl.classList.add("js-open");
+                    ul.classList.add("js-open");
                 }
             });
         }
     });
 
-    // 2. Gérer les sous-sections (liens avec enfants) de type toctree-l1 ou l2
+    // --- 3. Gérer les sous-sections ---
     var topLevelItems = document.querySelectorAll(".wy-menu-vertical li.toctree-l1, .wy-menu-vertical li.toctree-l2");
     topLevelItems.forEach(function (li) {
         var subMenu = li.querySelector("ul");
@@ -46,18 +70,18 @@ document.addEventListener("DOMContentLoaded", function () {
             if (link) {
                 link.style.cursor = "pointer";
                 
-                // Initialisation : si le li a la classe "current" (page active), on l'ouvre par défaut
                 if (li.classList.contains("current")) {
                     li.classList.add("js-open");
+                    subMenu.classList.add("js-open");
                 }
 
                 link.addEventListener("click", function (e) {
-                    // Si c'est juste un lien vide (#), on toggle sans naviguer
                     if (!link.getAttribute("href") || link.getAttribute("href") === "#") {
                         e.preventDefault();
                     }
-                    // Pour les sous-sections, un simple toggle (on ne ferme pas les autres sous-sections)
+                    // Pour les sous-sections, on fait un toggle simple (sans fermer les autres)
                     li.classList.toggle("js-open");
+                    subMenu.classList.toggle("js-open");
                 });
             }
         }

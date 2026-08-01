@@ -18,25 +18,29 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
 /* 1. Indentation (Décalage) des sous-sections par rapport aux grands titres */
 .wy-menu-vertical li.toctree-l1 > ul,
 .wy-menu-vertical li.toctree-l2 > ul {
-    margin-left: 1.5rem !important; /* Décalage des sous-éléments */
+    margin-left: 1.5rem !important;
 }
 
-/* 2. Cacher TOUS les sous-menus par défaut (le JS prendra le contrôle) */
-.wy-menu-vertical li.has-children > ul,
-.wy-menu-vertical p.caption + ul {
+/* 2. Cacher TOUS les sous-menus marqués par le JS ou via sélecteur direct */
+.wy-menu-vertical ul.nav-collapsible,
+.wy-menu-vertical .caption + ul,
+.wy-menu-vertical li.caption > ul,
+.wy-menu-vertical li.toctree-l1 > ul,
+.wy-menu-vertical li.toctree-l2 > ul {
     display: none !important;
 }
 
 /* 3. Afficher UNIQUEMENT si ouvert via JS (.js-open) */
-.wy-menu-vertical li.has-children.js-open > ul,
-.wy-menu-vertical p.caption.js-open + ul,
-.wy-menu-vertical p.caption + ul.js-open {
+.wy-menu-vertical ul.js-open,
+.wy-menu-vertical ul.nav-collapsible.js-open,
+.wy-menu-vertical .caption.js-open + ul,
+.wy-menu-vertical li.has-children.js-open > ul {
     display: block !important;
 }
 
-/* 4. Indicateur visuel (Flèche) pour les sections avec sous-menus et grands titres */
+/* 4. Indicateur visuel (Flèche) */
 .wy-menu-vertical li.has-children > a::before,
-.wy-menu-vertical p.caption.is-collapsible::before {
+.wy-menu-vertical .caption.is-collapsible::before {
     content: "▶";
     display: inline-block;
     font-size: 0.7em;
@@ -46,7 +50,7 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
 
 /* Pivoter la flèche quand c'est ouvert */
 .wy-menu-vertical li.has-children.js-open > a::before,
-.wy-menu-vertical p.caption.js-open::before {
+.wy-menu-vertical .caption.js-open::before {
     transform: rotate(90deg);
 }
 
