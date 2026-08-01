@@ -40,7 +40,7 @@
 │   └── run_hindcast_cycle.sh
 └── docs/                 # these documents
 ```
-
+<!--
 ## The session ritual (every time)
 
 ```bash
@@ -48,6 +48,7 @@ source ~/seaforward/env.sh                 # shared paths + compilers + NetCDF
 source ~/seaforward/forecast/track.sh      # OR hindcast/track.sh — pick the track
 conda activate seaforward                  # the Python tools
 ```
+-->
 
 To **compile** the model, leave conda first (`conda deactivate`) so the system
 linker uses the repo's `opt_seq` NetCDF, then `./jobcomp`.
@@ -56,5 +57,5 @@ linker uses the repo's `opt_seq` NetCDF, then `./jobcomp`.
     ## Conventions used in these docs :
       - Commands are shown for the **Canary_12** example region (22°W–15.5°W, 14°N–24°N, 1/12°). Replace its numbers with your region's.
        - `~/seaforward` is the repository root; `<you>` is your Linux username.
-       - A ✅ check after a step tells you what a correct result looks like.
+       - ✅ check after a step tells you what a correct result looks like.
        - ⚠️ marks a place people commonly trip; read those twice.
