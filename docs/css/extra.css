@@ -9,25 +9,36 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
    Sidebar — Indentation et Menu Déroulant (Dropdown/Accordion)
    ========================================================= */
 
+/* Annuler la mise en majuscule forcée du thème sur les grands titres */
+.wy-menu-vertical p.caption,
+.wy-menu-vertical .caption {
+    text-transform: none !important;
+}
+
 /* 1. Indentation (Décalage) des sous-sections par rapport aux grands titres */
-.wy-menu-vertical li.toctree-l1 > ul {
+.wy-menu-vertical li.toctree-l1 > ul,
+.wy-menu-vertical li.toctree-l2 > ul {
     margin-left: 1.5rem !important; /* Décalage des sous-éléments */
 }
 
-/* 2. Comportement du Dropdown (Caché par défaut) */
-.wy-menu-vertical li.has-children > ul {
+/* 2. Comportement du Dropdown (Caché par défaut) pour les sous-menus et les phases (ul après caption) */
+.wy-menu-vertical li.has-children > ul,
+.wy-menu-vertical p.caption + ul {
     display: none;
 }
 
 /* 3. Afficher le sous-menu si la section est active OU ouverte manuellement via JS */
 .wy-menu-vertical li.has-children.current > ul,
-.wy-menu-vertical li.has-children.js-open > ul {
+.wy-menu-vertical li.has-children.js-open > ul,
+.wy-menu-vertical p.caption.current-phase + ul,
+.wy-menu-vertical p.caption.js-open + ul,
+.wy-menu-vertical p.caption + ul.current {
     display: block;
 }
 
-/* 4. Indicateur visuel (Flèche) pour les sections avec sous-menus */
+/* 4. Indicateur visuel (Flèche) pour les sections avec sous-menus et grands titres */
 .wy-menu-vertical li.has-children > a::before,
-.wy-menu-vertical li.has-children > .caption::before {
+.wy-menu-vertical p.caption.is-collapsible::before {
     content: "▶";
     display: inline-block;
     font-size: 0.7em;
@@ -37,9 +48,10 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
 
 /* Pivoter la flèche quand c'est ouvert */
 .wy-menu-vertical li.has-children.current > a::before,
-.wy-menu-vertical li.has-children.current > .caption::before,
 .wy-menu-vertical li.has-children.js-open > a::before,
-.wy-menu-vertical li.has-children.js-open > .caption::before {
+.wy-menu-vertical p.caption.current-phase::before,
+.wy-menu-vertical p.caption.js-open::before,
+.wy-menu-vertical p.caption.is-collapsible:has(+ ul.current)::before {
     transform: rotate(90deg);
 }
 
