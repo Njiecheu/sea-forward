@@ -34,25 +34,25 @@ pre code.hljs {
 /* Carte du bloc de code */
 .highlight {
     position: relative;
-    background: #fafafa;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+    background: #1e1e24;
+    border: 1px solid #2d2d35;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
-    margin: 1.2em 0;
+    margin: 1.5em 0;
 }
 
 /* Bandeau supérieur avec le nom du langage */
 .highlight .filename {
     display: flex;
     align-items: center;
-    background: #f0f0f1;
-    color: #6e7781;
+    background: #282830;
+    color: #a0a0ab;
     font-family: "JetBrains Mono", monospace;
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 8px 14px;
-    border-bottom: 1px solid #e5e5e6;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-bottom: 1px solid #1e1e24;
 }
 
 .highlight pre {
@@ -67,10 +67,11 @@ pre code.hljs {
     font-family: "JetBrains Mono", monospace;
     font-size: 1rem;           /* remets à 0.5rem ici si tu voulais vraiment du texte plus petit */
     line-height: 1.6;
+    color: #e4e4e7;
 }
 
 .highlight .linenos {
-    color: #b0b0b0;
+    color: #52525b;
     font-family: "JetBrains Mono", monospace;
     margin-right: 1em;
     user-select: none;
@@ -92,7 +93,7 @@ pre code.hljs {
     width: 28px;
     height: 28px;
     cursor: pointer;
-    color: #8a8f98;
+    color: #a0a0ab;
     opacity: 1;
     transition: color 0.15s ease;
 }
@@ -104,11 +105,11 @@ pre code.hljs {
 }
 
 .copy-code-button:hover {
-    color: #1a1a1a;
+    color: #ffffff;
 }
 
 .copy-code-button.copied {
-    color: #1a7f37;
+    color: #4ade80;
 }
 
 /* Réduit la largeur de la sidebar */

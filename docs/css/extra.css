@@ -93,8 +93,17 @@ li.with-children > a > .toctree-expand {
 }
 
 /* Liens de premier niveau qui ne sont pas des catégories (Home, Hands-on Documentation) */
-.navtree.toctree-l1 > a {
-    color: #2980B9;
+.wy-menu-vertical li.toctree-l1 > a,
+.navtree.toctree-l1 > a,
+.navtree.toctree-l1.page > a {
+    color: #2980B9 !important;
+    font-size: 1.05rem;
+}
+
+.wy-menu-vertical li.toctree-l1 > a:hover,
+.navtree.toctree-l1 > a:hover,
+.navtree.toctree-l1.page > a:hover {
+    color: #1996f5 !important;
 }
 
 /* Titres de phase en bleu */
@@ -108,23 +117,14 @@ li.with-children > a > .toctree-expand {
 }
 
 /* Élément de la page actuellement affichée */
+.wy-menu-vertical li.toctree-l1.current > a,
 .navtree.active > a {
-    color: #1996f5;      /* couleur au choix, ex: orange pour bien la distinguer du bleu des phases */
+    color: #1996f5 !important;      /* couleur au choix, ex: orange pour bien la distinguer du bleu des phases */
     font-weight: 600;
 }
 
 /* Couleur du titre de phase correspondant à la page actuellement consultée */
 .navtree.label.active-phase .caption {
     color: #1996f5;   /* couleur au choix */
-    font-weight: 200;
-}
-
-/* Liens de premier niveau qui sont des pages directes (Home, Hands-on Documentation) */
-.navtree.toctree-l1.page > a {
-    color: #2980b9;   /* même bleu que les titres de phase */
-    font-size: 1.05rem;
-}
-
-.navtree.toctree-l1.page > a.current {
-    color: #2980b9 !important;
+    font-weight: 600;
 }

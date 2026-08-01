@@ -31,7 +31,7 @@ hooks:
 extra_css:
   - css/syntax_custom.css
   - css/extra.css
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-light.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css
   #- https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap
   - https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap
 
