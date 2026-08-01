@@ -35,6 +35,8 @@
     padding: 16px 18px;
     background: transparent;
     overflow-x: auto;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .highlight code.hljs {
