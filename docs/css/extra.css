@@ -52,11 +52,11 @@ html {
 /* Titres de phase en bleu */
 .navtree.toctree-l1.label .caption {
     color: #1a73e8;   /* ajuste la teinte de bleu selon ton goût */
+    font-size: 1.05rem;
 }
 
 .navtree.toctree-l1.label:hover .caption {
     color: #0d47a1;   /* un bleu plus foncé au survol */
-    font-size: 1.05rem;
 }
 
 /* Élément de la page actuellement affichée */
