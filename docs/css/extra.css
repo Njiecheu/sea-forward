@@ -21,19 +21,17 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
     margin-left: 1.5rem !important; /* Décalage des sous-éléments */
 }
 
-/* 2. Comportement du Dropdown (Caché par défaut) pour les sous-menus et les phases (ul après caption) */
+/* 2. Cacher TOUS les sous-menus par défaut (le JS prendra le contrôle) */
 .wy-menu-vertical li.has-children > ul,
 .wy-menu-vertical p.caption + ul {
-    display: none;
+    display: none !important;
 }
 
-/* 3. Afficher le sous-menu si la section est active OU ouverte manuellement via JS */
-.wy-menu-vertical li.has-children.current > ul,
+/* 3. Afficher UNIQUEMENT si ouvert via JS (.js-open) */
 .wy-menu-vertical li.has-children.js-open > ul,
-.wy-menu-vertical p.caption.current-phase + ul,
 .wy-menu-vertical p.caption.js-open + ul,
-.wy-menu-vertical p.caption + ul.current {
-    display: block;
+.wy-menu-vertical p.caption + ul.js-open {
+    display: block !important;
 }
 
 /* 4. Indicateur visuel (Flèche) pour les sections avec sous-menus et grands titres */
@@ -47,11 +45,8 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
 }
 
 /* Pivoter la flèche quand c'est ouvert */
-.wy-menu-vertical li.has-children.current > a::before,
 .wy-menu-vertical li.has-children.js-open > a::before,
-.wy-menu-vertical p.caption.current-phase::before,
-.wy-menu-vertical p.caption.js-open::before,
-.wy-menu-vertical p.caption.is-collapsible:has(+ ul.current)::before {
+.wy-menu-vertical p.caption.js-open::before {
     transform: rotate(90deg);
 }
 

@@ -32,13 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    var filenameBar = block.querySelector(".filename");
-    if (filenameBar) {
-      filenameBar.style.position = "relative";
-      filenameBar.appendChild(button);
-    } else {
-      block.style.position = "relative";
-      block.appendChild(button);
-    }
+    // On attache toujours le bouton au conteneur principal (.highlight) 
+    // pour éviter qu'il ne soit masqué si on cache le .filename via CSS.
+    block.style.position = "relative";
+    block.appendChild(button);
   });
 });
