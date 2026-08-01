@@ -76,7 +76,7 @@ nav:
   - Hands-on Documentation: handsOn.md
   - Setup: 
       - Overview: phase1/01_setup.md
-      - 0. What you are building, in one picture: phase1/step0.md
+      #- 0. What you are building, in one picture: phase1/step0.md
       - 1. A Linux shell: phase1/step1.md
       - 2. System build tools: phase1/step2.md
       - 3. Miniconda (the Python package manager): phase1/step3.md

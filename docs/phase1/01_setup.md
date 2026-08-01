@@ -1,14 +1,17 @@
 # SEA FORWARD — Phase 1: Setup (from a bare machine to build-ready)
 
-This is the **first** document. By the end of it you will have on your own
-computer:
+SEA FORWARD runs the **CROCO** regional ocean model to make short ocean
+forecasts. To do that, the machine needs three independent things:
 
-- a working Linux shell (via WSL2 if you're on Windows),
-- the Miniconda package manager,
-- the `seaforward` conda environment (all the Python libraries),
-- a **self-contained NetCDF/HDF5 stack** compiled from source (`opt_seq/`),
-- the **CROCO** ocean model and **croco_pytools** pre-processing toolbox,
-- the SEA FORWARD repository laid out and ready to build a configuration.
+1. **Python tools** (to download global data and shape it for CROCO) — provided
+   by the `seaforward` conda environment.
+2. **A NetCDF library** (the file format all the ocean data uses) — compiled
+   from source into `~/seaforward/opt_seq`.
+3. **The CROCO model itself** (Fortran code you compile into a program) — lives
+   in `~/seaforward/code/croco`.
+
+The repository ties them together with a few small scripts (`env.sh`,
+`install/`, `sftools/`). This document installs all three.
 
 Everything lives under **one folder**, `~/seaforward`, so nothing on your
 machine is scattered around. When you finish, Phase 2 (Building a Forecast Config) picks up
