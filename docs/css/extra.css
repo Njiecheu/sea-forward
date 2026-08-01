@@ -30,8 +30,12 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
 
 /* 3. Afficher UNIQUEMENT si ouvert via JS (.js-open) */
 .wy-menu-vertical li.nav-collapsible-container.js-open,
-.wy-menu-vertical ul.nav-collapsible.js-open {
+.wy-menu-vertical ul.nav-collapsible.js-open,
+.wy-menu-vertical li.nav-collapsible-container.js-open > ul {
     display: block !important;
+    visibility: visible !important;
+    height: auto !important;
+    opacity: 1 !important;
 }
 
 /* 4. Indicateurs visuels (Flèches) */
@@ -145,4 +149,13 @@ html {
 .navtree.label.active-phase .caption {
     color: #1996f5;   /* couleur au choix */
     font-weight: 600;
+}
+
+/* Indenter les liens de sommaire interne (TOC) pour éviter la confusion avec les pages principales */
+.wy-menu-vertical a[href^="#"] {
+    margin-left: 1.5rem !important;
+}
+.wy-menu-vertical li.with-children > a[href^="#"] {
+    margin-left: 0 !important;
+    padding-left: 3rem !important;
 }
