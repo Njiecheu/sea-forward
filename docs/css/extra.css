@@ -43,13 +43,7 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
     transform: rotate(90deg);
 }
 
-/* Titres de phase : seule la première lettre en majuscule */
-.wy-menu-vertical .caption {
-    text-transform: lowercase;
-}
-.wy-menu-vertical .caption::first-letter {
-    text-transform: uppercase;
-}
+/* Titres de phase (affichage normal, pas de majuscule forcée) */
 
 .wy-menu-vertical a.current {
     color: #2980b9 !important;
