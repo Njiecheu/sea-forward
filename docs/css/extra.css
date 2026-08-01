@@ -49,16 +49,31 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
     color: #2980b9 !important;
 }
 
-/*.wy-side-nav-search::after {
+.wy-side-nav-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.wy-side-nav-search > a.icon-home {
+    order: 1;
+}
+
+.wy-side-nav-search > div[role="search"] {
+    order: 2;
+}
+
+.wy-side-nav-search::after {
     content: "";
+    order: 3;
     display: block;
-    background-image: url("./assets/sf.png");
+    width: 100%;
+    height: 70px;                              /* ajuste selon la taille voulue */
+    background-image: url('../assets/sf.png');
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    height: 60px;            
-    margin-top: 10px;
-}*/
+    margin-top: 12px;
+}
 
 /* Réserve toujours l'espace de la scrollbar du navigateur,
    pour que la largeur totale ne bouge jamais selon le contenu affiché */
