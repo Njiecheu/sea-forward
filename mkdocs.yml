@@ -77,27 +77,27 @@ nav:
   - Setup: 
       - Overview: phase1/01_setup.md
       #- 0. What you are building, in one picture: phase1/step0.md
-      - 1. A Linux shell: phase1/step1.md
-      - 2. System build tools: phase1/step2.md
-      - 3. Miniconda (the Python package manager): phase1/step3.md
-      - 4. Get the SEA FORWARD repository: phase1/step4.md
-      - 5. Create the `seaforward` conda environment: phase1/step5.md
-      - 6. The environment file `env.sh`: phase1/step6.md
-      - 7. Build the NetCDF/HDF5:
-          - 7. Build the NetCDF/HDF5 stack from source: phase1/step7.md
-          - 7.0 The two ways to build: phase1/step70.md
-          - 7.1 Download the source tarballs: phase1/step71.md
+      - System build tools: phase1/step1.md
+      #- System build tools: phase1/step2.md
+      #- Miniconda (the Python package manager): phase1/step3.md
+      - Get the SEA FORWARD repository: phase1/step4.md
+      - Create the `seaforward` conda environment: phase1/step5.md
+      - The environment file `env.sh`: phase1/step6.md
+      - Build the NetCDF/HDF5:
+          - Build the NetCDF/HDF5 stack from source: phase1/step7.md
+          - The two ways to build: phase1/step70.md
+          - Download the source tarballs: phase1/step71.md
           - Route A — build with the scripts (fast): phase1/routeA.md
           - Route B — build by hand (learn / debug): 
               - Route B — build by hand (learn / debug): phase1/routeB.md
-              - 7.2 HDF5: phase1/step72.md
-              - 7.3 netcdf-c (built on top of HDF5): phase1/step73.md
-              - 7.4 netcdf-fortran (built on top of netcdf-c): phase1/step74.md
-              - 7.5 Verify the stack: phase1/step75.md
-      - 8. Get CROCO and croco_pytools: phase1/step8.md
-      - 9. Reference data (bathymetry & coastline): phase1/step9.md
-      - 10. Final check — is the machine build-ready?: phase1/step10.md
-      - 11. From now on — the every-session ritual: phase1/step11.md
+              - HDF5: phase1/step72.md
+              - netcdf-c (built on top of HDF5): phase1/step73.md
+              - netcdf-fortran (built on top of netcdf-c): phase1/step74.md
+              - Verify the stack: phase1/step75.md
+      - Get CROCO and croco_pytools: phase1/step8.md
+      - Reference data (bathymetry & coastline): phase1/step9.md
+      - Final check — is the machine build-ready?: phase1/step10.md
+      - From now on — the every-session ritual: phase1/step11.md
       - What you have now: phase1/now.md
       - Troubleshooting: phase1/trouble.md
   - Building a Forecast Config: 

@@ -38,3 +38,48 @@ whoami            # your linux username
 
 !!! note
     **RAM note.** Building the libraries and running the model is comfortable with **16 GB** of RAM. With less, use fewer parallel compile jobs (shown later).
+
+You need a C/Fortran compiler and a few build utilities. Install them once:
+
+```bash
+sudo apt update
+sudo apt install -y build-essential gfortran m4 curl wget git \
+                    libcurl4-openssl-dev zlib1g-dev
+```
+
+What these are:
+
+- `build-essential` — the C compiler (`gcc`) and `make`.
+- `gfortran` — the Fortran compiler (CROCO is Fortran).
+- `m4`, `zlib1g-dev`, `libcurl4-openssl-dev` — needed by the NetCDF build.
+- `git` — to clone the repository.
+
+Verify:
+
+```bash
+gcc --version
+gfortran --version
+```
+
+Both should print a version without error.
+
+**Conda** installs and isolates Python libraries so they don't clash with your
+system. We use it for the download/pre-processing tools.
+
+Download and install Miniconda:
+
+```bash
+cd ~
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+
+Accept the licence, keep the default location (`~/miniconda3`), and when it asks
+whether to initialise, answer **yes**. Then close and reopen the terminal (or
+`source ~/.bashrc`). Your prompt should now start with `(base)`.
+
+Confirm:
+
+```bash
+conda --version
+```
