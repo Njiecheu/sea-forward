@@ -56,6 +56,7 @@ html {
 
 .navtree.toctree-l1.label:hover .caption {
     color: #0d47a1;   /* un bleu plus foncé au survol */
+    font-size: 1.05rem;
 }
 
 /* Élément de la page actuellement affichée */
@@ -73,6 +74,7 @@ html {
 /* Liens de premier niveau qui sont des pages directes (Home, Hands-on Documentation) */
 .navtree.toctree-l1.page > a {
     color: #1a73e8;   /* même bleu que les titres de phase */
+    font-size: 1.05rem;
 }
 
 .navtree.toctree-l1.page > a {
