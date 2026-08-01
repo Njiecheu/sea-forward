@@ -12,31 +12,8 @@
 !!! note
     Phase 1 is a prerequisite for everything (once per computer). Phase 2 builds a **forecast** configuration for a region and Phase 3 runs it. Phase 4 (hindcast) reuses Phase 2's *steps* but swaps the data source — it points back to Phase 2 rather than repeating it.
 
-## The big picture
 
-```
-                       ┌─────────────────────────────┐
-   Phase 1  Setup  ───▶│  machine build-ready        │
-                       │  (env, conda, NetCDF, CROCO)│
-                       └──────────────┬──────────────┘
-                                      │
-                       ┌──────────────▼───────────────────┐
-   Phase 2  Build   ──▶│  FORECAST config built & compiled │
-   (forecast)          │  grid, mask, Mercator+GFS, croco  │
-                       └───────┬───────────────────┬───────┘
-                               │                   │
-              ┌────────────────▼──┐      reuse     │
-   Phase 3 ──▶│  Forecast          │     Phase 2   │
-              │  Mercator + GFS    │     steps     │
-              │  today → today+N   │       │       │
-              │  forecast/…        │       ▼       ▼
-              └────────────────────┘   ┌──────────────────────┐
-                                       │  Hindcast   Phase 4   │
-                                       │  GLORYS + ERA5        │
-                                       │  a past window,cycled │
-                                       │  hindcast/…           │
-                                       └──────────────────────┘
-```
+![Phase 1-4](./img/phase.png)
 
 ## The one-folder layout
 
