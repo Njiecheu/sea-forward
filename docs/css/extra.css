@@ -11,35 +11,53 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
 
 /* Annuler la mise en majuscule forcée du thème sur les grands titres */
 .wy-menu-vertical p.caption,
-.wy-menu-vertical .caption {
+.wy-menu-vertical .caption,
+.wy-menu-vertical a {
     text-transform: none !important;
 }
 
-/* 1. Indentation (Décalage) des sous-sections par rapport aux grands titres */
-.wy-menu-vertical li.toctree-l1 > ul,
-.wy-menu-vertical li.toctree-l2 > ul {
+/* 1. Indentation (Décalage) des sous-sections */
+.wy-menu-vertical ul.subnav-l1,
+.wy-menu-vertical ul.subnav-l2 {
     margin-left: 1.5rem !important;
 }
 
-/* 2. Cacher TOUS les sous-menus marqués par le JS ou via sélecteur direct */
-.wy-menu-vertical ul.nav-collapsible,
-.wy-menu-vertical .caption + ul,
-.wy-menu-vertical li.caption > ul,
-.wy-menu-vertical li.toctree-l1 > ul,
-.wy-menu-vertical li.toctree-l2 > ul {
+/* 2. Cacher TOUS les conteneurs de sous-menus identifiés par le JS */
+.wy-menu-vertical li.nav-collapsible-container,
+.wy-menu-vertical ul.nav-collapsible {
     display: none !important;
 }
 
 /* 3. Afficher UNIQUEMENT si ouvert via JS (.js-open) */
-.wy-menu-vertical ul.js-open,
-.wy-menu-vertical ul.nav-collapsible.js-open,
-.wy-menu-vertical .caption.js-open + ul,
-.wy-menu-vertical li.has-children.js-open > ul {
+.wy-menu-vertical li.nav-collapsible-container.js-open,
+.wy-menu-vertical ul.nav-collapsible.js-open {
     display: block !important;
 }
 
-/* 4. Indicateur visuel (Flèche) */
-.wy-menu-vertical li.has-children > a::before,
+/* 4. Indicateurs visuels (Flèches) */
+
+/* Type A : Les sous-menus internes (toctree-expand généré par le thème) */
+.wy-menu-vertical .toctree-expand {
+    display: inline-block !important;
+    float: left;
+    margin-right: 8px;
+    font-size: 0.8em;
+    transition: transform 0.2s ease;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.wy-menu-vertical .toctree-expand::before {
+    content: "▶" !important;
+    display: inline-block;
+}
+.wy-menu-vertical .toctree-expand::after {
+    content: none !important;
+}
+.wy-menu-vertical li.with-children.js-open .toctree-expand {
+    transform: rotate(90deg);
+}
+
+/* Type B : Les grandes Phases (caption) */
 .wy-menu-vertical .caption.is-collapsible::before {
     content: "▶";
     display: inline-block;
@@ -47,9 +65,6 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
     margin-right: 8px;
     transition: transform 0.2s ease;
 }
-
-/* Pivoter la flèche quand c'est ouvert */
-.wy-menu-vertical li.has-children.js-open > a::before,
 .wy-menu-vertical .caption.js-open::before {
     transform: rotate(90deg);
 }
@@ -93,10 +108,7 @@ html {
     scrollbar-gutter: stable;
 }
 
-/* Cache le signe "+" par défaut sur tous les titres */
-.toctree-expand {
-    display: none !important;
-}
+/* (Signe + géré plus haut avec la flèche) */
 
 /* Liens de premier niveau qui ne sont pas des catégories (Home, Hands-on Documentation) */
 .wy-menu-vertical li.toctree-l1 > a,
