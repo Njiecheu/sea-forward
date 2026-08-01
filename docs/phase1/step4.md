@@ -1,6 +1,6 @@
 Before setting up the environment, you need to download (clone) the project to your local machine. You can do this using either **SSH** (recommended for frequent contributors) or **HTTPS** (easier for beginners).
 
-### 4.1 Option A: Clone via SSH (Recommended)
+### Option A: Clone via SSH (Recommended)
 
 To use SSH, you must first have an SSH key configured on your GitHub account.
 _If you haven't done this yet, please follow these instructions:_
@@ -90,7 +90,7 @@ cd seaforward
 ls
 ```
 
-### 4.2 Option B: Clone via HTTPS
+### Option B: Clone via HTTPS
 
 If you don't want to set up SSH keys right now, you can clone using HTTPS. You may be prompted to enter your GitHub username and password/personal access token.
 
@@ -101,7 +101,7 @@ cd seaforward
 ls
 ```
 
-### 4.3 Verify the clone
+### Verify the clone
 ```bash 
 git clone https://github.com/opera-seaforward/seaforward.git
 ```
