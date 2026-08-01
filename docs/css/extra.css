@@ -78,7 +78,7 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 /* Réserve toujours l'espace de la scrollbar du navigateur,
