@@ -105,7 +105,7 @@ pre code.hljs {
 
 /* Réduit la largeur de la sidebar */
 .wy-nav-side {
-    width: 315px;   /* défaut généralement ~300px — ajuste selon le rendu voulu */
+    width: 390px;   /* défaut généralement ~300px — ajuste selon le rendu voulu */
 }
 
 /* Décale le contenu principal pour compenser la nouvelle largeur */
