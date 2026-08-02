@@ -180,21 +180,21 @@ html {
 /* 2. Augmenter la largeur de la barre latérale sur grand écran */
 @media screen and (min-width: 769px) {
     .wy-nav-side {
-        width: 380px !important;  
+        width: 420px !important;  
     }
     .wy-nav-content-wrap {
-        margin-left: 380px !important; 
+        margin-left: 420px !important; 
     }
     .wy-side-nav-search{
-        width: 360px !important; 
+        width: 420px !important; 
     }
     .wy-menu-vertical a.current{
-        width: 380px !important; 
+        width: 420px !important; 
     }
     .wy-menu-vertical li.toctree-l1 > a,
     .navtree.toctree-l1 > a,
     .navtree.toctree-l1.page > a {
-        width: 380px !important; 
+        width: 420px !important; 
     }
     .wy-menu-vertical,
     .wy-menu.wy-menu-vertical,
