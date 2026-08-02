@@ -191,11 +191,17 @@ html {
     .wy-menu-vertical a.current{
         width: 380px !important; 
     }
-.wy-menu-vertical li.toctree-l1 > a,
-.navtree.toctree-l1 > a,
-.navtree.toctree-l1.page > a {
-    width: 380px !important; 
-}}
+    .wy-menu-vertical li.toctree-l1 > a,
+    .navtree.toctree-l1 > a,
+    .navtree.toctree-l1.page > a {
+        width: 380px !important; 
+    }
+    .wy-menu-vertical,
+    .wy-menu.wy-menu-vertical,
+    .wy-side-scroll .wy-menu-vertical {
+        width: 380px !important;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .wy-nav-side {
