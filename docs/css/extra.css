@@ -16,10 +16,18 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
     text-transform: none !important;
 }
 
-/* 1. Indentation (Décalage) des sous-sections */
+/* 1. Indentation (Décalage) des sous-sections
+   Utilise padding-left plutôt que margin-left : le padding n'agit que sur
+   l'espace intérieur, il ne rétrécit jamais la largeur totale de l'élément
+   ni de son fond — contrairement à margin-left, qui obligeait à compenser
+   la largeur "à la main" à chaque niveau imbriqué. */
 .wy-menu-vertical ul.subnav-l1,
-.wy-menu-vertical ul.subnav-l2 {
-    margin-left: 1.5rem !important;
+.wy-menu-vertical ul.subnav-l2,
+.wy-menu-vertical ul.subnav-l3 {
+    margin-left: 0 !important;
+    padding-left: 1.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 
 /* 2. Cacher TOUS les conteneurs de sous-menus identifiés par le JS */
@@ -143,35 +151,6 @@ html {
 .navtree.active > a {
     color: #1996f5 !important;      /* couleur au choix, ex: orange pour bien la distinguer du bleu des phases */
     font-weight: 600;
-}
-
-/* Fait en sorte que le fond clair du sommaire "on this page" aille jusqu'au bord de la sidebar.
-   ul.subnav-l2 est décalé de 1.5rem (règle plus haut) sans compensation de largeur :
-   on annule ce décalage uniquement sur l'élément actif porteur du fond. */
-.wy-menu-vertical .navtree li.toctree-l2.current {
-    width: calc(100% + 1.5rem);
-    margin-left: -1.5rem;
-}
-
-.wy-menu-vertical .navtree li.toctree-l2.current > a {
-    width: 100%;
-    margin-left: -1.5rem;
-    padding-left: calc(22px + 1.5rem);   /* compense pour garder le texte à la même position visuelle */
-    box-sizing: border-box;
-}
-
-/* Le fond arrondi du sous-sommaire imbriqué (toctree-l3/l4, ex: "Phase 2 — Run a Forecast Locally")
-   est fixé en dur à width:300px par le thème, ce qui ne couvre pas toute la largeur de la sidebar (380px).
-   On force la largeur en fonction du conteneur parent à la place. */
-.wy-menu-vertical li.toctree-l2.current.nav-collapsible-container {
-    width: calc(100% + 24px) !important;
-    margin-left: -24px !important;
-    box-sizing: border-box !important;
-}
-
-.wy-menu-vertical li.toctree-l2.current.nav-collapsible-container > ul.subnav-l2 {
-    width: 100% !important;
-    box-sizing: border-box !important;
 }
 
 /* Couleur du titre de phase correspondant à la page actuellement consultée */
