@@ -199,7 +199,8 @@ html {
     .wy-menu-vertical,
     .wy-menu.wy-menu-vertical,
     .wy-side-scroll .wy-menu-vertical {
-        width: 380px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
 
