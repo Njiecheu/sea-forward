@@ -145,6 +145,15 @@ html {
     font-weight: 600;
 }
 
+/* Fait en sorte que le fond clair du sommaire "on this page" aille jusqu'au bord de la sidebar */
+.wy-menu-vertical li.toctree-l2.current,
+.wy-menu-vertical li.toctree-l2.current > ul,
+.wy-menu-vertical ul.subnav-l2,
+.wy-menu-vertical ul.subnav-l3 {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /* Couleur du titre de phase correspondant à la page actuellement consultée */
 .navtree.label.active-phase .caption {
     color: #1996f5;   /* couleur au choix */
