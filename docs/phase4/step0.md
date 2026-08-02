@@ -20,13 +20,13 @@ export LON_MIN=-22.0; export LON_MAX=-15.5      # grid box
 export LAT_MIN=14.0;  export LAT_MAX=24.0
 export RES=$(echo "1/12" | bc -l)
 export EXTENTS=-23.5,-14.0,12.5,25.5           # GLORYS download box (grid + ~1.5°)
-export ERA5_BOX="-22,-15.5,14,24"              # ERA5 grid box (a 2° margin is added)
+export GFS_BOX="-22,-15.5,14,24"              # GFS grid box (a 2° margin is added)
 export YORIG=1993                               # reanalysis time origin — NOT 2000
 
 mkdir -p ${CONFIG_DIR} ${CF} \
          ${HCAST}/downloaded_data/GLORYS \
-         ${HCAST}/downloaded_data/ERA5/for_croco
+         ${HCAST}/downloaded_data/GFS/for_croco
 ```
 
 !!! warning
-    ⚠️ **`Yorig=1993` for the hindcast.** GLORYS and ERA5 use 1993 as the time origin (the start of the altimetry era the reanalysis covers). Use **1993** consistently across the ini, bry, ERA5 convert, and the run — mixing origins corrupts the time axis.
+    ⚠️ **`Yorig=1993` for the hindcast.** GLORYS and GFS use 1993 as the time origin (the start of the altimetry era the reanalysis covers). Use **1993** consistently across the ini, bry, GFS convert, and the run — mixing origins corrupts the time axis.

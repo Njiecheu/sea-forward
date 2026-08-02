@@ -1,6 +1,6 @@
 `hindcast/run_hindcast_cycle.sh` automates the whole thing over a date range, in
 **2-day spin-up + 5-day hindcast** cycles. It mirrors the forecast driver, with
-GLORYS+ERA5 and a cycle loop.
+GLORYS+GFS and a cycle loop.
 
 ### 10.1 What one cycle does (per cycle date T)
 
@@ -12,8 +12,8 @@ GLORYS+ERA5 and a cycle loop.
 - then T advances by 5 days to the next cycle. **Each cycle re-inits from
   GLORYS** (not chained), keeping it anchored to the reanalysis.
 
-The driver **auto-downloads** any missing GLORYS/ERA5 month for each cycle's
-window, and its `patch_croco_in` sets the ERA5 online block automatically
+The driver **auto-downloads** any missing GLORYS/GFS month for each cycle's
+window, and its `patch_croco_in` sets the GFS online block automatically
 (spanning months when a cycle crosses a boundary, e.g. `2025 12 24 2026 01`).
 
 ### 10.2 Settings at the top
@@ -26,11 +26,11 @@ SPINUP_DAYS=2
 HCAST_DAYS=5
 YORIG=1993
 EXTENTS="-23.5,-14.0,12.5,25.5"   # GLORYS box
-ERA5_BOX="-22,-15.5,14,24"        # ERA5 box
+GFS_BOX="-22,-15.5,14,24"        # GFS box
 ```
 
 !!! warning
-    ⚠️ **Match the driver to your config** — same as the forecast driver, update `CONFIG_NAME`, `EXTENTS`, `ERA5_BOX` for a new region, or it runs Canary_12.
+    ⚠️ **Match the driver to your config** — same as the forecast driver, update `CONFIG_NAME`, `EXTENTS`, `GFS_BOX` for a new region, or it runs Canary_12.
 
 With these, the 3 cycles are:
 
@@ -45,7 +45,7 @@ the year boundary, so it needs ocean and atmosphere data from **two** months.
 Concretely, cycle 2 will:
 
 - build its boundaries by reading **both** `2025_12.nc` **and** `2026_01.nc` GLORYS files and stitching them across the year (thanks to the date-based `make_bry_hindcast` from Step 7), and
-- read **both** months' ERA5 online forcing — the driver sets the online block to `2025 12 24 2026 01` (start month → end month), so CROCO opens `..._Y2025M12.nc` and rolls over to `..._Y2026M01.nc` as the run crosses midnight on Dec 31.
+- read **both** months' GFS online forcing — the driver sets the online block to `2025 12 24 2026 01` (start month → end month), so CROCO opens `..._Y2025M12.nc` and rolls over to `..._Y2026M01.nc` as the run crosses midnight on Dec 31.
 
 This is exactly why the cross-month/cross-year support in Steps 6–7 matters — a
 naive single-month tool would fail here.
@@ -90,7 +90,7 @@ stages. It looks like this (trimmed):
 for two tell-tales that the year-crossing worked:
 
 1. In stage `[3/4]` the bry build prints that it's reading the GLORYS data because the window is Dec 29→Jan 5 (padded), `make_bry_hindcast` pulls in both `2025_12.nc` and `2026_01.nc`. The output filename records the span, e.g. `croco_bry_GLORYS_Y2025M12D29_to_Y2026M01D05.nc`.
-2. In stage `[4/4]` the run header prints the online forcing months spanning the year, e.g. `Online forcing: first ... year 2025, month 12` and `last ... year 2026, month 1`, and as the run passes Dec 31 you'll see it open the January ERA5 file (`... T2M_Y2026M01.nc`).
+2. In stage `[4/4]` the run header prints the online forcing months spanning the year, e.g. `Online forcing: first ... year 2025, month 12` and `last ... year 2026, month 1`, and as the run passes Dec 31 you'll see it open the January GFS file (`... T2M_Y2026M01.nc`).
 
 If a cycle stops early instead of reaching `MAIN: DONE`, jump to Troubleshooting —
 the most common first-run cause is the boundary window not extending past the run

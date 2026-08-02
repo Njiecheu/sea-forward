@@ -124,7 +124,7 @@ making three swaps you already know from Phase 4 (Hindcast):
 |---|---|---|
 | Which parent | today's forecast cycle | a **chosen** past cycle you've run (e.g. `20251225`) |
 | Time origin | `Yorig=2000` | **`Yorig=1993`** |
-| Atmosphere | GFS `for_croco` | the cycle's **ERA5** `for_croco` |
+| Atmosphere | GFS `for_croco` | the cycle's **GFS** `for_croco` |
 | Parent path | `model-runs/Canary_12/<tag>/fcst/...` | `model-runs/Canary_12/<tag>/hcast/...` |
 
 Concretely, to nest the `20251225` hindcast cycle:
@@ -145,7 +145,7 @@ python seaforward.py make_bry --input_file .../parent_20251225.nc --output_dir $
 ```
 
 Then Steps 5–7 as before, with the child's `online:` block pointing at that cycle's
-**ERA5** `for_croco` folder — the per-cycle copy the parent hindcast actually used,
+**GFS** `for_croco` folder — the per-cycle copy the parent hindcast actually used,
 which covers the cycle's full window (the same "use the parent's per-cycle forcing"
 point as the forecast). The child's run_date is simply the chosen cycle's date (the
 one you pass to make_ini/make_bry above), just as the forecast child uses today's

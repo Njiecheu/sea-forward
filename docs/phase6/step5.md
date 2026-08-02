@@ -77,7 +77,7 @@ nano croco.in
 **online** (`Ctrl-W` → `online:`), the two lines below the header:
 ```
            9999   1      24            9999     1
-    /home/btchonang/seaforward/forecast/model-runs/Canary_12/<DATE>/downloaded_data/GFS/for_croco/
+    ${SEA_FORWARD_ROOT}/seaforward/forecast/model-runs/Canary_12/<DATE>/downloaded_data/GFS/for_croco/
 ```
 Replace `<DATE>` with the parent forecast's date tag (e.g. `20260712`). **Use the
 parent's per-cycle GFS** under `model-runs/<parent>/<date>/`, *not* the copy in
@@ -97,5 +97,5 @@ parent's per-cycle GFS** under `model-runs/<parent>/<date>/`, *not* the copy in
 ```bash
 grep "SOURCE1=" jobcomp
 ```
-Confirm `SOURCE1=/home/btchonang/seaforward/code/croco/OCEAN` (same as parent). If
+Confirm `SOURCE1=${SEA_FORWARD_ROOT}/seaforward/code/croco/OCEAN` (same as parent). If
 not, `nano jobcomp` and fix it.

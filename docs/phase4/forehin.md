@@ -2,8 +2,8 @@
   `jobcomp`, compiled binary mechanics, spin-up→run handoff, scratch/model-runs
   split.
 - **Different:** ocean source (Mercator → **GLORYS**), atmosphere (GFS →
-  **ERA5**, `ERA_ECMWF`), `Yorig` (2000 → **1993**), data by **month** (not one
-  anfc file), month-padding for ERA5 (`M01`), and the driver cycles a **past**
+  **GFS**, `ERA_ECMWF`), `Yorig` (2000 → **1993**), data by **month** (not one
+  anfc file), month-padding for GFS (`M01`), and the driver cycles a **past**
   window instead of running "today."
 - **Kept separate on disk:** `forecast/` and `hindcast/` each have their own
   `configs/`, `scratch/`, `model-runs/`, and `track.sh`.

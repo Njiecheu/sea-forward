@@ -8,7 +8,7 @@ cd ~/seaforward
 python3 -c "
 import sftools.nesting as nest
 nest.croco_to_mercator(
-    '/home/btchonang/seaforward/forecast/model-runs/Canary_12/20260712/fcst/CROCO_FILES/croco_his.nc',
+    '${SEA_FORWARD_ROOT}/seaforward/forecast/model-runs/Canary_12/20260712/fcst/CROCO_FILES/croco_his.nc',
     '${FCAST}/downloaded_data/PARENT/parent_20260712.nc',
     Yorig=2000)
 "

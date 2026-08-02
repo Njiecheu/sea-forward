@@ -133,13 +133,13 @@ nav:
       - Step 0 — Session ritual (the HINDCAST track): phase4/step0.md
       - Step 1 — Build the grid (its own, in the hindcast track): phase4/step1.md
       - Step 2 — The hindcast `crocotools_param.py`: phase4/step2.md
-      - Step 3 — Set up ERA5 access (CDS account + API key): phase4/step3.md
+      - Step 3 — Set up GFS access (CDS account + API key): phase4/step3.md
       - Step 4 — Download the ocean (GLORYS): phase4/step4.md
-      - Step 5 — Download the atmosphere (ERA5): phase4/step5.md
+      - Step 5 — Download the atmosphere (GFS): phase4/step5.md
       - Step 6 — Build the initial condition: phase4/step6.md
       - Step 7 — Build the boundaries: phase4/step7.md
-      - Step 8 — The CROCO config files (Phase 2, with ERA5 differences): phase4/step8.md
-      - Step 9 — `croco.ini` for the ERA5 hindcast: phase4/step9.md
+      - Step 8 — The CROCO config files (Phase 2, with GFS differences): phase4/step8.md
+      - Step 9 — `croco.ini` for the GFS hindcast: phase4/step9.md
       - Step 10 — The operational driver: phase4/step10.md
       - What you built (the hindcast CLI additions): phase4/built.md
       - Forecast vs hindcast — the mental model: phase4/forehin.md

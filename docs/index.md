@@ -26,15 +26,13 @@ blueprint of the OceanPrediction DCC Architecture:
 
 | Layer | Process | In SEA FORWARD |
 |---|---|---|
-| Upstream Data (U) | U2, U4, U5 | ERA5 atmospheric forcing, CMEMS ocean boundary conditions, GEBCO 2024 bathymetry |
+| Upstream Data (U) | U2, U3, U4, U5, U7 | GFS atmospheric forcing, Dai river discharge, CMEMS ocean boundary conditions, ETOPO2 bathymetry, TPXO tidal forcing |
 | Core Forecasting Engine (C) | C1 | The CROCO v2.0 ocean model, compiled from source |
 | Verification & Analysis (V) | V1 | Automated validation against a canonical reference run (RMSE, bias, spatial correlation) |
 | Downstream Applications (D) | D1 | Jupyter notebooks for SST, SSH, currents, MLD and salinity, with guided exercises |
 
-The forecasting strategy follows Tchonang et al. (2024): each cycle is
-initialized from the global 1/12° GLORYS12v1 reanalysis, integrated through a
-2-day spin-up for dynamical adjustment, then run forward as a 5-day forecast —
-repeated every 2 days in a rolling cycle for continuous coverage.
+The forecasting strategy follows [Tchonang et al. (2024)](https://journals.ametsoc.org/view/journals/atot/41/6/JTECH-D-23-0112.1.xml): each cycle is initialized from the global 1/12° GLORYS12v1 reanalysis, integrated through a 2-day spin-up for dynamical adjustment, then run forward as a 5-day forecast — repeated every 2 days in a rolling cycle for continuous coverage.
+![forecasting_scheme](./img/forecasting_scheme.png)
 
 Every component in the documentation is cross-referenced to the
 OceanPrediction DCC Architecture process it implements, so what you learn here
@@ -55,6 +53,7 @@ because each poses a different forecasting challenge:
   shedding.
 
 See the [region gallery](phase7/) for what is available today.
+![sea_forward_test_cases](./img/sea_forward_test_cases.png)
 
 ## Two ways in
 
@@ -132,7 +131,7 @@ assimilation) and for CROCO-AGRIF nesting.
 | **Lead institutions** | ICMPA-UNESCO Chair, Université d'Abomey-Calavi (Benin); Gulf of Guinea Ocean Sciences Summer School (GGOSSS) |
 | **Framework** | OceanPrediction Decade Collaborative Centre (DCC) |
 | **Ocean model** | CROCO — Coastal and Regional Ocean COmmunity model |
-| **Data sources** | Copernicus Climate Data Store (ERA5); CMEMS / GLORYS12v1 (Mercator Ocean International); GEBCO |
+| **Data sources** | Copernicus Climate Data Store (GFS); CMEMS / GLORYS12v1 (Mercator Ocean International); ETOPO2 |
 
 ![Global Gateway · Funded by the European Union · OceanPrediction UN Decade Collaborative Centre · Mercator Ocean International · Gulf of Guinea Ocean Sciences Summer School (GGOSSS) · Université d'Abomey-Calavi · CIPMA – Chaire UNESCO](assets/mooc-footer.png)
 

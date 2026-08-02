@@ -8,4 +8,4 @@ cd ~/seaforward/forecast
 # result: forecast/model-runs/<CONFIG>/<date>/fcst/CROCO_FILES/croco_his.nc
 ```
 !!! note
-    **Next:** Phase 4 — *Running a Hindcast*, which reuses Phase 2's steps and swaps the data source (GLORYS + ERA5) for a past period.
+    **Next:** Phase 4 — *Running a Hindcast*, which reuses Phase 2's steps and swaps the data source (GLORYS + GFS) for a past period.

@@ -1,4 +1,4 @@
-ERA5 comes from the **Copernicus Climate Data Store (CDS)** — a different service
+GFS comes from the **Copernicus Climate Data Store (CDS)** — a different service
 from CMEMS, with its own free account and API key. This is a one-time setup.
 Here's the whole thing, step by step.
 
@@ -41,7 +41,7 @@ key: 12345678-abcd-1234-efgh-1234567890ab
 ```
 
 **What:** `url` is the CDS API endpoint; `key` is your personal token. **Why
-here:** `cdsapi.Client()` looks for `~/.cdsapirc` by default, so every ERA5
+here:** `cdsapi.Client()` looks for `~/.cdsapirc` by default, so every GFS
 download finds your credentials with no extra flags.
 
 Save (`Ctrl-O`, Enter), exit (`Ctrl-X`). Lock the permissions (it holds a secret):
@@ -58,11 +58,11 @@ The `seaforward` conda env should already have `cdsapi`. If not:
 pip install "cdsapi>=0.7.2"      # 0.7.2+ needed for the new CDS system
 ```
 
-### 3.5 Accept the ERA5 licence (one-time, per dataset)
+### 3.5 Accept the GFS licence (one-time, per dataset)
 
 5. You **must** accept the dataset's terms once, from the website, or downloads
-   fail with a licence error. Open the ERA5 single-levels dataset:
-   **https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels**
+   fail with a licence error. Open the GFS single-levels dataset:
+   **https://cds.climate.copernicus.eu/datasets/reanalysis-GFS-single-levels**
    → go to the **Download** tab → scroll to the bottom → under **Terms of use**,
    click **Accept**. (Do this once; it's remembered for your account.)
 
@@ -82,4 +82,4 @@ EOF
     ✅ All three should succeed: `cdsapi OK`, the `.cdsapirc` listing, and `CDS client initialised OK`.
 
 !!! warning
-    ⚠️ **If `.cdsapirc` is missing or wrong** you'll get an *authentication* error when downloading — redo 3.2–3.3 (token copied correctly, new URL form). **If you get a *licence* error** for ERA5 despite the key working, you skipped 3.5 — accept the terms on the dataset page and retry.
+    ⚠️ **If `.cdsapirc` is missing or wrong** you'll get an *authentication* error when downloading — redo 3.2–3.3 (token copied correctly, new URL form). **If you get a *licence* error** for GFS despite the key working, you skipped 3.5 — accept the terms on the dataset page and retry.

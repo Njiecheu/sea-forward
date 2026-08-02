@@ -1,5 +1,5 @@
 Copy the templates into the hindcast config folder (Phase 2 Step 7), then edit
-the four files **by hand in `nano`**. Only the ERA5 differences are spelled out
+the four files **by hand in `nano`**. Only the GFS differences are spelled out
 here; everything else is exactly Phase 2.
 
 ```bash
@@ -11,7 +11,7 @@ for f in cppdefs.h param.h croco.in jobcomp; do cp $f $f.orig; done
 !!! note
     **nano reminders** (same as Phase 2): `Ctrl-W` = search (type text, Enter, it jumps there), edit with arrow keys, `Ctrl-O` then Enter = save, `Ctrl-X` = exit.
 
-### 8.1 `cppdefs.h` — config name, boundaries, and **ERA5 forcing**
+### 8.1 `cppdefs.h` — config name, boundaries, and **GFS forcing**
 
 ```bash
 nano cppdefs.h
@@ -23,7 +23,7 @@ occurrence and change it too, if present.)
 
 - **What:** names your configuration. **Why:** `param.h`, `croco.in`, and jobcomp all key off this name.
 
-**Edit 2 — ONLINE + ERA5.** `Ctrl-W`, type `undef  ONLINE`, Enter — this lands in
+**Edit 2 — ONLINE + GFS.** `Ctrl-W`, type `undef  ONLINE`, Enter — this lands in
 **your** regional block (the one just below the `BULK_*` lines). Set the block to:
 ```
 #  define ONLINE
@@ -32,9 +32,9 @@ occurrence and change it too, if present.)
 #   define ERA_ECMWF
 #  endif
 ```
-- **What:** turns on online forcing and selects the **ERA5 (ECMWF)** format.
+- **What:** turns on online forcing and selects the **GFS (ECMWF)** format.
   **Why different from forecast:** the forecast used GFS (`ERA_ECMWF` undef); the
-  hindcast uses ERA5 (`ERA_ECMWF` **define**).
+  hindcast uses GFS (`ERA_ECMWF` **define**).
 
 **Edit 3 — close the east boundary.** `Ctrl-W`, type `define OBC_EAST`, Enter.
 Change `define` to `undef  ` on that line:

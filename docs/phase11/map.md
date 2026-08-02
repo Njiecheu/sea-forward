@@ -6,7 +6,7 @@ itself. SEA FORWARD uses the standard set, each supplying one class of input:
 | upstream source | SEA FORWARD product | role |
 |---|---|---|
 | Parent ocean model | **Mercator / GLORYS** (global 1/12°) | initial + boundary conditions |
-| Atmospheric forcing | **GFS** (forecast) / ERA5 (hindcast) | surface forcing |
+| Atmospheric forcing | **GFS** (forecast) / GFS (hindcast) | surface forcing |
 | Tidal atlas | **TPXO** | tidal boundary forcing (optional) |
 | Bathymetry + coastline | **ETOPO2 + GSHHS** | the model grid |
 | Ocean observations | tide gauges, altimetry, Argo | validation |

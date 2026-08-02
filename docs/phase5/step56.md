@@ -49,11 +49,11 @@ val.compare_sst(F, MERC, date="2026-07-11", Yorig=2000,
 
 ### SST with wind
 
-The upwelling diagnostic — SST shaded with the 10 m wind (from ERA5/GFS
+The upwelling diagnostic — SST shaded with the 10 m wind (from GFS/GFS
 `for_croco` files) on top:
 
 ```python
-val.sst_with_wind(F, era5_dir="forecast/scratch/Canary_12/downloaded_data/GFS/for_croco",
+val.sst_with_wind(F, GFS_dir="forecast/scratch/Canary_12/downloaded_data/GFS/for_croco",
                   date="2026-07-11")
 ```
 

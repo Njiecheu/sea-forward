@@ -1,5 +1,5 @@
 The one section that differs from the forecast is **`online:`**, which uses the
-ERA5 form (real byear/bmonth, not the GFS `9999` dummy dates). For a single manual
+GFS form (real byear/bmonth, not the GFS `9999` dummy dates). For a single manual
 test run (7 days, Dec 2→9, ini at D02):
 
 ```bash
@@ -40,17 +40,17 @@ GLORYS bry:
                     50000.            400.
 ```
 
-**online (ERA5 form)** — `Ctrl-W` `byear  bmonth`, Enter. Set the two lines below
+**online (GFS form)** — `Ctrl-W` `byear  bmonth`, Enter. Set the two lines below
 the `online:` header — the numbers line, then the data-path line:
 ```
 online:    byear  bmonth recordsperday byearend bmonthend / data path
            2025   12      24            2025     12
-    /home/<you>/seaforward/hindcast/scratch/Canary_12/downloaded_data/ERA5/for_croco/
+    /home/<you>/seaforward/hindcast/scratch/Canary_12/downloaded_data/GFS/for_croco/
 ```
 (replace `<you>` with your username).
 
 - **What the online fields mean:** `byear=2025 bmonth=12` (window start),
-  `recordsperday=24` (ERA5 is **hourly**), `byearend/bmonthend` (window end).
+  `recordsperday=24` (GFS is **hourly**), `byearend/bmonthend` (window end).
   CROCO builds `<path><VAR>_Y<year>M<month>.nc` (e.g. `T2M_Y2025M12.nc`) and reads
   across months if start/end differ.
 
@@ -69,7 +69,7 @@ Save: `Ctrl-O`, Enter. Exit: `Ctrl-X`.
     ```
 Want: title `CANARY_12 HINDCAST`, time_stepping `2016 300 60 1`, initial → the
 GLORYS ini with NRREC=1, boundary → the GLORYS bry, sponge `50000. 400.`, online
-`2025 12 24 2025 12` + the ERA5 path, and no `XXX` left.
+`2025 12 24 2025 12` + the GFS path, and no `XXX` left.
 
 !!! important
     **`start_date`/`end_date`** — as in the forecast, with `USE_CALENDAR` off these are ignored for the manual run; leave them. (CROCO prints a harmless `Unrecognized keyword: start_date DISREGARDED`.) The operational driver patches them per phase for bookkeeping.
