@@ -145,12 +145,18 @@ html {
     font-weight: 600;
 }
 
-/* Fait en sorte que le fond clair du sommaire "on this page" aille jusqu'au bord de la sidebar */
-.wy-menu-vertical li.toctree-l2.current,
-.wy-menu-vertical li.toctree-l2.current > ul,
-.wy-menu-vertical ul.subnav-l2,
-.wy-menu-vertical ul.subnav-l3 {
+/* Fait en sorte que le fond clair du sommaire "on this page" aille jusqu'au bord de la sidebar.
+   ul.subnav-l2 est décalé de 1.5rem (règle plus haut) sans compensation de largeur :
+   on annule ce décalage uniquement sur l'élément actif porteur du fond. */
+.wy-menu-vertical .navtree li.toctree-l2.current {
+    width: calc(100% + 1.5rem);
+    margin-left: -1.5rem;
+}
+
+.wy-menu-vertical .navtree li.toctree-l2.current > a {
     width: 100%;
+    margin-left: -1.5rem;
+    padding-left: calc(22px + 1.5rem);   /* compense pour garder le texte à la même position visuelle */
     box-sizing: border-box;
 }
 
@@ -192,13 +198,11 @@ html {
     .wy-menu-vertical a.current{
         width: 380px !important; 
     }
-    .wy-menu-vertical li.toctree-l1 > a,
+.wy-menu-vertical li.toctree-l1 > a,
 .navtree.toctree-l1 > a,
-.navtree.toctree-l1.page > a
-{
+.navtree.toctree-l1.page > a {
     width: 380px !important; 
-}
-}
+}}
 
 @media screen and (max-width: 768px) {
     .wy-nav-side {
