@@ -60,7 +60,7 @@ to the model. Understanding that configuration is the whole point.
 
 ## The upstream data — what feeds your model, and what you choose
 
-![build progress](../img/entire_forecast_build_chain_3)
+![entire_forecast_build_chain_3](../img/entire_forecast_build_chain_3.png)
 
 *The whole forecast build. Each step below highlights the piece it produces; the two dashed boxes (tides, AGRIF child) are optional add-ons covered in later chapters.*
 
