@@ -168,6 +168,14 @@ html {
     padding-left: 3rem !important;
 }
 
+.wy-menu-vertical a,
+.wy-menu-vertical .caption {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    overflow: visible !important;
+}
+
 /* =========================================================
    Ajustements de la barre latérale (Largeur et Pied de page)
    ========================================================= */
