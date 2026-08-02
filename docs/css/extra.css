@@ -176,6 +176,18 @@ html {
     overflow: visible !important;
 }
 
+/* Corrige la hauteur figée (30px, calculée pour une seule ligne) qui recouvre
+   le texte au lieu de le laisser passer sur 2 lignes ou plus. */
+.wy-menu-vertical li.navtree.toctree-l2.page.current,
+.wy-menu-vertical li.navtree.toctree-l2.page.current > a,
+.wy-menu-vertical li.toctree-l2,
+.wy-menu-vertical li.toctree-l2 > a,
+.wy-menu-vertical li.toctree-l3,
+.wy-menu-vertical li.toctree-l3 > a {
+    height: auto !important;
+    min-height: 30px !important;
+}
+
 /* =========================================================
    Ajustements de la barre latérale (Largeur et Pied de page)
    ========================================================= */
