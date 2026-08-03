@@ -1,4 +1,4 @@
-site_name: Sea Forward
+site_name: SEA-FORWARD
 docs_dir: docs
 theme:
   name: rtd-dropdown
@@ -21,8 +21,8 @@ theme:
 extra:
   footer: |
     <div style="text-align:center; padding:10px;">
-      <img src="/img/mooc.png" alt="SEA FORWARD Footer Logo" height="40">
-      <p>© {{ now().year }} SEA FORWARD — Documentation générée avec MkDocs</p>
+      <img src="/img/mooc.png" alt="SEA-FORWARD Footer Logo" height="40">
+      <p>© {{ now().year }} SEA-FORWARD — Documentation générée avec MkDocs</p>
     </div>
 
 hooks:
@@ -42,7 +42,7 @@ extra_javascript:
 plugins:
   #- with-pdf:
   #    output_path: pdf/documentation.pdf
-  #    cover_title: "Sea Forward Documentation"
+  #    cover_title: "SEA-FORWARD Documentation"
   #    cover_subtitle: "Data Download Guide"
   #    author: "Opera SeaForward Team"
   #    toc_level: 2
@@ -81,7 +81,7 @@ nav:
       - System build tools: phase1/step1.md
       #- System build tools: phase1/step2.md
       #- Miniconda (the Python package manager): phase1/step3.md
-      - Get the SEA FORWARD repository: phase1/step4.md
+      - Get the SEA-FORWARD repository: phase1/step4.md
       - Create the `seaforward` conda environment: phase1/step5.md
       - The environment file `env.sh`: phase1/step6.md
       - Build the NetCDF/HDF5:
@@ -212,12 +212,12 @@ nav:
       - Overview: phase11/11_architecture.md
       - Where the reference architecture comes from: phase11/where.md
       - The value chain, and the three roles: phase11/value.md
-      - The map — SEA FORWARD's components in the value chain: phase11/map.md
+      - The map — SEA-FORWARD's components in the value chain: phase11/map.md
       - What changes when the system runs operationally: phase11/changes.md
       - Why this framing matters: phase11/why.md
       - References: phase11/references.md
       - Regenerating the diagram: phase11/regenerating.md
-  - River (Runoff) Forcing in SEA FORWARD:
+  - River (Runoff) Forcing in SEA-FORWARD:
       - Overview: phase12/12_rivers.md
       - What are we doing, and why?: phase12/1.md
       - The data — Dai & Trenberth river climatology: phase12/2.md

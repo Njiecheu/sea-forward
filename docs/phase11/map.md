@@ -1,9 +1,9 @@
 ### Upstream data — the sources
 
 The chain begins with the global datasets a regional model cannot produce for
-itself. SEA FORWARD uses the standard set, each supplying one class of input:
+itself. SEA-FORWARD uses the standard set, each supplying one class of input:
 
-| upstream source | SEA FORWARD product | role |
+| upstream source | SEA-FORWARD product | role |
 |---|---|---|
 | Parent ocean model | **Mercator / GLORYS** (global 1/12°) | initial + boundary conditions |
 | Atmospheric forcing | **GFS** (forecast) / GFS (hindcast) | surface forcing |
@@ -18,7 +18,7 @@ value chain.
 
 ### The system owner's facility — where the model runs
 
-Everything inside SEA FORWARD's compute environment plays the role the guide
+Everything inside SEA-FORWARD's compute environment plays the role the guide
 assigns to the system owner's facility. It has two parts:
 
 - **Storage** holds the durable artifacts: the grid, the downloaded forcings, the
@@ -26,7 +26,7 @@ assigns to the system owner's facility. It has two parts:
   carry the ocean state from one cycle to the next.
 - **A single, reproducible compute environment** holds the running system. The
   Architecture Guide stresses that an operational system should run in one
-  controlled, reproducible environment; SEA FORWARD realises this as a pinned
+  controlled, reproducible environment; SEA-FORWARD realises this as a pinned
   `conda` environment plus a purpose-built NetCDF/CROCO stack (`env.sh`,
   `opt_seq`). Inside it live:
   - **the model configuration** — `cppdefs.h`, `param.h`, `croco.in`, and the
@@ -50,7 +50,7 @@ everyone downstream.
 
 ### Downstream — visualization, analysis, users
 
-On the downstream side, SEA FORWARD (acting, as the guide allows, as its own
+On the downstream side, SEA-FORWARD (acting, as the guide allows, as its own
 downstream provider) offers:
 
 - **visualization and analysis tools** — the plotting and comparison notebooks

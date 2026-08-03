@@ -1,6 +1,6 @@
-# SEA FORWARD — Phase 1: Setup (from a bare machine to build-ready)
+# SEA-FORWARD — Phase 1: Setup (from a bare machine to build-ready)
 
-SEA FORWARD runs the **CROCO** regional ocean model to make short ocean
+SEA-FORWARD runs the **CROCO** regional ocean model to make short ocean
 forecasts. To do that, the machine needs three independent things:
 
 1. **Python tools** (to download global data and shape it for CROCO) — provided

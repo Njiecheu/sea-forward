@@ -57,7 +57,7 @@ cd ~/seaforward/forecast
 
 ```
 ============================================================
- SEA FORWARD AGRIF forecast
+ SEA-FORWARD AGRIF forecast
    config  : Agulhas_AGRIF
    mode    : 1way   (binary: croco_1way)
    refine  : 3x

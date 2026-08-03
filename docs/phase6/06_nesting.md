@@ -1,4 +1,4 @@
-# SEA FORWARD — Phase 6: Nesting — Increasing Resolution
+# SEA-FORWARD — Phase 6: Nesting — Increasing Resolution
 
 This phase teaches **offline nesting**: running a finer-resolution "child" model
 inside the domain of a coarser "parent" you already built. It's how you climb the

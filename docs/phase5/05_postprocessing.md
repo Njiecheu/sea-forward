@@ -1,6 +1,6 @@
-# SEA FORWARD — Phase 5: Post-processing & Validation
+# SEA-FORWARD — Phase 5: Post-processing & Validation
 
-SEA FORWARD ships a small, self-contained Python toolkit for analysing CROCO
+SEA-FORWARD ships a small, self-contained Python toolkit for analysing CROCO
 output — making maps, sections, profiles, Hovmöller diagrams and time series,
 and for validating a run against the parent product it was downscaled from
 (GLORYS for hindcasts, Mercator for forecasts).

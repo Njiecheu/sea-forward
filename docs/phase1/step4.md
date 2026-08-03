@@ -77,7 +77,7 @@ cd seaforward
 ls
 ```
 
-## Sea Forward Directory Structure
+## SEA-FORWARD Directory Structure
 
 ```
 ~/seaforward/

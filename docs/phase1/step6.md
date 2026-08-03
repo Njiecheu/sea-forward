@@ -26,7 +26,7 @@ You **source** it (run it in your current shell) at the start of each session:
 source ~/seaforward/env.sh
 ```
 
-It prints `SEA FORWARD environment set (root: /home/<you>/seaforward)`.
+It prints `SEA-FORWARD environment set (root: /home/<you>/seaforward)`.
 
 !!! note
     **Sourcing vs running.** `source env.sh` (or `. env.sh`) applies the variables to *your* shell. Running `./env.sh` would set them only inside a throwaway sub-shell and lose them — so always `source` it.

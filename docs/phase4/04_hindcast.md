@@ -1,4 +1,4 @@
-# SEA FORWARD — Phase 4: Building and Running a Hindcast — Hand-Edit Edition
+# SEA-FORWARD — Phase 4: Building and Running a Hindcast — Hand-Edit Edition
 
 A **hindcast** reconstructs the ocean for a **past** period, rather than
 predicting the future. The model and the workflow are the same as the forecast;
@@ -39,6 +39,6 @@ followed by a 5-day hindcast), and cycles tile the period. Every cycle re-starts
 its ocean state from GLORYS, so the reconstruction stays anchored to the
 reanalysis rather than drifting.
 
-The SEA FORWARD hindcast tools are exposed through the same CLI as the forecast
+The SEA-FORWARD hindcast tools are exposed through the same CLI as the forecast
 (`seaforward.py`), with a parallel set of **`*_hindcast`** subcommands. You built
 and proved them in this phase.

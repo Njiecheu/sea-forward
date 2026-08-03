@@ -8,7 +8,7 @@ reference.
 
 The parent (CMEMS: GLORYS / Mercator) uses these names, mapped internally:
 
-| SEA FORWARD | CMEMS |
+| SEA-FORWARD | CMEMS |
 | --- | --- |
 | `temp` | `thetao` |
 | `ssh` | `zos` |
@@ -78,7 +78,7 @@ water column.
 
 ### Error growth along a cycle
 
-SEA FORWARD runs in 5-day cycles. `cycle_error_growth` tracks the CROCO-vs-parent
+SEA-FORWARD runs in 5-day cycles. `cycle_error_growth` tracks the CROCO-vs-parent
 statistics **as a function of lead time** — how the run drifts from the parent
 over its 5 days:
 

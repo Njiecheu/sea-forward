@@ -1,4 +1,4 @@
-# SEA FORWARD — Phase 3: Running a Forecast
+# SEA-FORWARD — Phase 3: Running a Forecast
 
 At the end of Phase 2 you have a **compiled forecast configuration** for your
 region — the `croco` program plus its grid, initial condition, boundary

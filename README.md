@@ -1,2 +1,2 @@
-# SEA FORWARD
-This repository is for the Sea Forward project documentation.
+# SEA-FORWARD
+This repository is for the SEA-FORWARD project documentation.

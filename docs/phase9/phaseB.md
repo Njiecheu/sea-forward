@@ -211,7 +211,7 @@ longitude is shorter at 35°S than at the equator. Always read `pm`/`pn`.
 
 ## B4 — the child's initial condition
 
-Use **SEA FORWARD's own `make_ini`**, not croco_pytools' (Phase 8 Step 3b explains why:
+Use **SEA-FORWARD's own `make_ini`**, not croco_pytools' (Phase 8 Step 3b explains why:
 it writes `9.969e+36` fill values into deep layers of small domains).
 
 ```bash

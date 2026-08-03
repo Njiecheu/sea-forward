@@ -1,4 +1,4 @@
-# River (Runoff) Forcing in SEA FORWARD — A Complete Walkthrough
+# River (Runoff) Forcing in SEA-FORWARD — A Complete Walkthrough
 
 This chapter shows you, step by step, how to add **river freshwater forcing** to a
 CROCO domain. It is written for someone new to CROCO and to Linux/WSL: every command

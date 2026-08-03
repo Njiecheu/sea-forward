@@ -25,7 +25,7 @@ val.compare_sst(F, MERC, date="2026-07-11", Yorig=2000)
 ### A note on `Yorig` (important)
 
 CROCO writes its `time` variable as *seconds since a reference date* — the
-`Yorig` set in the run. SEA FORWARD's tracks use **different reference years**:
+`Yorig` set in the run. SEA-FORWARD's tracks use **different reference years**:
 
 | Track | `Yorig` |
 | --- | --- |
