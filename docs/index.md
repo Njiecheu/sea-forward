@@ -91,10 +91,7 @@ Grids up to roughly 128×128 run comfortably on a standard laptop or desktop. Hi
 
 ## Context: the OPERA Capacity Development Activities
 
-SEA-FORWARD is delivered under **Task 1.3** of the **OPERA (Ocean Prediction
-Enhancement in Regions of Africa) Capacity Development Activities** — a 38-month
-initiative led by the **ICMPA-UNESCO Chair** (Université d'Abomey-Calavi, Benin)
-and the **Gulf of Guinea Ocean Sciences Summer School (GGOSSS)**.
+SEA-FORWARD is delivered under the **OPERA (Ocean Prediction Enhancement in Regions of Africa) Capacity Development Activities** — a 38-month initiative led by the **ICMPA-UNESCO Chair** (Université d'Abomey-Calavi, Benin) and the **Gulf of Guinea Ocean Sciences Summer School (GGOSSS)**.
 
 OPERA is a five-year project implemented by **Mercator Ocean International**,
 funded by the **European Union** as part of the **Arc X programme**, and framed
