@@ -90,16 +90,16 @@ ls
 │   └── croco_pytools/    # pre-processing toolbox
 ├── opt_seq/              # NetCDF/HDF5 stack, compiled from source (git-ignored)
 ├── data/                 # DATASETS_CROCOTOOLS bathymetry/coastline (git-ignored)
-├── hindcast/
-│   ├── track.sh
-│   ├── configs/  scratch/  model-runs/
-│   └── run_hindcast_cycle.sh
 ├── forecast/
 │   ├── track.sh          # forecast per-track paths
 │   ├── configs/          # forecast config recipes
 │   ├── scratch/          # forecast test builds (binary + grid)
 │   ├── model-runs/       # kept forecast outputs
 │   └── run_forecast_today.sh
+├── hindcast/
+│   ├── track.sh
+│   ├── configs/  scratch/  model-runs/
+│   └── run_hindcast_cycle.sh
 └── docs/                 # these documents
 ```
 
