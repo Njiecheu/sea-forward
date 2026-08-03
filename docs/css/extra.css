@@ -205,7 +205,10 @@ html {
     .wy-nav-content-wrap {
         margin-left: 420px !important; 
     }
-    .wy-side-nav-search{
+    .wy-side-nav-search {
+        width: 420px !important; 
+    }
+    .wy-form {
         width: 380px !important; 
     }
     .wy-menu-vertical a.current{
