@@ -59,7 +59,6 @@ See the [region gallery](phase7/) for what is available today.
 |---|---|---|
 | What you get | A containerized, ready-to-run forecasting system plus the analysis tools, driven from a local JupyterLab server | The full SEA-FORWARD repository: tools to fetch the model and data, prepare inputs, run forecasts, validate and analyse |
 | Best for | Getting a result quickly, and for teaching | Learning how the system is actually built; running at full speed |
-| Trade-off | Runs on a single processor, so expect longer run times | You build each piece yourself |
 
 Most users working through the phases below are on the Component Access path.
 
@@ -129,8 +128,6 @@ assimilation) and for CROCO-AGRIF nesting.
 | **Framework** | OceanPrediction Decade Collaborative Centre (DCC) |
 | **Ocean model** | CROCO — Coastal and Regional Ocean COmmunity model |
 | **Data sources** | Copernicus Climate Data Store (GFS); CMEMS / GLORYS12v1 (Mercator Ocean International); ETOPO2 |
-
-![Global Gateway · Funded by the European Union · OceanPrediction UN Decade Collaborative Centre · Mercator Ocean International · Gulf of Guinea Ocean Sciences Summer School (GGOSSS) · Université d'Abomey-Calavi · CIPMA – Chaire UNESCO](assets/mooc-footer.png)
 
 ## Learn more
 
