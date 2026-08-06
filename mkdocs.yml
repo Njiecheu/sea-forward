@@ -57,6 +57,8 @@ plugins:
       separator: '[\s\-\.]+'
 
 markdown_extensions:
+  - toc:
+      toc_depth: 0
   - admonition
   - pymdownx.highlight:
       linenums: true # affiche les numéros de ligne
