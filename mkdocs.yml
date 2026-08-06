@@ -149,14 +149,15 @@ nav:
       - Troubleshooting (hindcast-specific): phase4/trouble.md
   - Post-processing & Validation:
       - Overview: phase5/05_postprocessing.md
-      - 5.1 Quick start: phase5/step51.md
-      - 5.2 Loading CROCO output — `postprocess`: phase5/step52.md
-      - 5.3 Extracting fields — `postprocess`: phase5/step53.md
-      - 5.4 Attributes & display — `define_attrs`: phase5/step54.md
-      - 5.5 Plotting — `plotting`: phase5/step55.md
-      - 5.6 Validation — `validation`: phase5/step56.md
-      - 5.7 Interpreting the results: phase5/step57.md
-      - 5.8 Reference — module layout: phase5/step58.md
+      - Setup: phase5/step51_setup.md
+      - Open data: phase5/step52_open_data.md
+      - Horizontal section: phase5/step53_horizontal_section.md
+      - Vertical section: phase5/step54_vertical_section.md
+      - Vertical Profile: phase5/step55_vertcal_profil.md
+      - Hovmöller diagrams: phase5/step56_hovm_ller_diagrams.md
+      - Time series: phase5/step57_time_series.md
+      - Animations: phase5/step59_animations.md
+      - Validation: phase5/step58_validation.md
   - Nesting:
       - Overview: phase6/06_nesting.md
       - Step 0 — Session setup: phase6/step0.md
