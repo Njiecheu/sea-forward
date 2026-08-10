@@ -148,6 +148,7 @@ nav:
       - Quick reference — hindcast: phase4/reference.md
       - Troubleshooting (hindcast-specific): phase4/trouble.md
   - Post-processing & Validation:
+      - Gallery: phase5/00_gallery.md
       - Overview: phase5/05_postprocessing.md
       - Setup: phase5/step51_setup.md
       - Open data: phase5/step52_open_data.md
