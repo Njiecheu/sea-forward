@@ -230,8 +230,8 @@ html {
 }
 
 @media screen and (max-width: 768px) {
-    .wy-nav-side {
-        width: 380px !important;
+    .wy-nav-side,.wy-side-nav-search  {
+        width: 400px !important;
         max-width: 100% !important; 
     }
     .wy-nav-top {
