@@ -1,6 +1,8 @@
 # SEA-FORWARD — Phase 3: Running a Forecast
 
-<img src="../../img/phase3.png" alt="Phase 3" style="width: 100%; height: 550px; object-fit: contain;" />
+<!-- <img src="../../img/phase3.png" alt="Phase 3" style="width: 100%; height: 550px; object-fit: contain;" /> -->
+
+![Phase 4](../../img/phase4.png)
 
 At the end of Phase 2 you have a **compiled forecast configuration** for your
 region — the `croco` program plus its grid, initial condition, boundary

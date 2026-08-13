@@ -124,12 +124,6 @@ nav:
       - Toward an operational workflow: phase2/toward.md
       - What you change for your own region: phase2/change.md
       - The consistency rules to remember: phase2/consistency.md
-  - Running a Forecast:
-      - Overview: phase3/03_forecast.md
-      - Part A — The single manual run (recap of Phase 2): phase3/partA.md
-      - Part B — The operational driver (daily cycle): phase3/partB.md
-      - Why spin up before forecasting?: phase3/before.md
-      - Quick reference — forecast: phase3/reference.md
   - Running a Hindcast:
       - Overview: phase4/04_hindcast.md
       - Step 0 — Session ritual (the HINDCAST track): phase4/step0.md
@@ -147,6 +141,12 @@ nav:
       - Forecast vs hindcast — the mental model: phase4/forehin.md
       - Quick reference — hindcast: phase4/reference.md
       - Troubleshooting (hindcast-specific): phase4/trouble.md
+  - Running a Forecast:
+      - Overview: phase3/03_forecast.md
+      - Part A — The single manual run (recap of Phase 2): phase3/partA.md
+      - Part B — The operational driver (daily cycle): phase3/partB.md
+      - Why spin up before forecasting?: phase3/before.md
+      - Quick reference — forecast: phase3/reference.md
   - Post-processing & Validation:
       - Gallery: phase5/00_gallery.md
       - Overview: phase5/05_postprocessing.md

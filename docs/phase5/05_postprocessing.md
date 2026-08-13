@@ -1,6 +1,8 @@
 # SEA-FORWARD — Phase 5: Post-processing & Validation
 
-<img src="../../img/phase5.png" alt="Phase 5" style="width: 100%; height: 550px; object-fit: contain;" />
+<!-- <img src="../../img/phase5.png" alt="Phase 5" style="width: 100%; height: 550px; object-fit: contain;" /> -->
+
+![Phase 5](../../img/phase5.png)
 
 SEA-FORWARD ships a small, self-contained Python toolkit for analysing CROCO
 output — making maps, sections, profiles, Hovmöller diagrams and time series,

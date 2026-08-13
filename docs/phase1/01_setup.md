@@ -1,6 +1,8 @@
 # SEA-FORWARD — Phase 1: Setup (from a bare machine to build-ready)
 
-<img src="../../img/phase1.png" alt="Phase 1" style="width: 100%; height: 360px; object-fit: contain;" />
+<!-- <img src="../../img/phase1.png" alt="Phase 1" style="width: 100%; height: 360px; object-fit: contain;" /> -->
+
+![Phase 1](../../img/phase1.png)
 
 SEA-FORWARD runs the **CROCO** regional ocean model to make short ocean
 forecasts. To do that, the machine needs three independent things:
