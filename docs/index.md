@@ -14,7 +14,6 @@ forecast — it is to understand each link in the chain that produces it.
 
 No supercomputer is required. SEA-FORWARD runs on commodity hardware.
 
-
 ## What you will build
 
 A complete forecasting chain following the **OceanPrediction-A**
@@ -22,12 +21,12 @@ blueprint of the OceanPrediction DCC Architecture:
 
 **Upstream data → Ocean model → Validation → Visualization**
 
-| Layer | Process | In SEA-FORWARD |
-|---|---|---|
-| Upstream Data (U) | U2, U3, U4, U5, U7 | GFS atmospheric forcing, Dai river discharge, CMEMS ocean boundary conditions, ETOPO2 bathymetry, TPXO tidal forcing |
-| Core Forecasting Engine (C) | C1 | The CROCO v2.0 ocean model, compiled from source |
-| Verification & Analysis (V) | V1 | Automated validation against a canonical reference run (RMSE, bias, spatial correlation) |
-| Downstream Applications (D) | D1 | Jupyter notebooks for SST, SSH, currents, MLD and salinity, with guided exercises |
+| Layer                       | Process            | In SEA-FORWARD                                                                                                       |
+| --------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| Upstream Data (U)           | U2, U3, U4, U5, U7 | GFS atmospheric forcing, Dai river discharge, CMEMS ocean boundary conditions, ETOPO2 bathymetry, TPXO tidal forcing |
+| Core Forecasting Engine (C) | C1                 | The CROCO v2.0 ocean model, compiled from source                                                                     |
+| Verification & Analysis (V) | V1                 | Automated validation against a canonical reference run (RMSE, bias, spatial correlation)                             |
+| Downstream Applications (D) | D1                 | Jupyter notebooks for SST, SSH, currents, MLD and salinity, with guided exercises                                    |
 
 The forecasting strategy follows [Tchonang et al. (2024)](https://journals.ametsoc.org/view/journals/atot/41/6/JTECH-D-23-0112.1.xml): each cycle is initialized from the global 1/12° GLORYS12v1 reanalysis, integrated through a 2-day spin-up for dynamical adjustment, then run forward as a 5-day forecast — repeated every 2 days in a rolling cycle for continuous coverage.
 ![forecasting_scheme](./img/forecasting_scheme.png)
@@ -55,10 +54,10 @@ See the [region gallery](phase7/) for what is available today.
 
 ## Two ways in
 
-| | **Direct Access** | **Component Access** |
-|---|---|---|
+|              | **Direct Access**                                                                                               | **Component Access**                                                                                                    |
+| ------------ | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | What you get | A containerized, ready-to-run forecasting system plus the analysis tools, driven from a local JupyterLab server | The full SEA-FORWARD repository: tools to fetch the model and data, prepare inputs, run forecasts, validate and analyse |
-| Best for | Getting a result quickly, and for teaching | Learning how the system is actually built; running at full speed |
+| Best for     | Getting a result quickly, and for teaching                                                                      | Learning how the system is actually built; running at full speed                                                        |
 
 Most users working through the phases below are on the Component Access path.
 
@@ -75,19 +74,19 @@ Grids up to roughly 128×128 run comfortably on a standard laptop or desktop. Hi
 ## Where to start
 
 !!! tip "New here?"
-    Read this page, then go to **[Quickstart](quickstart/)** to get a forecast
-    running with the least friction. Come back to Phase 1 when you want to
-    build the full stack yourself.
+Read this page, then go to **[Quickstart](quickstart/)** to get a forecast
+running with the least friction. Come back to Phase 1 when you want to
+build the full stack yourself.
 
-| If you want to… | Go to |
-|---|---|
-| Set up a machine from scratch | [Phase 1 — Setup](phase1/01_setup.md) |
-| Configure a forecast | [Phase 2](phase2/02_forecast_config.md) |
-| Run forecasts, manually or automated | [Phase 3](phase3/03_forecast.md) |
-| Build and run a hindcast | [Phase 4](phase4/04_hindcast.md) |
-| Post-process and validate results | [Phase 5](phase5/05_postprocessing.md) |
-| Increase resolution with nesting | [Phase 6](phase6/06_nesting.md) |
-| Start from a ready-made region | [Phase 7 — Region gallery](phase7/07_regions.md) |
+| If you want to…                      | Go to                                            |
+| ------------------------------------ | ------------------------------------------------ |
+| Set up a machine from scratch        | [Phase 1 — Setup](phase1/01_setup.md)            |
+| Configure a forecast                 | [Phase 2](phase2/02_forecast_config.md)          |
+| Run forecasts, manually or automated | [Phase 3](phase3/03_forecast.md)                 |
+| Build and run a hindcast             | [Phase 4](phase4/04_hindcast.md)                 |
+| Post-process and validate results    | [Phase 5](phase5/05_postprocessing.md)           |
+| Increase resolution with nesting     | [Phase 6](phase6/06_nesting.md)                  |
+| Start from a ready-made region       | [Phase 7 — Region gallery](phase7/07_regions.md) |
 
 ## Context: the OPERA Capacity Development Activities
 
@@ -101,7 +100,7 @@ development of ocean forecasting systems, services and applications.
 
 OPERA serves three audiences — the general public, intermediate-level
 practitioners, and advanced-level developers — structured around the
-OceanPrediction DCC *virtuous loop*, which moves through four thematic periods:
+OceanPrediction DCC _virtuous loop_, which moves through four thematic periods:
 
 1. Fundamentals of Ocean Forecasting
 2. Building an Ocean Forecasting System
@@ -117,18 +116,18 @@ assimilation) and for CROCO-AGRIF nesting.
 
 ## Partners
 
-| | |
-|---|---|
-| **Project owner / implementer** | Mercator Ocean International |
-| **Funder** | European Union — Arc X programme |
-| **Lead institutions** | ICMPA-UNESCO Chair, Université d'Abomey-Calavi (Benin); Gulf of Guinea Ocean Sciences Summer School (GGOSSS) |
-| **Framework** | OceanPrediction Decade Collaborative Centre (DCC) |
-| **Ocean model** | CROCO — Coastal and Regional Ocean COmmunity model |
-| **Data sources** | Copernicus Climate Data Store (GFS); CMEMS / GLORYS12v1 (Mercator Ocean International); ETOPO2 |
+|                                 |                                                                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Project owner / implementer** | Mercator Ocean International                                                                                                         |
+| **Funder**                      | European Union — Arc X programme                                                                                                     |
+| **Lead institutions**           | ICMPA-UNESCO Chair, Université d'Abomey-Calavi (Benin); Gulf of Guinea Ocean Sciences Summer School (GGOSSS)                         |
+| **Framework**                   | OceanPrediction Decade Collaborative Centre (DCC)                                                                                    |
+| **Ocean model**                 | CROCO — Coastal and Regional Ocean COmmunity model                                                                                   |
+| **Data sources**                | CMEMS, Copernicus Climate Data Store; Global Forecasting System (GFS); ETOPO2; TPXO Tides Atlas; Dai and Trenberth River Climatology |
 
 ## Learn more
 
-- [OceanPrediction DCC Architecture Guide](https://doi.org/10.48670/oofsarchitecture) — Alvarez Fanjul et al.
+- [OceanPrediction DCC Architecture Guide](https://doi.org/10.48670/oofsarchitecture) — Alvarez Fanjul et al. (2024).
 - [ETOOFS Guide](https://www.unoceanprediction.org/en/resources/etoofs-guide)
 - [Ocean Rating List (ORL) Guide](https://www.unoceanprediction.org/en/resources/orl)
 - [CROCO Ocean Engine](https://www.croco-ocean.org/)
