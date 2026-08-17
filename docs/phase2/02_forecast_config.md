@@ -24,10 +24,10 @@ edit here — and because you edited them by hand, you will know exactly which o
 **A note on scope — this is not yet a fully operational forecast.** A real operational system does two things this manual run does not: it gives the forecast a proper **spin-up** (a short run that lets the regional model settle into balance and provides the forecast's initial state, instead of a cold start from the global model), and it runs **automatically on a schedule**. Here we do a single cold-started run by hand. That is the correct place to begin — it is the forecast that the operational cycle wraps a spin-up around and repeats daily. The step from this manual run to the automated, spun-up workflow is introduced at the end of this chapter (_Toward an operational workflow_) and built in Phase 3.
 
 !!! important
-**Prerequisite.** You have finished Phase 1 (Setup): the `seaforward` conda environment exists, `nf-config --prefix` shows `~/seaforward/opt_seq`, CROCO is in `~/seaforward/code/croco`, and the bathymetry data is under `~/seaforward/data/DATASETS_CROCOTOOLS/`.
+    **Prerequisite.** You have finished Phase 1 (Setup): the `seaforward` conda environment exists `nf-config --prefix` shows `~/seaforward/opt_seq`, CROCO is in `~/seaforward/code/croco`, and the bathymetry data is under `~/seaforward/data/DATASETS_CROCOTOOLS/`.
 
 !!! important
-**How to read this guide.** - When a step **edits a file**, you open it in `nano`; the guide tells you what to **find** and what to **change it to**, with a **What / Why** for each edit. - A few steps (downloading data, building the grid, compiling) are run rather than edited — the guide explains what each is doing. - **✅ CHECK** shows what a correct result looks like. - **⚠️ WATCH** marks a trap. - A **workflow diagram** opens each step, with the piece that step produces highlighted, so you always see where you are in the build.
+    **How to read this guide.** - When a step **edits a file**, you open it in `nano`; the guide tells you what to **find** and what to **change it to**, with a **What / Why** for each edit. - A few steps (downloading data, building the grid, compiling) are run rather than edited — the guide explains what each is doing. - **✅ CHECK** shows what a correct result looks like. - **⚠️ WATCH** marks a trap. - A **workflow diagram** opens each step, with the piece that step produces highlighted, so you always see where you are in the build.
 
 ### nano crash course
 

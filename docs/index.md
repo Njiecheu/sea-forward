@@ -71,16 +71,15 @@ Grids up to roughly 128×128 run comfortably on a standard laptop or desktop. Hi
 ## Where to start
 
 !!! tip "New here?"
-Read this page, then go to **[Quickstart](quickstart/)** to get a forecast
-running with the least friction. Come back to Phase 1 when you want to
-build the full stack yourself.
+    Read this page, then go to **[Quickstart](quickstart/)** to get a forecast
+    running with the least friction. Come back to Phase 1 when you want to build the full stack yourself.
 
 | If you want to…                      | Go to                                            |
 | ------------------------------------ | ------------------------------------------------ |
 | Set up a machine from scratch        | [Phase 1 — Setup](phase1/01_setup.md)            |
 | Configure a forecast                 | [Phase 2](phase2/02_forecast_config.md)          |
-| Run forecasts, manually or automated | [Phase 3](phase3/03_forecast.md)                 |
-| Build and run a hindcast             | [Phase 4](phase4/04_hindcast.md)                 |
+| Build and run a hindcast             | [Phase 3](phase3/03_hindcast.md)                 |
+| Run forecasts, manually or automated | [Phase 4](phase4/04_forecast.md)                 |
 | Post-process and validate results    | [Phase 5](phase5/05_postprocessing.md)           |
 | Increase resolution with nesting     | [Phase 6](phase6/06_nesting.md)                  |
 | Start from a ready-made region       | [Phase 7 — Region gallery](phase7/07_regions.md) |
