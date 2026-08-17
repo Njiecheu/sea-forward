@@ -52,14 +52,11 @@ because each poses a different forecasting challenge:
 See the [region gallery](phase7/) for what is available today.
 ![sea_forward_test_cases](./img/sea_forward_test_cases.png)
 
-## Two ways in
 
-|              | **Direct Access**                                                                                               | **Component Access**                                                                                                    |
-| ------------ | --------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| What you get | A containerized, ready-to-run forecasting system plus the analysis tools, driven from a local JupyterLab server | The full SEA-FORWARD repository: tools to fetch the model and data, prepare inputs, run forecasts, validate and analyse |
-| Best for     | Getting a result quickly, and for teaching                                                                      | Learning how the system is actually built; running at full speed                                                        |
-
-Most users working through the phases below are on the Component Access path.
+|              | **Component Access**                                                                                                    |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| What you get | The full SEA-FORWARD repository: tools to fetch the model and data, prepare inputs, run forecasts, validate and analyse |
+| Best for     | Learning how the system is actually built; running at full speed                                                        |
 
 ## Requirements at a glance
 
