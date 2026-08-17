@@ -17,7 +17,3 @@ Validation compares the model outputs (CROCO) against parent forcing data (such 
 
 ![Plot 39](../../img/phase5/plot_39.png)
 
-
-```python
-%
-```
