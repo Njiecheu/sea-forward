@@ -78,8 +78,8 @@ Grids up to roughly 128×128 run comfortably on a standard laptop or desktop. Hi
 | ------------------------------------ | ------------------------------------------------ |
 | Set up a machine from scratch        | [Phase 1 — Setup](phase1/01_setup.md)            |
 | Configure a forecast                 | [Phase 2](phase2/02_forecast_config.md)          |
-| Build and run a hindcast             | [Phase 3](phase3/03_hindcast.md)                 |
-| Run forecasts, manually or automated | [Phase 4](phase4/04_forecast.md)                 |
+| Run forecasts, manually or automated | [Phase 3](phase3/03_forecast.md)                 |
+| Build and run a hindcast             | [Phase 4](phase4/04_hindcast.md)                 |
 | Post-process and validate results    | [Phase 5](phase5/05_postprocessing.md)           |
 | Increase resolution with nesting     | [Phase 6](phase6/06_nesting.md)                  |
 | Start from a ready-made region       | [Phase 7 — Region gallery](phase7/07_regions.md) |
