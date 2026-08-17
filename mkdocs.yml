@@ -103,7 +103,7 @@ nav:
       - From now on — the every-session ritual: phase1/step11.md
       - What you have now: phase1/now.md
       - Troubleshooting: phase1/trouble.md
-  - Building a Configuration:
+  - Building a Forecast Config:
       - Overview: phase2/02_forecast_config.md
       - Step 0 — Set up your environment (every session starts here): phase2/step0.md
       - Step 1 — Create the grid definition: phase2/step1.md
