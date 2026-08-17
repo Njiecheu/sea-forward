@@ -148,8 +148,8 @@ nav:
       - Why spin up before forecasting?: phase3/before.md
       - Quick reference — forecast: phase3/reference.md
   - Post-processing & Validation:
-      - Gallery: phase5/00_gallery.md
       - Overview: phase5/05_postprocessing.md
+      - Gallery: phase5/00_gallery.md
       - Setup: phase5/step51_setup.md
       - Open data: phase5/step52_open_data.md
       - Horizontal section: phase5/step53_horizontal_section.md
