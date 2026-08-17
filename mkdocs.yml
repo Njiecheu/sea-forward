@@ -125,28 +125,28 @@ nav:
       - What you change for your own region: phase2/change.md
       - The consistency rules to remember: phase2/consistency.md
   - Running a Hindcast:
-      - Overview: phase4/04_hindcast.md
-      - Step 0 — Session ritual (the HINDCAST track): phase4/step0.md
-      - Step 1 — Build the grid (its own, in the hindcast track): phase4/step1.md
-      - Step 2 — The hindcast `crocotools_param.py`: phase4/step2.md
-      - Step 3 — Set up GFS access (CDS account + API key): phase4/step3.md
-      - Step 4 — Download the ocean (GLORYS): phase4/step4.md
-      - Step 5 — Download the atmosphere (GFS): phase4/step5.md
-      - Step 6 — Build the initial condition: phase4/step6.md
-      - Step 7 — Build the boundaries: phase4/step7.md
-      - Step 8 — The CROCO config files (Phase 2, with GFS differences): phase4/step8.md
-      - Step 9 — `croco.ini` for the GFS hindcast: phase4/step9.md
-      - Step 10 — The operational driver: phase4/step10.md
-      - What you built (the hindcast CLI additions): phase4/built.md
-      - Forecast vs hindcast — the mental model: phase4/forehin.md
-      - Quick reference — hindcast: phase4/reference.md
-      - Troubleshooting (hindcast-specific): phase4/trouble.md
+      - Overview: phase3/03_hindcast.md
+      - Step 0 — Session ritual (the HINDCAST track): phase3/step0.md
+      - Step 1 — Build the grid (its own, in the hindcast track): phase3/step1.md
+      - Step 2 — The hindcast `crocotools_param.py`: phase3/step2.md
+      - Step 3 — Set up GFS access (CDS account + API key): phase3/step3.md
+      - Step 4 — Download the ocean (GLORYS): phase3/step4.md
+      - Step 5 — Download the atmosphere (GFS): phase3/step5.md
+      - Step 6 — Build the initial condition: phase3/step6.md
+      - Step 7 — Build the boundaries: phase3/step7.md
+      - Step 8 — The CROCO config files (Phase 2, with GFS differences): phase3/step8.md
+      - Step 9 — `croco.ini` for the GFS hindcast: phase3/step9.md
+      - Step 10 — The operational driver: phase3/step10.md
+      - What you built (the hindcast CLI additions): phase3/built.md
+      - Forecast vs hindcast — the mental model: phase3/forehin.md
+      - Quick reference — hindcast: phase3/reference.md
+      - Troubleshooting (hindcast-specific): phase3/trouble.md
   - Running a Forecast:
-      - Overview: phase3/03_forecast.md
-      - Part A — The single manual run (recap of Phase 2): phase3/partA.md
-      - Part B — The operational driver (daily cycle): phase3/partB.md
-      - Why spin up before forecasting?: phase3/before.md
-      - Quick reference — forecast: phase3/reference.md
+      - Overview: phase4/04_forecast.md
+      - Part A — The single manual run (recap of Phase 2): phase4/partA.md
+      - Part B — The operational driver (daily cycle): phase4/partB.md
+      - Why spin up before forecasting?: phase4/before.md
+      - Quick reference — forecast: phase4/reference.md
   - Post-processing & Validation:
       - Overview: phase5/05_postprocessing.md
       - Gallery: phase5/00_gallery.md
