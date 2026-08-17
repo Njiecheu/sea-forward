@@ -8,6 +8,7 @@
 | 4   | [Running a Forecast](phase4/04_forecast.md)                | A manual test run, then the automated daily operational driver.                                                                                   | Each forecast.              |
 | 5   | [Analyse and validate the model outputs](phase5/05_postprocessing.md)                | Use the sftools toolkit to analyse outputs and validate against the parent product.                                                                                    | After each run.              |
 
+
 !!! note
     Phase 1 is a prerequisite for everything (once per computer). Phase 2 builds a **forecast** configuration for a region and Phase 3 runs it. Phase 4 (hindcast) reuses Phase 2's _steps_ but
     swaps the data source — it points back to Phase 2 rather than repeating it.

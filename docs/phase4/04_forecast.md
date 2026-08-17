@@ -1,4 +1,4 @@
-# SEA-FORWARD — Phase 3: Running a Forecast
+# SEA-FORWARD — Phase 4: Running a Forecast
 
 <!-- <img src="../../img/phase3.png" alt="Phase 3" style="width: 100%; height: 550px; object-fit: contain;" /> -->
 
