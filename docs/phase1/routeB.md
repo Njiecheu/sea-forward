@@ -10,4 +10,4 @@ This is exactly what the scripts do, one library at a time. A few conventions:
   something fails.
 
 !!! warning
-    ⚠️ **Dependencies for netcdf-c.** It needs `libcurl` and `m4` headers. You installed these in [2](step2.md) (`libcurl4-openssl-dev m4`). If a configure step complains about curl or m4, install them and re-run that library.
+    ⚠️ **Dependencies for netcdf-c.** It needs `libcurl` and `m4` headers. You installed these in [step 2](step2.md) (`libcurl4-openssl-dev m4`). If a configure step complains about curl or m4, install them and re-run that library.
