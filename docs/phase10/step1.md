@@ -23,3 +23,6 @@ uses, and for the same reason: `make_tides`'s `inputdata` value is a TPXO tag,
 which would clash with the `'mercator'` value that `make_ini`/`make_bry` read
 from *their* param file. Keeping the tide params in their own directory avoids
 the collision entirely.
+
+The process described above is summarized by the figure below.
+![Workflow combining CROCO_tools/TPXO10 Atlas tidal data with model_grid.nc, processed by SEA_FORWARD pytools (using -run-date, -reference-date, crocotools_param_tides.py) to produce the tides-upstr-input file, linked downstream to C1, V1, and D1.](../img/tides_U4.png)

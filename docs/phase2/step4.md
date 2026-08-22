@@ -1,8 +1,9 @@
-![build progress](../img/wf_04_param.png)
+Now, let’s talk about how to construct the ocean boundaries
 
-This file tells the tools that build the initial and boundary conditions about
-your grid. The CLI reads it from the folder you point `make_ini`/`make_bry` at
-(your `CROCO_FILES`). Create and edit it:
+![ocean_boundaries](../img/ocean_boundaries.png)
+
+**Step 4** — Write `crocotools_param.py`
+To do so, we must edit primarily the file `crocotools_param.py`. This file tells the tools that build the initial and boundary conditions about your grid. The CLI reads it from the folder you point make_ini/make_bry at (your CROCO_FILES). Create and edit it:
 
 ```bash
 nano ${CF}/crocotools_param.py

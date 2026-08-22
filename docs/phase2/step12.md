@@ -1,4 +1,4 @@
-![build progress](../img/wf_13_run.png)
+![build progress](../img/run_parent.png)
 
 *Step 12 **runs the model** — now every prepared input converges on the run.*
 

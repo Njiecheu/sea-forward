@@ -17,13 +17,13 @@ clean names**:
 cd ~/seaforward/code
 
 # 1. CROCO ocean model (Fortran) — v2.1.3
-wget https://gitlab.inria.fr/croco-ocean/croco/-/archive/v2.1.3/croco-v2.1.3.tar.gz
+wget -c https://gitlab.inria.fr/croco-ocean/croco/-/archive/v2.1.3/croco-v2.1.3.tar.gz
 tar -xzf croco-v2.1.3.tar.gz
 mv croco-v2.1.3 croco
 rm croco-v2.1.3.tar.gz
 
 # 2. croco_pytools pre-processing toolbox — v2.0.4
-wget https://gitlab.inria.fr/croco-ocean/croco_pytools/-/archive/v2.0.4/croco_pytools-v2.0.4.tar.gz
+wget -c https://gitlab.inria.fr/croco-ocean/croco_pytools/-/archive/v2.0.4/croco_pytools-v2.0.4.tar.gz
 tar -xzf croco_pytools-v2.0.4.tar.gz
 mv croco_pytools-v2.0.4 croco_pytools
 rm croco_pytools-v2.0.4.tar.gz

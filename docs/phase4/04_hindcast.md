@@ -2,7 +2,7 @@
 
 <!-- <img src="../../img/phase4.png" alt="Phase 4" style="width: 100%; height: 550px; object-fit: contain;" /> -->
 
-![Phase 3](../../img/phase3.png)
+![Phase 3](../img/phase3.png)
 
 A **hindcast** reconstructs the ocean for a **past** period, rather than
 predicting the future. The model and the workflow are the same as the forecast;
@@ -25,6 +25,8 @@ window — including one that **crosses the year boundary**.
 
 The worked example is again **Canary_12** (22°W–15.5°W, 14°N–24°N, 1/12°), for
 **December 2025 → January 2026**.
+
+![Phase 3](../img/canary_12_portrait.png)
 
 !!! important
     **Prerequisites:** Phase 1 (Setup) done, and you've read Phases 2–3 (the hindcast reuses their steps and vocabulary). You need a **CDS account + API key** for GFS (explained in [3](step3.md)).

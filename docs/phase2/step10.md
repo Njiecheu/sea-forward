@@ -1,4 +1,4 @@
-![build progress](../img/wf_12_compile.png)
+![build progress](../img/compile.png)
 
 *Step 10 **compiles** the model into a runnable program.*
 

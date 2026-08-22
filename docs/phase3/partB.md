@@ -32,9 +32,9 @@ bry is the forecast part of the product.
     the anfc), because this window is in the future and its edges must come from
     the forecast, not the analysis.
 
-So the two phases differ in where their boundaries come from: the spin-up's
-boundaries are from the **analysis**, the forecast's boundaries are from the
-**forecast**. The forecast's initial condition is the spin-up restart.
+So the two phases differ in where their boundaries come from: the spin-up's boundaries are from the Global Forecasting System (GFS), the forecast's boundaries are from the spin-up analysis. The forecast's initial condition is the spin-up restart. This is better illustrated by the figure below.
+
+![Phase 3](../img/forecasting_scheme.png)
 
 ### B.2 One download feeds both phases
 

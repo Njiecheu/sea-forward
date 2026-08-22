@@ -3,11 +3,19 @@
 
 # SEA-FORWARD
 
-SEA-FORWARD (**S**imple **E**ducational **A**ccess for **For**ecast and **War**ning **D**evelopers) is a free, open-source toolkit that teaches you to build and run a
-complete ocean forecasting system on your own computer — from raw input data
-through to a validated 5-day forecast you can plot and interpret.
+SEA-FORWARD (**S**imple **E**ducational **A**ccess for **For**ecast and **War**ning **D**evelopers) is based on the OPERA OCeanPrediction-A Architecture as described by the figure below.
+![Implementation of the OceanPrediction-A architecture for the SEA-FORWARD system. The system consists of two main components (UNIX/LINUX based system and Jupyter Notebooks) accessible via a GitHub Repository](./img/SEA-FORWARD_Architecture.png)
 
-It is aimed at practitioners who understand oceanography but have not yet built
+The OceanPrediction-A architecture is functionally implemented within a downloadable workflow, hence locally accessible by the users. The SEA-FORWARD architecture diagram illustrates a system which consists of two main components:
+
+* **UNIX/LINUX system**: Hosts the model and forecast systems elements, the test configurations along with storage capabilities.
+* **Jupyter Notebooks**: Provide interface for output data analysis and visualization, the downstream tools, sensitivity tests and exercises.
+
+The **GitHub repository** serves as version control and download interface for the tools listed above.
+
+Users interact locally with the UNIX/LINUX system to set-up/compile/execute models and run forecasts; and then with the Jupyter Notebook to analyze simulation outputs, create visualizations and downstream services.
+
+SEA-FORWARD is aimed at practitioners who understand oceanography but have not yet built
 or operated a forecasting system. Every step is explicit and manual by design:
 there is no automated installer, because the goal is not just to produce a
 forecast — it is to understand each link in the chain that produces it.
@@ -50,7 +58,7 @@ because each poses a different forecasting challenge:
   shedding.
 
 See the [region gallery](phase7/) for what is available today.
-![sea_forward_test_cases](./img/sea_forward_test_cases.png)
+![sea_forward_test_cases](./img/SEA-FORWARD_test_cases.png)
 
 
 |              | **Component Access**                                                                                                    |

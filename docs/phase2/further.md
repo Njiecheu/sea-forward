@@ -1,4 +1,4 @@
-![AGRIF nest](../img/wf_08_agrif.png)
+![AGRIF nest](../img/run_parent_child.png)
 
 *An AGRIF child is a finer grid nested inside the parent. Parent and child run **together** in one execution, and the child's boundaries come from the **parent model itself**, not from the global ocean — CROCO forcing CROCO.*
 

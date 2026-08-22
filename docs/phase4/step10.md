@@ -2,6 +2,9 @@
 **2-day spin-up + 5-day hindcast** cycles. It mirrors the forecast driver, with
 GLORYS+GFS and a cycle loop.
 
+The figure below shows to what the hindcast scheme looks 
+![Phase 3](../img/forecasting_scheme.png)
+
 ### 10.1 What one cycle does (per cycle date T)
 
 - **spin-up** (T−2 → T): `make_ini_hindcast` at T−2 + `make_bry_hindcast`

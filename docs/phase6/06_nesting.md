@@ -42,3 +42,7 @@ There's a small wrinkle. `make_ini` / `make_bry` expect the ocean data in **Merc
 Once the parent output *looks like* Mercator, the standard Phase-2 machinery
 builds the child inputs without knowing (or caring) that the "global product" is
 actually your own model.
+
+The figure below highlights where this phase sit on in the SEA-FORWARD entire build chain
+
+![Phase 6](../img/run_parent_child.png)

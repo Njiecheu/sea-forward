@@ -1,4 +1,4 @@
-![build progress](../img/wf_08_cppdefs.png)
+![build progress](../img/compile.png)
 
 *Step 7 sets the **compile-time features** — the switches baked into the binary.*
 

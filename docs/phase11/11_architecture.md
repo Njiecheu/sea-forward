@@ -14,4 +14,4 @@ becomes legible to anyone in the field — and the design choices stop looking
 arbitrary and start looking like the standard components of an operational
 service.
 
-![SEA-FORWARD architecture](../img/seaforward_architecture.png)
+![SEA-FORWARD architecture](../img/SEA-FORWARD_Architecture.png)

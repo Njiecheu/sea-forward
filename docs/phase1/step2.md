@@ -2,7 +2,7 @@ You need a C/Fortran compiler and a few build utilities. Install them once:
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential gfortran m4 curl wget git \
+sudo apt install -y build-essential gfortran m4 curl wget -c git \
                     libcurl4-openssl-dev zlib1g-dev
 ```
 

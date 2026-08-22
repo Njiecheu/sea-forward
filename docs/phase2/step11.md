@@ -1,4 +1,4 @@
-![build progress](../img/wf_10_runtime.png)
+![build progress](../img/runtime_input.png)
 
 *Step 11 sets the **run-time inputs** in `croco.in` — dates, filenames, output intervals. Changing these needs no recompile.*
 

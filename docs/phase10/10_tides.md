@@ -37,6 +37,9 @@ it runs, *then* come here and add tides on top. Doing it that way means if the
 tidal run misbehaves, you already know the tide-free config was sound — the tide
 is the only new variable.
 
+The figure below highlights where this phase sit on in the SEA-FORWARD entire build chain
+![Phase 10](../img/surface_forcing.png)
+
 !!! note
     **The one Phase 2 check that changes.** Phase 2 Step 8's verification expects `TIDES` to be `undef`. Once you follow this chapter, that same grep will show `TIDES` **defined** — which is correct now, not a mistake. The `USE_CALENDAR` part of that check stays `undef` either way.
 

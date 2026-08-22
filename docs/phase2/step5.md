@@ -25,7 +25,7 @@ export RUN_DT="$(date -u +'%Y-%m-%d') 00:00:00"
 
 ### 5a — Download the forcing data
 
-![build progress](../img/wf_05a_download.png)
+![build progress](../img/atmosphere_ocean.png)
 
 *First, pull down both global datasets — the ocean and the atmosphere. Nothing is shaped yet; you're just fetching the raw data your region sits inside.*
 
@@ -59,9 +59,11 @@ input: the **ocean** becomes the initial and boundary conditions, the
 
 **From the ocean → initial + boundary conditions**
 
-![build progress](../img/wf_05b_ocean.png)
+![build progress](../img/init_bound_conditions.png)
 
-*The global ocean forecast supplies the state your model starts from and the values that flow in at the open edges. Both are interpolated from the one Mercator file you downloaded.*
+*The global ocean forecast supplies the state your model starts from and the values that flow in at the open edges the one Mercator file you downloaded. The figure below shows how this is functionally implemented.*
+
+![Workflow for ingesting Global Ocean Forecast (OM) data alongside model_grid.nc and -run-date, processed via SEA_FORWARD pytools (subset-clim-oce, subset-mod-oce, format-converter-oce) and the Ocean-to-model step (extrapolation → interpolation → processing-oce), producing ocean-model, ocean-model-initial-input, and ocean-model-obc (open boundary conditions)-input outputs linked to V1, C1, and D1.](../img/ocean_model_U2.png)
 
 Build the **initial condition** (the ocean's state at the start):
 
@@ -88,9 +90,11 @@ python seaforward.py make_bry \
 
 **From the atmosphere → surface forcing**
 
-![build progress](../img/wf_05b_atmos.png)
+![build progress](../img/surface_forcing.png)
 
-*The global weather becomes the surface forcing — the ten files (wind, heat, radiation, pressure, humidity, precipitation) CROCO reads at every timestep.*
+*The global weather becomes the surface forcing — the ten files (wind, heat, radiation, pressure, humidity, precipitation) CROCO reads at every timestep. The figure below shows how this is functionally implemented*
+
+![Workflow for preparing atmospheric forcing from the Global Forecasting System (ATM), -run-date, and model_grid.nc, run through SEA_FORWARD pytools (subset-mod-atm, format-converter-atm) and the Ocean-to-model chain (extrapolation → processing-atm → interpolation → grid-transformation), yielding atm-upstr-input and atm-model outputs linked to C1, V1, and D1.](../img/atmosphere_U3.png)
 
 Build the **surface forcing**:
 
@@ -146,7 +150,7 @@ PYEOF
 
 ### 5c — Tides *(optional)*
 
-![build progress](../img/wf_05c_tides.png)
+![build progress](../img/tidal_forcing.png)
 
 *Tides are the one forcing no global ocean product carries. If your domain has a shelf or coast where the tide is a large signal, you add it from a tidal atlas (TPXO); deep open-ocean domains skip it.*
 

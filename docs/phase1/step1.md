@@ -44,7 +44,7 @@ You need a C/Fortran compiler and a few build utilities. Install them once:
 
 ```bash
 sudo apt update
-sudo apt install -y build-essential gfortran m4 curl wget git \
+sudo apt install -y build-essential gfortran m4 curl wget -c git \
                     libcurl4-openssl-dev zlib1g-dev
 ```
 
@@ -71,7 +71,7 @@ Download and install Miniconda:
 
 ```bash
 cd ~
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget -c https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
