@@ -2,7 +2,7 @@
 
 <!-- <img src="../../img/phase2.png" alt="Phase 2" tyle="width: 100%; height: 250px; object-fit: contain;" /> -->
 
-![Phase 2](../../img/phase2.png)
+![Phase 2](../img/phase2.jpeg)
 
 ### Building and running a single CROCO forecast by hand, from global data to a proven model
 

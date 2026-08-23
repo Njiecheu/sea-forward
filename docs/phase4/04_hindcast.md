@@ -2,7 +2,7 @@
 
 <!-- <img src="../../img/phase4.png" alt="Phase 4" style="width: 100%; height: 550px; object-fit: contain;" /> -->
 
-![Phase 3](../img/phase3.png)
+![Phase 4](../img/phase4.jpeg)
 
 A **hindcast** reconstructs the ocean for a **past** period, rather than
 predicting the future. The model and the workflow are the same as the forecast;

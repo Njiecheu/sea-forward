@@ -2,7 +2,7 @@
 
 <!-- <img src="../../img/phase5.png" alt="Phase 5" style="width: 100%; height: 550px; object-fit: contain;" /> -->
 
-![Phase 5](../img/phase5.png)
+![Phase 5](../img/phase5.jpeg)
 
 SEA-FORWARD ships a small, self-contained Python toolkit for analysing CROCO
 output — making maps, sections, profiles, Hovmöller diagrams and time series,

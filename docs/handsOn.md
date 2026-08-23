@@ -13,7 +13,7 @@
     Phase 1 is a prerequisite for everything (once per computer). Phase 2 builds a **forecast** configuration for a region and Phase 3 runs it. Phase 4 (hindcast) reuses Phase 2's _steps_ but
     swaps the data source — it points back to Phase 2 rather than repeating it.
 
-![Phase 1-4](./img/phase.png)
+![Phase 1-4](./img/phase.jpeg)
 
 <!--
 ## The session ritual (every time)
