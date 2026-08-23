@@ -14,10 +14,6 @@
 /* =========================================================
    Blocs de code — style carte claire moderne
    ========================================================= */
-
-/* Fix : le thème rtd-dropdown écrase white-space sur les blocs de code,
-   ce qui fusionnait toutes les lignes en une seule. On restaure le
-   comportement normal, et on neutralise le double scroll du thème. */
 .highlight,
 .highlight > div,
 .highlight table,
@@ -118,7 +114,22 @@ pre code.hljs {
     max-width: 50vw;   /* optionnel : retire la limite si tu veux profiter de l'espace gagné */
 }
 
-/* Empêche la sidebar de changer de largeur visuelle selon l'apparition de la scrollbar */
+@media screen and (max-width: 768px) {
+    .wy-nav-content {
+        max-width: none;
+        width: 100%;
+    }
+
+    .highlight pre {
+        padding: 10px 12px;
+    }
+
+    .copy-code-button {
+        top: 6px;
+        right: 6px;
+    }
+}
+
 .wy-side-scroll {
     overflow-y: scroll;        /* toujours réserver l'espace de la scrollbar, même sans contenu débordant */
     scrollbar-gutter: stable;  /* équivalent moderne, pris en compte par les navigateurs récents */

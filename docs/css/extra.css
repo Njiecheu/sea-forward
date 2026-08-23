@@ -92,6 +92,36 @@ body, h1, h2, h3, h4, h5, h6, .wy-menu, .wy-nav-content, p, a, li, span {
     flex-direction: column;
 }
 
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+div.highlight, div.codehilite, pre {
+    max-width: 100%;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.wy-content-wrap,
+.wy-nav-content,
+.wy-nav-content-wrap {
+    min-width: 0;
+}
+
 .wy-side-nav-search > a.icon-home {
     order: 1;
 }
@@ -200,7 +230,7 @@ html {
 }
 
 /* 2. Augmenter la largeur de la barre latérale sur grand écran */
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 993px) {
     .wy-nav-side {
         width: 420px !important;  
     }
@@ -229,15 +259,132 @@ html {
     }
 }
 
-@media screen and (max-width: 768px) {
-    .wy-nav-side,.wy-side-nav-search  {
-        width: 400px !important;
-        max-width: 100% !important; 
+@media screen and (max-width: 992px) {
+    body.sidebar-open {
+        overflow: hidden;
     }
+
+    .wy-nav-side,
+    .wy-side-nav-search {
+        width: min(86vw, 320px) !important;
+        max-width: 320px !important;
+    }
+
+    .wy-nav-side {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-102%);
+        transition: transform 0.28s ease, box-shadow 0.28s ease;
+        z-index: 1200;
+        box-shadow: 0 24px 80px rgba(15, 23, 42, 0.28);
+    }
+
+
+    .wy-side-nav-search::after {
+        filter: brightness(1.08) saturate(1.05);
+    }
+
+    body.sidebar-open .wy-nav-side,
+    .wy-nav-side.shift {
+        transform: translateX(0) !important;
+    }
+
+    .wy-nav-content-wrap {
+        margin-left: 0 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+
+    .wy-nav-content {
+        max-width: none !important;
+        width: 100% !important;
+    }
+
     .wy-nav-top {
-        width: 380px !important;
+        display: block !important;
+        background-color: #2980B9 !important;
+        color: #ffffff !important;
+        width: 100% !important;
         max-width: 100% !important;
+        left: 0 !important;
+        z-index: 1050;
     }
+
+    .sidebar-toggle-button {
+        display: inline-flex;
+    }
+
+    .sidebar-backdrop {
+        display: block;
+    }
+
+    .rst-footer-buttons .btn {
+        min-width: 0;
+        width: 100%;
+        padding: 12px 18px !important;
+    }
+    .gallery-card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.42);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s ease;
+    z-index: 1100;
+}
+
+body.sidebar-open .sidebar-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar-toggle-button {
+    display: none;
+    align-items: center;
+    gap: 0.6rem;
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 1300;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.8rem 1rem;
+    background: #0f172a;
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.28);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.sidebar-toggle-button:hover,
+.sidebar-toggle-button:focus-visible {
+    background: #111f3a;
+}
+
+.sidebar-toggle-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar-toggle-icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-toggle-text {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
 .rst-footer-buttons .btn {
@@ -255,7 +402,7 @@ html {
 
 /* Gallery Card Hover Effect */
 .gallery-card {
-    width: 250px;
+    width: min(100%, 250px);
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -267,4 +414,9 @@ html {
 .gallery-card:hover {
     transform: translateY(-5px);
     box-shadow: 4px 8px 15px rgba(0,0,0,0.2);
+}
+/* Change hamburger to cross when sidebar is shifted */
+.wy-nav-content-wrap.shift .wy-nav-top i.fa-bars::before,
+body.sidebar-open .wy-nav-top i.fa-bars::before {
+    content: "\f00d" !important;
 }
