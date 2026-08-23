@@ -1,6 +1,6 @@
 # Phase 2 — Run a Forecast Locally
 
-<!-- <img src="../../img/phase2.png" alt="Phase 2" tyle="width: 100%; height: 250px; object-fit: contain;" /> -->
+<!-- <img src="../img/phase2.png" alt="Phase 2" tyle="width: 100%; height: 250px; object-fit: contain;" /> -->
 
 ![Phase 2](../img/phase2.jpeg)
 

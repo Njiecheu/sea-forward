@@ -1,6 +1,6 @@
 # SEA-FORWARD — Phase 3: Running a Forecast
 
-<!-- <img src="../../img/phase3.png" alt="Phase 3" style="width: 100%; height: 550px; object-fit: contain;" /> -->
+<!-- <img src="../img/phase3.png" alt="Phase 3" style="width: 100%; height: 550px; object-fit: contain;" /> -->
 
 ![Phase 3](../img/phase3.jpg)
 

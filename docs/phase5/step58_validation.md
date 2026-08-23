@@ -15,5 +15,5 @@ res,s=val.compare_sst(F, MERC, date="2026-07-11", Yorig=2000)
 
 Validation compares the model outputs (CROCO) against parent forcing data (such as GLORYS or Mercator) to evaluate the drift, errors, and value added by the high resolution.
 
-![Plot 39](../../img/phase5/plot_39.png)
+![Plot 39](../img/phase5/plot_39.png)
 

@@ -11,7 +11,7 @@ fig = pl.plot(pp.field(ds, "salt", depth_m=depth),ds=ds, isobaths=isobaths)   # 
 Horizontal sections allow visualizing the spatial distribution of a variable (such as temperature or salinity) over a geographical area, either at a given depth or at the surface. It is the ideal tool to identify fronts, eddies, and large-scale structures.
 Salinity is a major water mass tracer. The code below extracts the salinity field and plots it alongside bathymetric contours (isobaths) or as a vertical profile/section.
 
-![Plot 1](../../img/phase5/plot_1.png)
+![Plot 1](../img/phase5/plot_1.png)
 
 ## Temperature
 
@@ -21,7 +21,7 @@ fig = pl.plot(pp.field(ds, "temp", depth_m=depth),ds=ds, isobaths=isobaths)   # 
 
 Water temperature is crucial for coastal dynamics (e.g., upwellings). Here is how to plot the temperature field to observe thermal gradients.
 
-![Plot 2](../../img/phase5/plot_2.png)
+![Plot 2](../img/phase5/plot_2.png)
 
 ## Curent & Speed at depth
 
@@ -32,7 +32,7 @@ fig=pl.plot(pp.speed_map(ds,depth_m=depth),ds=ds, uv=(u, v),isobaths=isobaths,uv
 
 Current speed is calculated from the zonal (u) and meridional (v) components. The rendering overlays the velocity magnitude and direction vectors.
 
-![Plot 4](../../img/phase5/plot_4.png)
+![Plot 4](../img/phase5/plot_4.png)
 
 ## Vorticity
 
@@ -42,7 +42,7 @@ fig=pl.plot(pp.vorticity(ds,depth_m=depth, normalized=True))
 
 Relative vorticity helps identify cyclonic and anticyclonic eddies within the domain.
 
-![Plot 6](../../img/phase5/plot_6.png)
+![Plot 6](../img/phase5/plot_6.png)
 
 ## Combined eddy view: shaded base field + vorticity contours or current vectors
 
@@ -52,11 +52,11 @@ fig = pl.plot_eddy(pp.field(ds, "temp", depth_m=depth),ds=ds, isobaths=isobaths,
 
 This combined view smartly overlays the base field with vorticity contours or current vectors for an advanced synoptic analysis.
 
-![Plot 8](../../img/phase5/plot_8.png)
+![Plot 8](../img/phase5/plot_8.png)
 
 ```python
 vort_da = pp.vorticity(ds,depth_m=depth, normalized=True)
 fig = pl.plot_eddy(pp.field(ds, "temp", depth_m=depth),ds=ds, isobaths=isobaths,overlay= ('vort', vort_da))   # no out= -> returns the figure
 ```
 
-![Plot 10](../../img/phase5/plot_10.png)
+![Plot 10](../img/phase5/plot_10.png)

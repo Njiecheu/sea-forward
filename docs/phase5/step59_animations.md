@@ -12,7 +12,7 @@ This animation overlays wind stress vectors on top of the Sea Surface Temperatur
 anim.animate(ds, "temp", overlay="wind")
 ```
 
-![Animation anim_1](../../img/phase5/anim_1.gif)
+![Animation anim_1](../img/phase5/anim_1.gif)
 
 ## Animation: Sea Surface Height (SSH) & Surface Currents
 
@@ -22,7 +22,7 @@ This animation shows the Sea Surface Height (SSH) combined with surface current 
 anim.animate(ds, "zeta", overlay="uv")
 ```
 
-![Animation anim_2](../../img/phase5/anim_2.gif)
+![Animation anim_2](../img/phase5/anim_2.gif)
 
 ## Animation: Current Speed & Quivers
 
@@ -32,7 +32,7 @@ Current velocity magnitude (speed) overlaid with direction quivers. This highlig
 anim.animate(ds, "speed", overlay="uv")
 ```
 
-![Animation anim_3](../../img/phase5/anim_3.gif)
+![Animation anim_3](../img/phase5/anim_3.gif)
 
 ## Animation: Zonal Current (u)
 
@@ -42,7 +42,7 @@ Animation of the zonal (East-West) current component. Useful to track the tempor
 anim.animate(ds, "u", overlay="uv")
 ```
 
-![Animation anim_4](../../img/phase5/anim_4.gif)
+![Animation anim_4](../img/phase5/anim_4.gif)
 
 ## Animation: Meridional Current (v)
 
@@ -52,4 +52,4 @@ Animation of the meridional (North-South) current component.
 anim.animate(ds, "v", overlay="uv")
 ```
 
-![Animation anim_5](../../img/phase5/anim_5.gif)
+![Animation anim_5](../img/phase5/anim_5.gif)

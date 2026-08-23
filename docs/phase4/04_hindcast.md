@@ -1,6 +1,6 @@
 # SEA-FORWARD — Phase 4: Building and Running a Hindcast — Hand-Edit Edition
 
-<!-- <img src="../../img/phase4.png" alt="Phase 4" style="width: 100%; height: 550px; object-fit: contain;" /> -->
+<!-- <img src="../img/phase4.png" alt="Phase 4" style="width: 100%; height: 550px; object-fit: contain;" /> -->
 
 ![Phase 4](../img/phase4.jpeg)
 
