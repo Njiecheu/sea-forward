@@ -1,4 +1,4 @@
-# Vertcal Profile
+# Vertical Profile
 
 
 
