@@ -43,7 +43,60 @@ with the square of wind speed, so a 1.5x wind-*speed* perturbation is a
 substantially stronger forcing change than it first appears -- worth
 keeping in mind when you look at the SST response in Part C.
 
+```python
+import sys, os
+sys.path.insert(0, os.path.abspath(".."))
 
+import numpy as np
+import xarray as xr
+import matplotlib.pyplot as plt
+
+import sftools.postprocess as pp
+import sftools.validation as val
+
+import _demo_data
+
+AMP_FACTOR = 1.5   # per Step 5.3 of the operational workflow
+paths = _demo_data.get_sensitivity_paths(amp_factor=AMP_FACTOR)
+IS_DEMO = paths["is_demo"]
+YORIG = paths["Yorig"]
+
+if IS_DEMO:
+    print("!! DEMO DATA !! Real forcing/history files were not found, so this")
+    print("   notebook is running against synthetic stand-ins (see _demo_data.py).")
+    print("   Part A and Part C run for real below; Part B (the actual CROCO")
+    print("   re-run) is skipped in demo mode -- see that section's markdown.")
+    BLK_BASELINE = paths["blk_baseline"]
+else:
+    REGION = "Canary_12"   # TODO: your region, see docs/07_regions.md
+    BLK_BASELINE = f"../hindcast/model-runs/{REGION}/<DATE>/hcast/CROCO_FILES/croco_blk.nc"
+BLK_PERTURBED = os.path.splitext(BLK_BASELINE)[0] + f"_wind{AMP_FACTOR:g}.nc"
+
+# CROCOTOOLS bulk-forcing files commonly use 'uwnd'/'vwnd'; some pipelines
+# instead carry 'Uwind'/'Vwind'. Detect whichever pair is present.
+WIND_NAME_PAIRS = [("uwnd", "vwnd"), ("Uwind", "Vwind"), ("u10", "v10")]
+
+dsb = xr.open_dataset(BLK_BASELINE)
+uname, vname = next(p for p in WIND_NAME_PAIRS if p[0] in dsb)
+print(f"detected wind variables: {uname!r}, {vname!r}")
+print(f"baseline wind speed range: "
+     f"{float(np.sqrt(dsb[uname]**2 + dsb[vname]**2).min()):.2f} .. "
+     f"{float(np.sqrt(dsb[uname]**2 + dsb[vname]**2).max()):.2f} m/s")
+```
+```python
+dsp = dsb.copy(deep=True)
+dsp[uname] = dsb[uname] * AMP_FACTOR
+dsp[vname] = dsb[vname] * AMP_FACTOR
+dsp[uname].attrs.update(dsb[uname].attrs)
+dsp[vname].attrs.update(dsb[vname].attrs)
+dsp.attrs["history"] = (dsb.attrs.get("history", "") +
+                        f" | SEA-FORWARD 04_sensitivity: wind x{AMP_FACTOR} "
+                        f"({uname},{vname}) for Step 5.3 sensitivity study")
+
+dsp.to_netcdf(BLK_PERTURBED)
+dsb.close(); dsp.close()
+print(f"wrote perturbed forcing -> {BLK_PERTURBED}")
+```
 
 ## Part B -- Re-run CROCO with the perturbed forcing (C1)
 
@@ -70,6 +123,23 @@ already generated a synthetic "perturbed" history file (stronger coastal
 cooling) standing in for what this re-run would produce, so Part C below
 still has something real to compare.
 
+```python
+if IS_DEMO:
+    HIS_BASELINE = paths["his_baseline"]
+    HIS_PERTURBED = paths["his_perturbed"]
+    print("demo mode -- using the auto-generated synthetic 'perturbed' run:")
+else:
+    HIS_BASELINE = f"../hindcast/model-runs/{REGION}/<DATE>/hcast/CROCO_FILES/croco_his.nc"
+    HIS_PERTURBED = f"../hindcast/model-runs/{REGION}/<DATE>/hcast_wind1p5/CROCO_FILES/croco_his.nc"
+    assert os.path.exists(HIS_BASELINE), f"missing baseline history: {HIS_BASELINE}"
+    assert os.path.exists(HIS_PERTURBED), (
+        f"missing perturbed-run history: {HIS_PERTURBED}"
+        " -> run Part B (the CROCO re-run) before continuing.")
+
+print(f"  baseline : {HIS_BASELINE}")
+print(f"  perturbed: {HIS_PERTURBED}")
+```
+
 ## Part C -- Compare the upwelling response (D1)
 
 Three comparisons, from the simplest to the most physically direct:
@@ -81,18 +151,88 @@ Three comparisons, from the simplest to the most physically direct:
 3. **Domain statistics** of the SST change, to put a single number on "how
    much stronger is upwelling with 1.5x wind".
 
+```python
+dsb_his = pp.open_history(HIS_BASELINE, Yorig=YORIG)
+dsp_his = pp.open_history(HIS_PERTURBED, Yorig=YORIG)
+
+clon, clat, cmask = pp.lonlatmask(dsb_his)
+sst_baseline = pp.surface(dsb_his, "temp", tindex=-1).values
+sst_perturbed = pp.surface(dsp_his, "temp", tindex=-1).values
+sst_diff = sst_perturbed - sst_baseline
+
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+vmin, vmax = np.nanmin([sst_baseline, sst_perturbed]), np.nanmax([sst_baseline, sst_perturbed])
+for ax, f, title in zip(axes, (sst_baseline, sst_perturbed, sst_diff),
+                        ("baseline SST", f"perturbed SST (wind x{AMP_FACTOR})",
+                         "difference (perturbed - baseline)")):
+    if f is sst_diff:
+        dmax = np.nanpercentile(np.abs(f[np.isfinite(f)]), 98)
+        h = ax.pcolormesh(clon, clat, f, cmap="RdBu_r", vmin=-dmax, vmax=dmax, shading="auto")
+    else:
+        h = ax.pcolormesh(clon, clat, f, cmap="RdYlBu_r", vmin=vmin, vmax=vmax, shading="auto")
+    ax.set_title(title, fontsize=10)
+    plt.colorbar(h, ax=ax, shrink=0.8, label="degC")
+fig.suptitle(f"CROCO SST response to a {AMP_FACTOR}x wind-amplitude perturbation")
+plt.tight_layout(); plt.show()
+```
+```python
+sst_change = val.domain_statistics(sst_perturbed, sst_baseline)
+print(f"SST change (perturbed vs. baseline): mean = {sst_change['bias']:+.3f} C, "
+     f"RMS = {sst_change['rmse']:.3f} C, n = {sst_change['n']}")
+print("A negative mean bias here is the expected upwelling signature: stronger "
+     "upwelling-favourable wind -> more coastal cooling.")
+```
+
 ### Bakun upwelling index -- baseline vs. perturbed
 
 Reusing the Exercise 1 calculation from `03_exercises.ipynb` unchanged,
 applied to both wind fields, so the *only* thing that differs between the
 two numbers below is the `AMP_FACTOR` scaling applied in Part A.
 
-> **Note.** The qualitative result -- that the index scales *faster* than
-> linearly with `AMP_FACTOR` -- holds because both the alongshore-wind term
-> *and* the wind-speed term in the Bakun formula grow together (Qx is
-> proportional to `&#124;W&#124; * W_alongshore`, i.e. roughly quadratic in wind
-> speed for wind blowing mostly alongshore). Compare `Qx_pert/Qx_base`
-> above to `AMP_FACTOR**2` to check this directly on your own run.
+```python
+OMEGA = 7.2921e-5
+RHO_AIR, RHO_WATER, CD = 1.22, 1025.0, 1.3e-3
+COAST_ANGLE_DEG = 0.0   # TODO: same coastline angle used in 03_exercises.ipynb
+
+
+def bakun_index(u10, v10, lat0, coast_angle_deg=COAST_ANGLE_DEG):
+    theta = np.deg2rad(coast_angle_deg)
+    w_along = u10 * np.cos(theta) + v10 * np.sin(theta)
+    w_speed = np.sqrt(u10 ** 2 + v10 ** 2)
+    f = 2 * OMEGA * np.sin(np.deg2rad(lat0))
+    return (RHO_AIR * CD * w_speed * w_along) / (RHO_WATER * f)
+
+
+LON0 = float(clon[cmask > 0][0]); LAT0 = float(clat[cmask > 0][0])
+dsb_blk = xr.open_dataset(BLK_BASELINE)
+j = np.argmin((dsb_blk["lat"].values[:, 0] - LAT0) ** 2)
+i = np.argmin((dsb_blk["lon"].values[0, :] - LON0) ** 2)
+u0_base = float(dsb_blk[uname].isel(time=-1).values[j, i])
+v0_base = float(dsb_blk[vname].isel(time=-1).values[j, i])
+u0_pert = u0_base * AMP_FACTOR
+v0_pert = v0_base * AMP_FACTOR
+dsb_blk.close()
+
+Qx_base = bakun_index(u0_base, v0_base, LAT0)
+Qx_pert = bakun_index(u0_pert, v0_pert, LAT0)
+print(f"Bakun index, baseline : {Qx_base:+.3f} m2/s")
+print(f"Bakun index, perturbed: {Qx_pert:+.3f} m2/s")
+if Qx_base != 0:
+    print(f"  ratio: x{Qx_pert / Qx_base:.2f} relative to baseline")
+```
+
+!!! note
+    The qualitative result -- that the index scales *faster* than linearly with `AMP_FACTOR` -- holds because both the alongshore-wind term *and* the wind-speed term in the Bakun formula grow together (Qx is proportional to `&#124;W&#124; * W_alongshore`, i.e. roughly quadratic in wind speed for wind blowing mostly alongshore). Compare `Qx_pert/Qx_base` above to `AMP_FACTOR**2` to check this directly on your own run.
+
+```python
+# Self-check: the perturbed index should scale up with AMP_FACTOR, in the
+# same direction as the baseline (same upwelling/downwelling sign)
+assert np.sign(Qx_pert) == np.sign(Qx_base), "perturbation flipped the upwelling sign -- check COAST_ANGLE_DEG"
+assert abs(Qx_pert) > abs(Qx_base), "perturbed index should be stronger than baseline for AMP_FACTOR > 1"
+print("self-check passed")
+
+dsb_his.close(); dsp_his.close()
+```
 
 ## Summary
 
