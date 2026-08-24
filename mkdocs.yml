@@ -38,6 +38,7 @@ extra_css:
 extra_javascript:
   - javascripts/copy-button.js
   - javascripts/sidebar.js
+  - javascripts/download-button.js
 
 plugins:
   #- with-pdf:

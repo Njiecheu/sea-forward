@@ -104,21 +104,8 @@ just computed responds when the wind forcing itself is perturbed (Step 5.3, U2 -
 Run the executable notebook for full code, plots, and self-checks:
 
 <div style="display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 14px 0;">
-	<a href="https://github.com/Njiecheu/sea-forward/blob/main/docs/notebooks/03_exercises.ipynb" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:8px; background:linear-gradient(to top, #ccfff4 0%, #389bf2 100%); color:#ffffff; text-decoration:none; font-weight:600;">
-		<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/box-arrow-up-right.svg" alt="" aria-hidden="true" style="width:16px; height:16px; filter:invert(1);" />
-		<span>Open notebook 03_exercises.ipynb</span>
-	</a>
-	<a href="https://github.com/Njiecheu/sea-forward/raw/main/docs/notebooks/03_exercises.ipynb" style="display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:8px; background:linear-gradient(to bottom, #ffffcc 0%, #fbec69 100%); color:#ffffff; text-decoration:none; font-weight:600;">
+	<a href="https://github.com/Njiecheu/sea-forward/raw/main/docs/notebooks/03_exercises.ipynb" data-download-url="https://github.com/Njiecheu/sea-forward/raw/main/docs/notebooks/03_exercises.ipynb" data-download-filename="03_exercises.ipynb" style="display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:8px; background:linear-gradient(to bottom, #ffffcc 0%, #f4f797de 100%); color:#ffffff; text-decoration:none; font-weight:600;">
 		<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/download.svg" alt="" aria-hidden="true" style="width:16px; height:16px; filter:invert(1);" />
 		<span>Download notebook 03_exercises.ipynb</span>
-	</a>
-</div>
-
-Then continue with sensitivity analysis:
-
-<div style="display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 14px 0;">
-	<a href="https://github.com/Njiecheu/sea-forward/blob/main/docs/notebooks/04_sensitivity.ipynb" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:8px; background:linear-gradient(to top, #ccfff4 0%, #389bf2 100%); color:#ffffff; text-decoration:none; font-weight:600;">
-		<img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/box-arrow-up-right.svg" alt="" aria-hidden="true" style="width:16px; height:16px; filter:invert(1);" />
-		<span>Open notebook 04_sensitivity.ipynb</span>
 	</a>
 </div>
