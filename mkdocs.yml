@@ -243,3 +243,5 @@ nav:
       - Validate all cycles (batch): notebooks/05_validate_all_cycles.md
       - Validation crontab: notebooks/06_validation_crontab.md
       - Notebook notes and language: notebooks/07_notebook_notes_and_language.md
+      - Guided exercises (from 03_exercises): notebooks/08_guided_exercises.md
+      - Sensitivity analysis (from 04_sensitivity): notebooks/09_sensitivity_analysis.md
