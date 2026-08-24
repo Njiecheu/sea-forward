@@ -54,7 +54,7 @@
 
   <div class="gallery-card">
     <a href="../step58_validation/" style="text-decoration: none; color: inherit; display: block;">
-      <img src="../img/plot_39.png" alt="Validation" style="width: 100%; height: 180px; object-fit: cover;">
+      <img src="../../img/plot_39.png" alt="Validation" style="width: 100%; height: 180px; object-fit: cover;">
       <div style="padding: 15px; background-color: #fafafa; text-align: center;">
         <h4 style="margin: 0 0 10px 0; font-size: 1.1em; color: #303030;">Validation</h4>
         <p style="margin: 0; font-size: 0.9em; color: #666;">Comparison against parent models</p>
