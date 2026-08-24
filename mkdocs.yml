@@ -234,3 +234,12 @@ nav:
       - How the automatic `--rivers` flag works: phase12/9.md
       - Doing this for a new region: phase12/10.md
       - Notes and gotchas (learned the hard way): phase12/11.md
+  - Notebooks Toolkit:
+      - Overview: notebooks/00_notebooks_overview.md
+      - Before you start: notebooks/01_before_you_start.md
+      - Demo data: notebooks/02_demo_data.md
+      - Validation engine: notebooks/03_validation_engine.md
+      - Run validation (one cycle): notebooks/04_run_validation_one_cycle.md
+      - Validate all cycles (batch): notebooks/05_validate_all_cycles.md
+      - Validation crontab: notebooks/06_validation_crontab.md
+      - Notebook notes and language: notebooks/07_notebook_notes_and_language.md
