@@ -1,4 +1,4 @@
-# Sensitivity Analysis (from 04_sensitivity.ipynb)
+# 04 -- Sensitivity analysis (Technical Specification Step 5.3)
 
 **SEA-FORWARD** OceanPrediction-A toolkit
 
