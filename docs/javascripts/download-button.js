@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
           return response.blob();
         })
         .then(function (blob) {
-          var objectUrl = window.URL.createObjectURL(blob);
+          var downloadBlob = blob.type ? blob : new Blob([blob], { type: "application/octet-stream" });
+          var objectUrl = window.URL.createObjectURL(downloadBlob);
           var anchor = document.createElement("a");
           anchor.href = objectUrl;
           anchor.download = filename;
