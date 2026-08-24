@@ -148,7 +148,7 @@ PYEOF
     ✅ **CHECK** — re-run the check above; it should now say `covers? True` with forcing lon around your box. Eastern-hemisphere regions skip this — their GFS longitudes already fall in range.
 
 
-### 5c — Tides *(optional)*
+### 5c — Tides
 
 ![build progress](../img/tidal_forcing.png)
 

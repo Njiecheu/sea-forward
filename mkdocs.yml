@@ -148,7 +148,7 @@ nav:
       - Forecast vs hindcast — the mental model: phase4/forehin.md
       - Quick reference — hindcast: phase4/reference.md
       - Troubleshooting (hindcast-specific): phase4/trouble.md
-  - Post-processing & Validation:
+  - Post-processing:
       - Overview: phase5/05_postprocessing.md
       - Gallery: phase5/00_gallery.md
       - Setup: phase5/step51_setup.md
@@ -159,20 +159,36 @@ nav:
       - Hovmöller diagrams: phase5/step56_hovm_ller_diagrams.md
       - Time series: phase5/step57_time_series.md
       - Animations: phase5/step59_animations.md
+  - Validation:
       - Validation: phase5/step58_validation.md
-  - Nesting:
-      - Overview: phase6/06_nesting.md
-      - Step 0 — Session setup: phase6/step0.md
-      - Step 1 — Create the child grid (finer resolution, same box): phase6/step1.md
-      - Step 2 — Write the child `crocotools_param.py` (the vertical refinement): phase6/step2.md
-      - Step 3 — Convert the parent output to Mercator format (the new step): phase6/step3.md
-      - Step 4 — Build the child initial and boundary conditions: phase6/step4.md
-      - Step 5 — Build the child config files (Phase-2 Steps 7–11, refined): phase6/step5.md
-      - Step 6 — Compile the child: phase6/step6.md
-      - Step 7 — Run the nested child: phase6/step7.md
-      - Step 8:
-          - Part A — Validate — does the finer grid resolve more? (the payoff): phase6/partA.md
-          - Part B — The operational nesting driver (`run_nest_today.sh`): phase6/partB.md
+  - AGRIF nesting:
+      - Overview: phase8/08_agrif.md
+      - Why bother — what two-way actually buys you: phase8/bother.md
+      - The hard constraints: phase8/constraint.md
+      - Step 1 — Choose the child box, and check it against the mask: phase8/step1.md
+      - Step 2 — Build the child grid: phase8/step2.md
+      - Step 3 — Build the child's initial condition: phase8/step3.md
+      - Step 4 — Assemble the run directory: phase8/step4.md
+      - Step 5 — `croco.in.1`, the child's runtime settings: phase8/step5.md
+      - Step 6 — Turn AGRIF on and compile: phase8/step6.md
+      - Step 7 — Run it (one-way): phase8/step7.md
+      - Step 8 — Switch to two-way, and measure it: phase8/step8.md
+      - Worked example 2 — a coastal child: phase8/example.md
+      - Gotchas — the short list: phase8/gotchas.md
+      - What this chapter does not cover: phase8/chapter.md
+  #- Nesting:
+      #- Overview: phase6/06_nesting.md
+      #- Step 0 — Session setup: phase6/step0.md
+      #- Step 1 — Create the child grid (finer resolution, same box): phase6/step1.md
+      #- Step 2 — Write the child `crocotools_param.py` (the vertical refinement): phase6/step2.md
+      #- Step 3 — Convert the parent output to Mercator format (the new step): phase6/step3.md
+      #- Step 4 — Build the child initial and boundary conditions: phase6/step4.md
+      #- Step 5 — Build the child config files (Phase-2 Steps 7–11, refined): phase6/step5.md
+      #- Step 6 — Compile the child: phase6/step6.md
+      #- Step 7 — Run the nested child: phase6/step7.md
+      #- Step 8:
+          #- Part A — Validate — does the finer grid resolve more? (the payoff): phase6/partA.md
+          #- Part B — The operational nesting driver (`run_nest_today.sh`): phase6/partB.md
   - Region Gallery:
       - Overview: phase7/07_regions.md
       - Canary — `Canary_12` (1/12°): phase7/canary.md
