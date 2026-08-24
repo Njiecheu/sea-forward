@@ -104,8 +104,8 @@ just computed responds when the wind forcing itself is perturbed (Step 5.3, U2 -
 Run the executable notebook for full code, plots, and self-checks:
 
 <div style="display:flex; justify-content:center; margin:10px 0 14px 0;">
-   <a href="https://raw.githubusercontent.com/Njiecheu/sea-forward/main/docs/notebooks/04_sensitivity.ipynb" data-download-url="https://raw.githubusercontent.com/Njiecheu/sea-forward/main/docs/notebooks/03_exercises.ipynb" data-download-filename="03_exercises.ipynb" style="display:inline-flex; align-items:center; justify-content:center; gap:16px; min-width: 586px; min-height: 156px; padding:30px 42px; border-radius:10px; background:linear-gradient(to bottom, #ffffcc 0%, #f4f797de 100%); color:#000000; text-decoration:none; font-weight:600; font-size:3rem; line-height:1.1; text-align:center;">
-      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/download.svg" alt="" aria-hidden="true" style="width:48px; height:48px; filter:invert(1);" />
+   <a href="https://raw.githubusercontent.com/Njiecheu/sea-forward/main/docs/notebooks/03_exercises.ipynb" data-download-url="https://raw.githubusercontent.com/Njiecheu/sea-forward/main/docs/notebooks/03_exercises.ipynb" data-download-filename="03_exercises.ipynb" style="display:inline-flex; align-items:center; justify-content:center; gap:16px; min-width: 80px; padding:20px 20px; border-radius:10px; background:linear-gradient(to bottom, #ffffcc 0%, #f4f797de 100%); color:#000000; text-decoration:none; font-size:1.2rem; line-height:1.1; text-align:center;">
+      <img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/download.svg" alt="" aria-hidden="true" style="width:25px; height:25px; color: #000000; font-weight: bold; filter:invert(1);" />
       <span>Download notebook 03_exercises.ipynb</span>
    </a>
 </div>
